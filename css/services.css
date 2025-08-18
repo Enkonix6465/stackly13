@@ -1,0 +1,451 @@
+
+/* =========================
+   COMMON CONTAINER
+  
+========================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #007b8f;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #007b8f;
+  color:white;
+}
+
+/* =========================
+   SERVICES HEADER
+========================= */
+.services-header {
+  background: #007b8f;
+  color: white;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.services-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.services-header p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* =========================
+   SERVICES LIST
+========================= */
+.services-list-section {
+  position: relative;
+  padding: 4rem 1.5rem;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+.services-list-section .container .service-card h2{
+  color:#007b8f;
+}
+.services-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, #e0f7f5 0%, #c4f0ec 100%);
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.services-list {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #007b8f;
+}
+
+.service-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Animate on scroll */
+.service-card.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+.why-choose-us {
+  background-color: #007b8f;
+  padding: 80px 20px;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  font-weight: bold;
+  color: #f1f5f9;
+}
+
+.choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.choose-card {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease;
+}
+
+.choose-card:hover {
+  transform: translateY(-5px);
+}
+
+.choose-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.choose-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact-section {
+  background: url("../images/im5.jpeg") center/cover no-repeat;
+  position: relative;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.contact-overlay {
+  background-color: rgba(0,0,0,0.5);
+  padding: 4rem 2rem;
+  border-radius: 8px;
+}
+
+.contact-btn {
+  display: inline-block;
+  background-color: #007b8f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: white;
+  color:#007b8f;
+}
+/* =========================
+   BUSINESS CONSULTING PROMO
+========================= */
+.promo-section {
+    
+  position: relative;
+  background: url("../images/promo-bg.jpg") center/cover no-repeat;
+  padding: 6rem 1.5rem;
+  overflow: hidden;
+}
+
+.promo-overlay {
+  background-image: url("../images/service.jpeg");
+  padding: 4rem 1rem;
+  border-radius: 10px;
+}
+
+.promo-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.promo-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  text-align: center;
+  padding: 2rem;
+  flex: 1 1 280px;
+  max-width: 300px;
+  color: black;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  background-color: white;
+}
+.promo-card h3{
+  color:#007b8f;
+}
+.promo-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.promo-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.promo-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Staggered fade-up animation */
+.promo-card.animate {
+  animation: fadeSlideUp 0.8s forwards;
+}
+
+.promo-card:nth-child(1) { animation-delay: 0.1s; }
+.promo-card:nth-child(2) { animation-delay: 0.3s; }
+.promo-card:nth-child(3) { animation-delay: 0.5s; }
+
+/* Reuse previous keyframes */
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+body.dark-mode .hero .hero-content .btn-secondary{
+  background-color: #007BFF;
+  color: white;
+}
+body.dark-mode .hero .hero-content .btn-secondary:hover {
+  background-color:white;
+  color: #007BFF;
+}
+body.dark-mode .services-header {
+  background: black;
+}
+body.dark-mode .services-header .container h1{
+  color: #007BFF;
+}
+body.dark-mode .services-list-section{
+  background: black;
+  color: white;
+
+}
+body.dark-mode .services-list-section .container .service-card{
+  background: black;
+  color: white;
+}
+body.dark-mode .services-list-section .container .service-card h2{
+  color: #007BFF;
+}
+body.dark-mode .services-list-section .container .service-card .btn-secondary{
+  background-color: #007BFF;
+  color:white;
+}
+body.dark-mode .services-list-section .container .service-card .btn-secondary:hover{
+  background-color:white;
+  color: #007BFF;
+}
+body.dark-mode .why-choose-us {
+  background-color: #1f1f1f;
+}
+body.dark-mode .why-choose-us .container h2{
+  color: #007BFF;
+}
+body.dark-mode .why-choose-us .choose-card h3{
+  color: #007BFF;
+}
+
+body.dark-mode .promo-section{
+  background-color: black;
+  color:white;
+}
+body.dark-mode .promo-card.animate{
+  background-color: black;
+}
+body.dark-mode .promo-card.animate h3{
+  color:#007BFF;
+}
+body.dark-mode .promo-card.animate p{
+  color: white;
+}
+body.dark-mode .contact-section {
+  background: url("../images/im5.jpeg") center/cover no-repeat;
+  filter: brightness(1);
+}
+body.dark-mode .contact-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+body.dark-mode .contact-btn {
+  background-color: #007BFF;
+  color: white;
+}
+body.dark-mode .contact-btn:hover {
+  background-color: white;
+  color: #007BFF;
+}
+body.dark-mode .contact-container h2 {
+  color: #007BFF;
+}
+/* Mobile menu button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    top: 0.7rem;
+    right: 2rem;
+  }
+  body.dark-mode .mobile-menu-btn {
+    color: white;
+  }
+  body.dark-mode .nav-menu{
+    background-color: black;
+  }
+}
+/* Mobile Menu hidden by default */
+.nav-menu.mobile-active {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+  gap: 0;
+  z-index: 1000;
+}

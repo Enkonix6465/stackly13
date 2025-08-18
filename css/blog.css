@@ -1,0 +1,357 @@
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode header {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+body.dark-mode nav ul li a {
+  color:white;
+}
+
+body.dark-mode .dropdown {
+  background:white;
+}
+
+body.dark-mode .dropdown li a {
+  color:black;
+}
+body.dark-mode footer {
+  background-color: #111;
+  color: white;
+}
+
+body.dark-mode footer ul li a {
+  color:white;
+}
+body.dark-mode footer ul li a:hover {
+  color: white;
+}
+
+/* Make social icons dimmer in dark mode */
+body.dark-mode .social img {
+  filter: brightness(0.9);
+}
+/* Footer copyright */
+footer .footer-copy {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 1.5rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+/* Dark mode copyright */
+body.dark-mode footer .footer-copy {
+  color: white;
+  border-top: 1px solid #333;
+}
+body.dark-mode footer .footer-links h4{
+  color: white;
+}
+body.dark-mode footer .footer-services h4{
+  color: white;
+}
+body.dark-mode footer .footer-contact h4{
+  color: white;
+}
+body.dark-mode footer .newsletter button {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+/* 2. Featured Post */
+.featured-post {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4rem auto;
+  max-width: 1200px;
+  gap: 2rem;
+  align-items: center;
+}
+.featured-post img { flex: 1 1 500px; width: 100%; border-radius: 10px; }
+.featured-text { flex: 1 1 500px; }
+.featured-text h2 { font-size: 2rem; margin-bottom: 1rem; }
+.featured-text p { margin-bottom: 1rem; }
+.read-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #007b8f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* 3. Latest Posts Grid */
+.latest-posts { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; }
+.posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.post-card { border: 1px solid #ddd; border-radius: 10px; overflow: hidden; transition: transform 0.3s ease; }
+.post-card:hover { transform: translateY(-5px); }
+.post-card img { width: 100%; height: 180px; object-fit: cover; }
+.post-card h3 { margin: 1rem; font-size: 1.3rem; }
+.post-card p { margin: 0 1rem 1rem; }
+
+/* 4. Categories */
+.blog-categories { background: #f9f9f9; padding: 2rem; text-align: center; }
+.category-btn {
+  background: #007b8f;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.category-btn:hover { background:white;
+color: #007b8f; }
+
+/* 5. Subscribe Section */
+.subscribe-section {
+  background: url('../images/newsletter-bg.jpg') center/cover no-repeat;
+  text-align: center;
+  color: #fff;
+  padding: 4rem 2rem;
+  position: relative;
+}
+.subscribe-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+.subscribe-section h2, .subscribe-section p, .subscribe-section button {
+  position: relative;
+  z-index: 1;
+}
+.subscribe-btn {
+  padding: 0.8rem 1.5rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #007b8f;
+  color: #fff;
+  cursor: pointer;
+}
+.subscribe-btn:hover { background: white;
+color: #007b8f; }
+
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #007b8f;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #007b8f;
+  color:white;
+}
+
+body.dark-mode .hero {
+  background-color: black;
+  color: white;
+}
+body.dark-mode .hero .hero-content .btn-secondary{
+  background-color: #007BFF;
+  color: white;
+}
+body.dark-mode .hero .hero-content .btn-secondary:hover {
+  background-color: white;  
+  color: #007BFF;
+}
+body.dark-mode .featured-post{
+  background-color: black;
+  color:white;
+}
+body.dark-mode .featured-post h2{
+  color:#007BFF;
+}
+body.dark-mode .featured-post p {
+  color: white;
+}
+body.dark-mode .featured-post .read-more {
+  background-color: #007BFF;
+  color: white;
+} 
+body.dark-mode .featured-post .read-more:hover {
+  background-color: white;
+  color: #007BFF;
+} 
+body.dark-mode .latest-posts {
+  background-color: black;
+  color: white;
+}
+body.dark-mode .latest-posts .post-card{
+  background-color: #2a2a2a;
+}
+body.dark-mode .latest-posts h2{
+  color:#007BFF;
+}
+body.dark-mode .latest-posts p {
+  color: white;
+} 
+body.dark-mode .latest-posts .post-card h3{
+  color:#007BFF;
+}
+body.dark-mode .latest-posts .post-card p {
+  color: white;
+}
+body.dark-mode .latest-posts .post-card .read-more{
+ background-color: #007BFF;
+ color:white;
+}
+body.dark-mode .latest-posts .post-card .read-more:hover {
+  background-color: white;
+  color: #007BFF;
+}
+
+body.dark-mode .blog-categories {
+  background-color: black;
+  color: white;
+} 
+body.dark-mode .blog-categories .category-btn {
+  background-color: #007BFF;
+  color: white;
+}
+body.dark-mode .blog-categories .category-btn:hover{
+  background-color: white;
+  color: #007BFF;
+}
+
+body.dark-mode .blog-categories h2{
+  color:#007BFF;  
+}
+body.dark-mode .subscribe-section {
+ background-color: black;
+ color:white;
+}
+body.dark-mode .subscribe-section h2 {
+  color: #007BFF;
+}
+body.dark-mode .subscribe-section p {
+  color: white;
+}
+body.dark-mode .subscribe-section button {
+  background-color: #007BFF;
+  color: white;
+}
+body.dark-mode .subscribe-section button:hover {
+  background-color: white;
+  color: #007BFF;
+}
+body.dark-mode footer .footer-links a:hover{
+  text-decoration: none;
+}
+/* Mobile menu button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    top: 0.7rem;
+    right: 2rem;
+  }
+  body.dark-mode .mobile-menu-btn {
+    color: white;
+  }
+  body.dark-mode .nav-menu{
+    background-color: black;
+  }
+}
+/* Mobile Menu hidden by default */
+.nav-menu.mobile-active {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+  gap: 0;
+  z-index: 1000;
+}

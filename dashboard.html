@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="js/darkmode.js" defer></script>  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/header.css">
+<script src="js/main.js" defer></script>
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
+    </div>
+
+  <button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
+    <nav>
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html">Home</a>
+          <ul class="dropdown">
+            <li><a href="index.html">Home1</a></li>
+            <li><a href="pages/home2.html">Home2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li>
+          <a href="services.html">Services</a>
+          <ul class="dropdown">
+            <li><a href="pages/service1.html">Business</a></li>
+            <li><a href="pages/services2.html">Operations</a></li>
+            <li><a href="pages/services3.html">Financial</a></li>
+            <li><a href="pages/services4.html">Marketing</a></li>
+            <li><a href="pages/services5.html">HR&Talent</a></li>
+            <li><a href="pages/services6.html">Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+<div class="profile-container">
+  <div class="profile" id="profile-dropdown-toggle">
+    <img id="profile-pic" src="../images/.jpg" alt="Profile Picture">
+    <span id="profile-initials" style="display:none;"></span>
+  </div>
+
+  <ul class="profile-dropdown" id="profile-dropdown">
+    <li><a href="dashboard.html">Dashboard </a></li>
+    <li><a href="#" id="logout-btn">Logout</a></li>
+  </ul>
+
+  <button id="dark-mode-toggle">🌙</button>
+</div>
+
+
+
+
+
+  
+  </header>
+
+  <div class="charts-container">
+  <div class="chart-card">
+    <h4>Total Users</h4>
+    <canvas id="totalUsersChart"></canvas>
+  </div>
+
+  <div class="chart-card">
+    <h4>Signups Today</h4>
+    <canvas id="todaySignupChart"></canvas>
+  </div>
+</div>
+
+
+   
+  <div class="dashboard-container">
+    <h2>User Dashboard</h2>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Actions</th> <!-- new -->
+        </tr>
+      </thead>
+      <tbody id="userTableBody"></tbody>
+    </table>
+   
+  </div>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

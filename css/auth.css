@@ -1,0 +1,185 @@
+/* =========================
+   AUTH PAGES (Login / Signup)
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f5f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: white;
+}
+
+.auth-container {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 350px; /* fixed width */
+  box-sizing: border-box; /* include padding in width */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .auth-container {
+  background: #1f1f1f;
+  color: #f1f1f1;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #333;
+}
+
+body.dark-mode .auth-container h2 {
+  color: white;
+}
+
+/* =========================
+   INPUT FIELDS
+========================= */
+.auth-container input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: border 0.3s, background 0.3s;
+  box-sizing: border-box; /* ensure padding included in width */
+}
+
+.auth-container input:focus {
+  border-color: #007bff;
+}
+
+body.dark-mode .auth-container input {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #f1f1f1;
+}
+
+/* =========================
+   PASSWORD FIELD WITH TOGGLE ICON
+========================= */
+.password-field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 40px; /* space for toggle icon */
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+  user-select: none;
+}
+
+body.dark-mode .toggle-password {
+  color: #bbb;
+}
+
+.toggle-password:hover {
+  color: #007bff;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.auth-container button:hover {
+  background: #0056b3;
+}
+
+/* =========================
+   LINKS
+========================= */
+.auth-container p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.auth-container a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+body.dark-mode {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .auth-container {
+  background: #1f1f1f;
+  color: #f1f1f1;
+}
+
+body.dark-mode .auth-container input {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #f1f1f1;
+}
+
+body.dark-mode .toggle-password {
+  color: #bbb;
+}
+
+body.dark-mode .auth-container button {
+  background: #0d6efd; /* slightly darker blue */
+  color: white;
+}
+
+body.dark-mode .auth-container button:hover {
+  background: #0056b3;
+}
+
+body.dark-mode .auth-container a {
+  color: #66b2ff;
+}
+.auth-container input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 8px 0; /* slightly smaller spacing for first/last name fields */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: border 0.3s, background 0.3s;
+  box-sizing: border-box;
+}

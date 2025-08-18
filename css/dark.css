@@ -1,0 +1,114 @@
+/* ===== Global Dark Mode ===== */
+body.dark-mode {
+  background-color: #121212;
+  color: #ddd;
+  transition: all 0.3s ease;
+}
+
+/* Hero Section */
+body.dark-mode .hero {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url("images/hero-bg.jpg") center/cover no-repeat;
+}
+body.dark-mode .hero h1,
+body.dark-mode .hero p {
+  color: #fff;
+}
+body.dark-mode .hero-buttons .btn-primary {
+  background-color: #005f8a;
+}
+body.dark-mode .hero-buttons .btn-primary:hover {
+  background-color: #00476a;
+}
+body.dark-mode .hero-buttons .btn-secondary {
+  background-color: #333;
+  color: #fff;
+}
+body.dark-mode .hero-buttons .btn-secondary:hover {
+  background-color: #444;
+}
+
+/* About Hero */
+body.dark-mode .about-hero {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+}
+body.dark-mode .about-hero .container {
+  background: rgba(31,41,55,0.85);
+  color: #fff;
+}
+
+/* Mission & Vision */
+body.dark-mode .mission-vision {
+  background: #0d9488;
+  color: #fff;
+}
+body.dark-mode .mission-vision .card {
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+}
+body.dark-mode .mission-card {
+  border-left: 4px solid #5eead4;
+}
+body.dark-mode .vision-card {
+  border-left: 4px solid #ffeb3b;
+}
+
+/* Team Section */
+body.dark-mode .team-section {
+  background: #111;
+  color: #ddd;
+}
+body.dark-mode .team-member {
+  background: #1f2937;
+  color: #ddd;
+}
+
+/* Journey Section */
+body.dark-mode .journey-section {
+  background: #1f2937;
+  color: #ccc;
+}
+body.dark-mode .timeline {
+  border-left-color: #5eead4;
+}
+body.dark-mode .timeline li::before {
+  background: #5eead4;
+}
+
+/* Contact Section */
+body.dark-mode .contact-section {
+  filter: brightness(0.6);
+}
+body.dark-mode .contact-overlay {
+  background-color: rgba(0,0,0,0.7);
+}
+body.dark-mode .contact-btn {
+  background-color: #007b8f;
+  color: #fff;
+}
+body.dark-mode .contact-btn:hover {
+  background-color: #00476a;
+  color: #fff;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background: #111;
+  color: #ddd;
+}
+body.dark-mode footer a {
+  color: #5eead4;
+}
+body.dark-mode .footer-contact input,
+body.dark-mode .footer-contact button {
+  background: #333;
+  color: #fff;
+  border: none;
+}
+
+/* Cards & Other Reusable Elements */
+body.dark-mode .card {
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/contact.js" defer></script>
+</head>
+<body>
+    <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
+    </div>
+    <button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
+    <nav>
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html">Home</a>
+          <ul class="dropdown">
+            <li><a href="index.html">Home1</a></li>
+            <li><a href="pages/home2.html">Home2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li>
+          <a href="services.html">Services</a>
+          <ul class="dropdown">
+            <li><a href="pages/service1.html">Business</a></li>
+            <li><a href="pages/services2.html">Operations</a></li>
+            <li><a href="pages/services3.html">Financial</a></li>
+            <li><a href="pages/services4.html">Marketing</a></li>
+            <li><a href="pages/services5.html">HR&Talent</a></li>
+            <li><a href="pages/services6.html">Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="profile-container">
+  <div class="profile" id="profile-dropdown-toggle">
+    <img id="profile-pic" src="../images/.jpg" alt="Profile Picture">
+    <span id="profile-initials" style="display:none;"></span>
+  </div>
+
+  <ul class="profile-dropdown" id="profile-dropdown">
+    
+    <li><a href="#" id="logout-btn">Logout</a></li>
+  </ul>
+
+  <button id="dark-mode-toggle">🌙</button>
+</div>
+
+
+  
+  </header>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="videos/contact.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Let’s Shape Your Business Future</h1>
+      <p>
+        Whether you need expert advice, a fresh strategy, or a trusted partner to guide your next big move, our team is ready to help. Reach out today and let’s start building your path to sustainable growth and success.
+      </p>
+      <div class="hero-buttons">
+        <a href="services.html" class="btn-secondary">Our Services</a>
+        <a href="contact.html" class="btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Hero Section -->
+<section class="contact-hero fade-in">
+  <div class="overlay">
+    <h1>Get in Touch</h1>
+    <p>We’re here to help your business grow. Let’s talk strategy.</p>
+  </div>
+</section>
+
+<!-- Contact Info Section -->
+<section class="contact-info fade-in">
+  <div class="info-card">
+    <h3>📍 Address</h3>
+    <p>123 Business Avenue, Corporate City, 45678</p>
+  </div>
+  <div class="info-card">
+    <h3>📞 Phone</h3>
+    <p>+1 (555) 123-4567</p>
+  </div>
+  <div class="info-card">
+    <h3>📧 Email</h3>
+    <p>contact@bizconsult.com</p>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<section class="contact-form-section fade-in">
+  <h2>Send Us a Message</h2>
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- Map Section -->
+<section class="map-section fade-in">
+  <h2>Our Location</h2>
+  <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531561687!3d-37.816279742021865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c1e88c50a3f!2sVictoria%20Harbour!5e0!3m2!1sen!2sau!4v1614033600000!5m2!1sen!2sau" 
+  width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+</iframe>
+
+</section>
+<!-- FAQ Section -->
+<section class="faq-section">
+  <h2>Quick Help</h2>
+
+  <div class="faq-item">
+    <h4>What services do you offer?</h4>
+    <p>We provide business strategy consulting, operations improvement, financial advisory, marketing solutions, and technology integration.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>How soon will you respond?</h4>
+    <p>We usually respond within 24 hours during business days.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Do you work with startups?</h4>
+    <p>Absolutely! We have tailored packages to help startups establish a solid foundation and grow sustainably.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Can I schedule a free consultation?</h4>
+    <p>Yes, we offer a complimentary initial consultation to understand your needs and explore how we can help.</p>
+  </div>
+</section>
+
+
+<!-- CTA Section -->
+<section class="cta-section fade-in">
+  <h2>Let’s Build Something Great Together</h2>
+  <p>Our experts are ready to guide your business towards success.</p>
+  <a href="services.html" class="cta-btn">Explore Services</a>
+</section>
+<footer>
+  <div class="footer-logo">
+    <a href="../index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
+  </div>
+
+  <div class="footer-links">
+    <h4>Quick Links</h4>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-services">
+    <h4>Services</h4>
+    <ul>
+      <li><a href="pages/service1.html">Businessg</a></li>
+      <li><a href="pages/services2.html">Operations</a></li>
+      <li><a href="pages/services3.html">Financial</a></li>
+      <li><a href="pages/services4.html">Marketing</a></li>
+      <li><a href="pages/services5.html">HR&Talent</a></li>
+      <li><a href="pages/services6.html">Technology</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-contact">
+    <h4>Contact</h4>
+    <p>Email: info@example.com</p>
+    <p>Phone: +91 1234567890</p>
+    <div class="social">
+      <a href="https://www.facebook.com/login/"><img src="images/fb.png" alt="Facebook"></a>
+      <a href="https://twitter.com/"><img src="images/x.png" alt="Twitter"></a>
+      <a href="https://www.instagram.com/"><img src="images/inst.jpeg" alt="Instagram"></a>
+    </div>
+     <div class="newsletter">
+      <form id="newsletter-form">
+      <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;">
+      Thank you for subscribing!
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('newsletter-form');
+      const successMsg = document.getElementById('newsletter-success');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+      });
+      });
+    </script>
+  </div>
+
+  </div>
+
+  <!-- COPYRIGHT LINE -->
+  <div class="footer-copy">
+    &copy; 2025 Your Company Name. All Rights Reserved.
+  </div>
+</footer>
+</body>
+</html>

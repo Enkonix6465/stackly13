@@ -1,0 +1,654 @@
+/* ===== General Layout ===== */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode header {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+body.dark-mode nav ul li a {
+  color:white;
+}
+
+body.dark-mode .dropdown {
+  background:white;
+}
+
+body.dark-mode .dropdown li a {
+  color:black;
+}
+body.dark-mode footer {
+  background-color: #111;
+  color: white;
+}
+
+body.dark-mode footer ul li a {
+  color:white;
+}
+body.dark-mode footer ul li a:hover {
+  color: white;
+}
+
+/* Make social icons dimmer in dark mode */
+body.dark-mode .social img {
+  filter: brightness(0.9);
+}
+/* Footer copyright */
+footer .footer-copy {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 1.5rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+/* Dark mode copyright */
+body.dark-mode footer .footer-copy {
+  color: white;
+  border-top: 1px solid #333;
+}
+body.dark-mode footer .footer-links h4{
+  color: white;
+}
+body.dark-mode footer .footer-services h4{
+  color: white;
+}
+body.dark-mode footer .footer-contact h4{
+  color: white;
+}
+body.dark-mode footer .newsletter button {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* ===== Hero Section ===== */
+.about-hero {
+  background: #f9fafb;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+.about-hero .container {
+  max-width: 1100px;
+  margin: auto;
+}
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #007b8f;
+}
+.about-hero p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+.about-hero img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  max-height: 400px;
+}
+
+/* ===== Mission & Vision Section ===== */
+.mission-vision {
+  background: #007b8f;
+  color: white;
+  padding: 4rem 1.5rem;
+}
+.mission-vision .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+.left-image img {
+  width: 100%;
+  
+  padding-top: 40px;
+  
+}
+.right-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+.right-content p {
+  margin-bottom: 1.5rem;
+}
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+.mission-card {
+  border-left: 4px solid #fff;
+}
+.vision-card {
+  border-left: 4px solid #ffeb3b;
+}
+@media (min-width: 768px) {
+  .mission-vision .container {
+    flex-direction: row;
+  }
+  .left-image, .right-content {
+    flex: 1;
+  }
+}
+
+/* ===== Team Section ===== */
+.team-section {
+  background: #f9f9f9;
+  padding: 4rem 1.5rem;
+}
+.team-section .container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+.team-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #007b8f;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.team-member {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.team-member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.team-member h3 {
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== Journey Section ===== */
+.journey-section {
+  background: white;
+  padding: 4rem 1.5rem;
+}
+.journey-section .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.journey-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #007b8f;
+}
+.journey-section p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+.timeline {
+  list-style: none;
+  padding: 0;
+  border-left: 3px solid #007b8f;
+  margin-left: 1rem;
+}
+.timeline li {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -0.6rem;
+  top: 0.4rem;
+  width: 12px;
+  height: 12px;
+  background: #007b8f;
+  border-radius: 50%;
+}
+
+/* ===== Dark Mode Styles ===== */
+body.dark .about-hero {
+  background: #1f2937;
+} 
+body.dark .about-hero h1 {
+  color: #5eead4;
+}
+body.dark .about-hero p {
+  color: #ccc;
+}
+
+body.dark .mission-vision {
+  background: #0d9488;
+}
+body.dark .card {
+  background: rgba(0,0,0,0.3);
+}
+
+body.dark .team-section {
+  background: #111;
+}
+body.dark .team-member {
+  background: #1f2937;
+  color: #ddd;
+}
+
+body.dark .journey-section {
+  background: #1f2937;
+}
+body.dark .journey-section p {
+  color: #ccc;
+}
+body.dark .timeline {
+  border-left-color: #5eead4;
+}
+body.dark .timeline li::before {
+  background: #5eead4;
+}
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 2rem;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("images/hero-bg.jpg") center/cover no-repeat;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: #007b8f;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color:#007b8f;
+  color:white
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #007b8f;
+}
+
+.btn-secondary:hover {
+  background-color: #007b8fe3;
+  color: white;
+}
+
+/* Dark mode adjustments */
+body.dark-mode .hero {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("images/hero-bg.jpg") center/cover no-repeat;
+}
+
+body.dark-mode .btn-secondary {
+  background-color: #007BFF;
+  color: white;
+}
+
+body.dark-mode .btn-secondary:hover {
+  background-color: #444;
+}
+/* Video Background */
+.hero {
+  position: relative; /* make overlay and video absolute */
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay to keep text readable */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* ensure content appears above video and overlay */
+}
+/* Dark mode adjustments for hero section */
+body.dark-mode .hero-overlay {
+  background: rgba(0, 0, 0, 0.7); /* darker overlay in dark mode */
+}
+body.dark-mode .hero .hero-buttons .btn-secondary{
+  background-color: #007BFF;
+  color: white;}
+
+body.dark-mode .hero h1,
+body.dark-mode .hero p {
+  color: #ffffff; /* keep text white */
+}
+
+body.dark-mode .btn-primary {
+  background-color: #005f8a; /* darker blue for primary button */
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #00476a;
+}
+
+body.dark-mode .btn-secondary {
+  background-color: hsl(186, 76%, 47%); /* dark background for secondary button */
+  color: #fff;
+}
+
+body.dark-mode .btn-secondary:hover {
+  background-color: #444;
+}
+
+
+/* Contact Section with Background Image */
+.contact-section {
+  background: url("../images/im5.jpeg") center/cover no-repeat;
+  position: relative;
+  padding: 4rem 2rem;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+/* Dark overlay for readability */
+.contact-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  padding: 4rem 2rem;
+  border-radius: 8px;
+}
+
+.contact-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.contact-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-container p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Button Styling */
+.contact-btn {
+  display: inline-block;
+  background-color: #007b8f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: white;
+  color: #007b8f;
+}
+
+/* ===== Dark Mode Styles ===== */
+body.dark-mode {
+  background-color: #121212;
+  color: #ddd;
+}
+
+/* Hero Section */
+body.dark-mode .hero {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("images/hero-bg.jpg") center/cover no-repeat;
+}
+body.dark-mode .hero h1,
+body.dark-mode .hero p {
+  color: #ffffff;
+}
+body.dark-mode .btn-primary {
+  background-color: #005f8a;
+}
+body.dark-mode .btn-primary:hover {
+  background-color: #00476a;
+}
+body.dark-mode .btn-secondary {
+  background-color: #333;
+  color: #fff;
+}
+body.dark-mode .btn-secondary:hover {
+  background-color: #444;
+}
+
+/* About Hero */
+body.dark-mode .about-hero {
+  background: black;
+}
+body.dark-mode .about-hero .container {
+  background: black;
+  color: #fff;
+}
+body.dark-mode .about-hero h1 {
+  color: #007BFF;
+}
+body.dark-mode .about-hero p {
+  color: white;
+}
+
+/* Mission & Vision Section */
+body.dark-mode .mission-vision {
+  background: black;
+  color: white;
+}
+body.dark-mode .mission-vision .card {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+body.dark-mode .mission-card {
+  border-left: 4px solid #007BFF;
+}
+body.dark-mode .vision-card {
+  border-left: 4px solid #007BFF;
+}
+body.dark-mode .mission-vision .right-content h2 {
+  color: #007BFF;
+}
+body.dark-mode .mission-vision .right-content p {
+  color: white;
+}
+body.dark-mode .mission-card h3{
+  color: #007BFF;
+}
+body.dark-mode .vision-card h3{
+  color: #007BFF;
+}
+/* Team Section */
+body.dark-mode .team-section {
+  background: black;
+  color: white;
+}
+body.dark-mode .team-member {
+  background: #1f2937;
+  color: #ddd;
+}
+body.dark-mode .team-member h3 {
+  color: #007BFF;
+}
+body.dark-mode .team-section .container h2 {
+  color: #007BFF;
+}
+
+/* Journey Section */
+body.dark-mode .journey-section {
+  background: black;
+  color: white;
+}
+body.dark-mode .timeline {
+  border-left-color: white;
+}
+body.dark-mode .timeline li::before {
+  background: #007BFF;
+}
+body.dark-mode .timeline li::after {
+  background: #007BFF;
+}
+
+body.dark-mode .journey-section h2 {
+  color: #007BFF;
+}
+body.dark-mode .journey-section p {
+  color: white;
+}
+  
+/* Contact Section */
+body.dark-mode .contact-section {
+  background: url("../images/im5.jpeg") center/cover no-repeat;
+  filter: brightness(1);
+}
+  body.dark-mode .contact-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  body.dark-mode .contact-btn {
+    background-color: #007BFF;
+    color: white;
+  }
+  body.dark-mode .contact-btn:hover {
+    background-color: white;
+    color: #007BFF;
+  }
+  body.dark-mode .contact-container h2 {
+    color: #007BFF;
+  }
+
+/* Footer */
+body.dark-mode footer {
+  background: #111;
+  color: #ddd;
+}
+body.dark-mode footer a {
+  color: #5eead4;
+}
+body.dark-mode .footer-contact input,
+body.dark-mode .footer-contact button {
+  background: white;
+  color: black;
+  border: none;
+}
+body.dark-mode .footer-contact button:hover {
+  background: #007BFF;
+  color: white;
+} 
+/* Mobile menu button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    top: 0.7rem;
+    right: 2rem;
+  }
+  body.dark-mode .mobile-menu-btn {
+    color: white;
+  }
+  body.dark-mode .nav-menu{
+    background-color: black;
+  }
+}
+/* Mobile Menu hidden by default */
+.nav-menu.mobile-active {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+  gap: 0;
+  z-index: 1000;
+}

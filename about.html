@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/about.css"> <!-- New CSS for About page -->
+    <script src="js/main.js" defer></script>
+    <title>About Us - My Website</title>
+</head>
+<body>
+    <!-- Header (unchanged) -->
+    <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
+    </div>
+  <button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
+    <nav>
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html">Home</a>
+          <ul class="dropdown">
+            <li><a href="index.html">Home1</a></li>
+            <li><a href="pages/home2.html">Home2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li>
+          <a href="services.html">Services</a>
+          <ul class="dropdown">
+            <li><a href="service1.html">Business</a></li>
+            <li><a href="service2.html">Operations</a></li>
+            <li><a href="service3.html">Financial</a></li>
+            <li><a href="service4.html">Marketing</a></li>
+            <li><a href="service5.html">HR&Talent</a></li>
+            <li><a href="service6.html">Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="profile-container">
+  <div class="profile" id="profile-dropdown-toggle">
+    <img id="profile-pic" src="../images/.jpg" alt="Profile Picture">
+    <span id="profile-initials" style="display:none;"></span>
+  </div>
+
+  <ul class="profile-dropdown" id="profile-dropdown">
+    
+    <li><a href="#" id="logout-btn">Logout</a></li>
+  </ul>
+
+  <button id="dark-mode-toggle">🌙</button>
+</div>
+
+
+  
+  </header>
+
+    <section class="hero">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="videos/about.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay to darken video -->
+  <div class="hero-overlay"></div>
+
+  <!-- Hero content (keep as is) -->
+  <div class="hero-content">
+    <h1>"Your Trusted Partner in Business Growth."</h1>
+    <p>
+      With years of experience in strategy, operations, and market development, We bring a wealth of knowledge to every project.
+    </p>
+    <div class="hero-buttons">
+      <a href="services.html" class="btn-secondary">Our Services</a>
+      <a href="contact.html" class="btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Our Company</h1>
+            <p>We are more than consultants – we are collaborators, innovators, and problem-solvers. Our approach blends analytical thinking with creative strategies to help you make bold, informed decisions.</p>
+            <img src="images/about.jpeg" alt="About Us Image">
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <!-- Left Image -->
+            <div class="left-image">
+                <img src="images/im5.jpeg" alt="Mission & Vision">
+            </div>
+
+            <!-- Right Content -->
+            <div class="right-content">
+                <h2>Our Mission & Vision</h2>
+                <p>We are committed to empowering individuals to achieve their optimal well-being through evidence-based practices, personalized care, and a supportive community.</p>
+
+                <!-- Mission Card -->
+                <div class="card mission-card">
+                    <h3>Our Mission</h3>
+                    <p>To provide accessible, comprehensive wellness solutions that transform lives and create lasting positive change in our community.</p>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="card vision-card">
+                    <h3>Our Vision</h3>
+                    <p>To be the leading wellness destination where individuals discover their path to health, balance, and fulfillment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="team-section">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="images/1.jpg" alt="John Doe">
+                    <h3>John Doe</h3>
+                    <p>CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/about2.jpg" alt="Jane Smith">
+                    <h3>Jane Smith</h3>
+                    <p>CTO</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/about3.jpg" alt="Michael Lee">
+                    <h3>Michael Lee</h3>
+                    <p>Project Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+    .about-hero {
+      background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+      padding: 60px 0 40px 0;
+      position: relative;
+      z-index: 1;
+    }
+    .about-hero .container {
+      background: rgba(255,255,255,0.85);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.12);
+      padding: 40px 30px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .about-hero img {
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      max-width: 100%;
+      height: auto;
+    }
+    </style>
+    <!-- Company Journey -->
+    <section class="journey-section">
+        <div class="container fade-in">
+            <h2>Our Journey</h2>
+            <p>From humble beginnings to becoming a trusted leader, our journey is built on dedication, innovation, and our clients’ success.</p>
+            <ul class="timeline">
+                <li><strong>2015:</strong> Company founded with a small but passionate team.</li>
+                <li><strong>2018:</strong> Expanded services to international clients.</li>
+                <li><strong>2021:</strong> Launched innovative new solutions for businesses.</li>
+                <li><strong>2024:</strong> Recognized as an industry leader in our field.</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Contact Us Section -->
+<section class="contact-section">
+  <div class="contact-overlay">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Whether you have questions, feedback, or just want to connect, reach out to us anytime.</p>
+      <a href="contact.html" class="contact-btn">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Footer (unchanged) -->
+    <footer>
+        <div class="footer-logo">
+            <a href="../index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-services">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="pages/service1.html">Business</a></li>
+                <li><a href="pages/services2.html">Operations</a></li>
+                <li><a href="pages/services3.html">Financial</a></li>
+                <li><a href="pages/services4.html">Marketing</a></li>
+                <li><a href="pages/services5.html">HR&Talent</a></li>
+                <li><a href="pages/services6.html">Technology</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>Email: info@example.com</p>
+            <p>Phone: +91 1234567890</p>
+            <div class="social">
+                <a href="https://www.facebook.com/login/"><img src="images/fb.png" alt="Facebook"></a>
+                <a href="https://twitter.com/"><img src="images/x.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/"><img src="images/inst.jpeg" alt="Instagram"></a>
+            </div>
+             <div class="newsletter">
+      <form id="newsletter-form">
+      <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;">
+      Thank you for subscribing!
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('newsletter-form');
+      const successMsg = document.getElementById('newsletter-success');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+      });
+      });
+    </script>
+  </div>
+
+         <div class="footer-copy">
+    &copy; 2025 Your Company Name. All Rights Reserved.
+  </div>
+    </footer>
+</body>
+</html>

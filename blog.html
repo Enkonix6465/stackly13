@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Business Consulting</title>
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="logo">
+      <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
+    </div>
+    <button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
+    <nav>
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html">Home</a>
+          <ul class="dropdown">
+            <li><a href="index.html">Home1</a></li>
+            <li><a href="pages/home2.html">Home2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li>
+          <a href="services.html">Services</a>
+          <ul class="dropdown">
+            <li><a href="pages/service1.html">Business</a></li>
+            <li><a href="pages/services2.html">Operations</a></li>
+            <li><a href="pages/services3.html">Financial</a></li>
+            <li><a href="pages/services4.html">Marketing</a></li>
+            <li><a href="pages/services5.html">HR&Talent</a></li>
+            <li><a href="pages/services6.html">Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="profile-container">
+  <div class="profile" id="profile-dropdown-toggle">
+    <img id="profile-pic" src="../images/.jpg" alt="Profile Picture">
+    <span id="profile-initials" style="display:none;"></span>
+  </div>
+
+  <ul class="profile-dropdown" id="profile-dropdown">
+    
+    <li><a href="#" id="logout-btn">Logout</a></li>
+  </ul>
+
+  <button id="dark-mode-toggle">🌙</button>
+</div>
+
+
+  
+  </header>
+  <section class="hero">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="videos/blog.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay to darken video -->
+  <div class="hero-overlay"></div>
+
+  <!-- Hero content (keep as is) -->
+  <div class="hero-content">
+    <h1>Insights & Strategies for Your Business</h1>
+    <p>
+Explore our latest articles on growth, management, and innovation.    </p>
+    <div class="hero-buttons">
+      <a href="services.html" class="btn-secondary">Our Services</a>
+      <a href="contact.html" class="btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+  <!-- 2. Featured Blog Post -->
+  <section class="featured-post">
+    <img src="images/blog.jpg" alt="Featured Blog">
+    <div class="featured-text">
+      <h2>Mastering Business Strategy in 2025</h2>
+      <p>Learn how top companies plan for growth and stay ahead of the competition.</p>
+      <a href="services.html" class="read-more">Read More</a>
+    </div>
+  </section>
+
+  <!-- 3. Latest Posts Grid -->
+  <section class="latest-posts">
+    <h2>Latest Articles</h2>
+    <div class="posts-grid">
+      <article class="post-card">
+        <img src="images/blog1.jpg" alt="Post 1">
+        <h3>Business Strategy Consulting</h3>
+        <p>Helping organizations define vision, set goals, and develop long-term strategies.</p>
+        <a href="pages/service1.html" class="read-more">Read More</a>
+      </article>
+      <article class="post-card">
+        <img src="images/blog2.jpg" alt="Post 2">
+        <h3>Operations & Process Improvement</h3>
+        <p>Streamline workflows, reduce costs, and improve efficiency.</p>
+        <a href="pages/services2.html" class="read-more">Read More</a>
+      </article>
+      <article class="post-card">
+        <img src="images/blog3.jpg" alt="Post 3">
+        <h3>Marketing & Brand Development</h3>
+        <p>Boost brand awareness and implement marketing strategies that work.</p>
+        <a href="pages/services3.html" class="read-more">Read More</a>
+      </article>
+      <article class="post-card">
+        <img src="images/blog1.jpg" alt="Post 4">
+        <h3>Financial Advisory & Planning</h3>
+        <p>Budgeting, forecasting, and cost optimization tips for your business.</p>
+        <a href="pages/services4.html" class="read-more">Read More</a>
+      </article>
+      <article class="post-card">
+        <img src="images/blog2.jpg" alt="Post 5">
+        <h3>Leadership & Team Management</h3>
+        <p>Develop effective leadership skills and high-performing teams.</p>
+        <a href="pages/services5.html" class="read-more">Read More</a>
+      </article>
+      <article class="post-card">
+        <img src="images/blog3.jpg" alt="Post 6">
+        <h3>Innovation & Technology</h3>
+        <p>Stay competitive by adopting new technologies and innovation strategies.</p>
+        <a href="pages/services6.html" class="read-more">Read More</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. Categories / Filters -->
+  <section class="blog-categories">
+    <h2>Categories</h2>
+    <div class="categories-list">
+      <a href="pages/service1.html"><button class="category-btn">Strategy</button></a>
+      <a href="pages/services2.html"><button class="category-btn">Marketing</button></a>
+      <a href="pages/services3.html"><button class="category-btn">Finance</button></a>
+      <a href="pages/services4.html"><button class="category-btn">Operations</button></a>
+      <a href="pages/services5.html"><button class="category-btn">Leadership</button></a>
+      <a href="pages/services6.html"><button class="category-btn">Innovation</button></a>
+    </div>
+  </section>
+
+  <!-- 5. Newsletter / Subscribe Section -->
+  <section class="subscribe-section">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get the latest articles and insights delivered straight to your inbox.</p>
+    <a href="#newsletter-email"><button class="subscribe-btn">Subscribe Now</button></a>
+  </section>
+  <!-- Footer (unchanged) -->
+    <footer>
+        <div class="footer-logo">
+            <a href="../index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-services">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="pages/service1.html">Business</a></li>
+                <li><a href="pages/services2.html">Operations</a></li>
+                <li><a href="pages/services3.html">Financial</a></li>
+                <li><a href="pages/services4.html">Marketing</a></li>
+                <li><a href="pages/services5.html">HR&Talent</a></li>
+                <li><a href="pages/services6.html">Technology</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>Email: info@example.com</p>
+            <p>Phone: +91 1234567890</p>
+            <div class="social">
+                <a href="https://www.facebook.com/login/"><img src="images/fb.png" alt="Facebook"></a>
+                <a href="https://twitter.com/"><img src="images/x.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/"><img src="images/inst.jpeg" alt="Instagram"></a>
+            </div>
+            <div class="newsletter">
+      <form id="newsletter-form">
+      <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;">
+      Thank you for subscribing!
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('newsletter-form');
+      const successMsg = document.getElementById('newsletter-success');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+      });
+      });
+    </script>
+  </div>
+
+        </div>
+         <div class="footer-copy">
+    &copy; 2025 Your Company Name. All Rights Reserved.
+  </div>
+    </footer>
+
+  
+
+ 
+</body>
+</html>
