@@ -185,6 +185,7 @@ header nav {
   .profile-container {
     order: 2;
     margin-left: auto;
+    padding-left: 60px;
   }
 }
 
