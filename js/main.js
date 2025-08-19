@@ -29,6 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
   mobileMenuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("mobile-active");
   });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      navMenu.classList.remove("mobile-active");
+      navMenu.style.display = "flex"; // ensure flex in desktop
+    } else {
+      navMenu.style.display = ""; // let CSS handle mobile
+    }
+  });
 
   // ----- PROFILE DROPDOWN -----
   profileToggle.addEventListener('click', () => {
