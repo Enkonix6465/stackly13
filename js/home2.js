@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const user = JSON.parse(sessionStorage.getItem("loggedInUser"));
 
   if (!user) {
-    // Redirect if not logged in
     window.location.href = "login.html";
     return;
   }
@@ -39,35 +38,40 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ----- PROFILE DROPDOWN -----
-  profileToggle.addEventListener('click', () => {
-    profileDropdown.style.display = profileDropdown.style.display === 'block' ? 'none' : 'block';
+  profileToggle.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent closing immediately
+    profileDropdown.classList.toggle("active");
   });
 
-  document.addEventListener('click', (e) => {
+  document.addEventListener("click", (e) => {
     if (!profileToggle.contains(e.target) && !profileDropdown.contains(e.target)) {
-      profileDropdown.style.display = 'none';
+      profileDropdown.classList.remove("active");
     }
   });
 
   // ----- LOGOUT -----
-  logoutBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    sessionStorage.removeItem('loggedInUser');
-    window.location.href = '../login.html';
-  });
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      sessionStorage.removeItem("loggedInUser");
+      window.location.href = "../login.html";
+    });
+  }
 
   // ----- MOBILE MENU -----
   mobileMenuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("mobile-active");
   });
+
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
       navMenu.classList.remove("mobile-active");
-      navMenu.style.display = "flex"; // ensure flex in desktop
+      navMenu.style.display = "flex";
     } else {
-      navMenu.style.display = ""; // let CSS handle mobile
+      navMenu.style.display = "";
     }
   });
+
   // ----- DARK MODE -----
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");

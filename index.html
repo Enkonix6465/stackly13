@@ -5,42 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - My Website</title>
   <link rel="stylesheet" href="css/index.css">
-<script src="js/auth-check.js" defer></script>
+  <script src="js/auth-check.js" defer></script>
+  
+
+  <link rel="stylesheet" href="css/header2.css">
 </head>
 <body>
+<header>
+  <div class="logo">
+    <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo" ></a>
+  </div>
 
-  <!-- Header -->
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html" data-key="nav_home">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html"  data-key="nav_home1">Home 1</a></li>
+            <li><a href="pages/home2.html" data-key="nav_home2">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+        <li class="dropdown">
+          <a href="services.html" data-key="nav_services">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li class="mobile-only"><a href="services.html" data-i18n="nav_all_services">All Services</a></li>
+            <li><a href="pages/service1.html" data-key="nav_business">Business</a></li>
+            <li><a href="pages/services2.html" data-key="nav_operations">Operations</a></li>
+            <li><a href="pages/services3.html" data-key="nav_financial">Financial</a></li>
+            <li><a href="pages/services4.html" data-key="nav_marketing">Marketing</a></li>
+            <li><a href="pages/services5.html" data-key="nav_hr">HR & Talent</a></li>
+            <li><a href="pages/services6.html" data-key="nav_digital">Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Language Toggle -->
+    <select id="languageToggle" aria-label="Language">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+
+  <!-- Header 
   <header>
       <div class="logo">
         <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
       </div>
 
-    <button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
+    
       <nav>
         <ul class="nav-menu">
           <li>
-            <a href="index.html">Home</a>
+            <a href="index.html" data-key="nav_home">Home</a>
             <ul class="dropdown">
-              <li><a href="index.html">Home1</a></li>
-              <li><a href="pages/home2.html">Home2</a></li>
+              <li><a href="index.html" data-key="nav_home1">Home1</a></li>
+              <li><a href="pages/home2.html" data-key="nav_home2">Home2</a></li>
             </ul>
           </li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html" data-key="nav_about">About</a></li>
+          <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
           <li>
-            <a href="services.html">Services</a>
+            <a href="services.html" data-key="nav_services">Services</a>
             <ul class="dropdown">
-              <li><a href="pages/service1.html">Business</a></li>
-              <li><a href="pages/services2.html">Operations</a></li>
-              <li><a href="pages/services3.html">Financial</a></li>
-              <li><a href="pages/services4.html">Marketing</a></li>
-              <li><a href="pages/services5.html">HR&Talent</a></li>
-              <li><a href="pages/services6.html">Digital</a></li>
+              <li><a href="pages/service1.html" data-key="nav_business">Business</a></li>
+              <li><a href="pages/services2.html" data-key="nav_operations">Operations</a></li>
+              <li><a href="pages/services3.html" data-key="nav_financial">Financial</a></li>
+              <li><a href="pages/services4.html" data-key="nav_marketing">Marketing</a></li>
+              <li><a href="pages/services5.html" data-key="nav_hr">HR & Talent</a></li>
+              <li><a href="pages/services6.html" data-key="nav_digital">Digital</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
         </ul>
       </nav>
+  
+    <select id="languageToggle" aria-label="Language">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    
+    <button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
   <div class="profile-container">
     <div class="profile" id="profile-dropdown-toggle">
       <img id="profile-pic" src="../images/.jpg" alt="Profile Picture">
@@ -49,19 +114,16 @@
 
     <ul class="profile-dropdown" id="profile-dropdown">
       
-      <li><a href="#" id="logout-btn">Logout</a></li>
+      <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
     </ul>
 
     <button id="dark-mode-toggle">🌙</button>
+
   </div>
-
-
-
-
-
-    
     </header>
+    
 
+  -->
 
   <!-- Main Body Sections -->
   <main>
@@ -80,14 +142,14 @@
 
   <!-- Hero content (keep as is) -->
   <div class="hero-content">
-    <h1>Empowering Your Business for Tomorrow</h1>
-    <p>
+    <h1 data-key="hero_title">Empowering Your Business for Tomorrow</h1>
+    <p data-key="hero_desc">
       We provide strategic consulting, innovative solutions, and actionable
       insights to help your business thrive in a competitive world.
     </p>
     <div class="hero-buttons">
-      <a href="services.html" class="btn-secondary">Our Services</a>
-      <a href="contact.html" class="btn-secondary">Get in Touch</a>
+      <a href="services.html" class="btn-secondary" data-key="hero_btn_services">Our Services</a>
+      <a href="contact.html" class="btn-secondary" data-key="hero_btn_contact">Get in Touch</a>
     </div>
   </div>
 </section>
@@ -98,13 +160,13 @@
       <img src="images/im4.jpeg" alt="About Us">
     </div>
     <div class="about-content">
-      <h2>About Us</h2>
-      <p>
+      <h2 data-key="about_title">About Us</h2>
+      <p data-key="about_text">
         We are a consulting firm dedicated to helping businesses grow with innovative solutions and actionable strategies. Our team of experts brings years of experience in various industries to ensure measurable success for our clients. We focus on understanding your business needs and delivering tailored solutions.
                 We are a consulting firm dedicated to helping businesses grow with innovative solutions and actionable strategies. Our team of experts brings years of experience in various industries to ensure measurable success for our clients. We focus on understanding your business needs and delivering tailored solutions.
 
       </p>
-      <a href="about.html" class="btn-primary">Learn More About Us</a>
+      <a href="about.html" class="btn-primary" data-key="about_btn">Learn More About Us</a>
     </div>
   </div>
 </section>
@@ -113,29 +175,29 @@
 <!-- Services Section -->
 <section class="services">
   <div class="container">
-    <h2 >Our Core Services</h2>
-    <p>We help businesses grow by providing strategic, actionable, and innovative solutions.</p>
+    <h2 data-key="services_title">Our Core Services</h2>
+    <p data-key="services_subtitle">We help businesses grow by providing strategic, actionable, and innovative solutions.</p>
 
     <div class="services-grid">
       <div class="service-card">
         <img src="images/im1.jpg" alt="Strategy Consulting" style="border-radius: 50%;">
-        <h3>Strategy Consulting</h3>
-        <p>Expert guidance to shape your business strategy and achieve sustainable growth.</p>
-        <a href="pages/service1.html" class="btn-primary">Learn More</a>
+        <h3 data-key="svc1_title">Strategy Consulting</h3>
+        <p data-key="svc1_desc">Expert guidance to shape your business strategy and achieve sustainable growth.</p>
+        <a href="pages/service1.html" class="btn-primary" data-key="svc_btn">Learn More</a>
       </div>
 
       <div class="service-card">
         <img src="images/im2.jpg" alt="Market Research" style="border-radius: 50%;">
-        <h3>Market Research</h3>
-        <p>In-depth market insights and analysis to make informed business decisions.</p>
-        <a href="pages/services2.html" class="btn-primary">Learn More</a>
+        <h3 data-key="svc2_title">Market Research</h3>
+        <p data-key="svc2_desc">In-depth market insights and analysis to make informed business decisions.</p>
+        <a href="pages/services2.html" class="btn-primary" data-key="svc_btn">Learn More</a>
       </div>
 
       <div class="service-card">
         <img src="images/im3.jpg" alt="Technology Solutions" style="border-radius: 50%;">
-        <h3>Technology Solutions</h3>
-        <p>Innovative tech solutions that streamline operations and improve efficiency.</p>
-        <a href="pages/services3.html" class="btn-primary">Learn More</a>
+        <h3 data-key="svc3_title">Technology Solutions</h3>
+        <p data-key="svc3_desc">Innovative tech solutions that streamline operations and improve efficiency.</p>
+        <a href="pages/services3.html" class="btn-primary" data-key="svc_btn">Learn More</a>
       </div>
     </div>
   </div>
@@ -145,32 +207,32 @@
 
 <section class="how-it-works" style="margin: 2rem 0;">
   <div class="container">
-    <h2>How It Works</h2>
-    <p>We make it simple for you to get results with our 4-step process.</p>
+    <h2 data-key="how_title">How It Works</h2>
+    <p data-key="how_subtitle">We make it simple for you to get results with our 4-step process.</p>
 
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-circle">1</div>
-        <h3>Consultation</h3>
-        <p>We start by understanding your business needs and goals.</p>
+        <h3 data-key="how1_title">Consultation</h3>
+        <p data-key="how1_desc">We start by understanding your business needs and goals.</p>
       </div>
 
       <div class="step-card">
         <div class="step-circle">2</div>
-        <h3>Strategy</h3>
-        <p>We design a clear plan to achieve your objectives efficiently.</p>
+        <h3 data-key="how2_title">Strategy</h3>
+        <p data-key="how2_desc">We design a clear plan to achieve your objectives efficiently.</p>
       </div>
 
       <div class="step-card">
         <div class="step-circle">3</div>
-        <h3>Execution</h3>
-        <p>Our team implements the strategy with precision and focus.</p>
+        <h3 data-key="how3_title">Execution</h3>
+        <p data-key="how3_desc">Our team implements the strategy with precision and focus.</p>
       </div>
 
       <div class="step-card">
         <div class="step-circle">4</div>
-        <h3>Results</h3>
-        <p>We track progress and deliver results for your business.</p>
+        <h3 data-key="how4_title">Results</h3>
+        <p data-key="how4_desc">We track progress and deliver results for your business.</p>
       </div>
     </div>
   </div>
@@ -178,45 +240,45 @@
 
 <section class="testimonials">
   <div class="container">
-    <h2>What Our Clients Say</h2>
-    <p>Here’s what our clients have to say about working with us.</p>
+    <h2 data-key="testi_title">What Our Clients Say</h2>
+    <p data-key="testi_subtitle">Here’s what our clients have to say about working with us.</p>
 
     <div class="testimonials-grid">
       <div class="testimonial-card">
-        <p class="testimonial-text">
+        <p class="testimonial-text" data-key="t1_text">
           "This team transformed our business! Professional, reliable, and results-driven."
         </p>
         <div class="testimonial-author">
           <img src="images/1.jpg" alt="Client Photo">
           <div>
-            <h4>Sarah Johnson</h4>
-            <span>CEO, BrightTech</span>
+            <h4 data-key="t1_name">Sarah Johnson</h4>
+            <span data-key="t1_role">CEO, BrightTech</span>
           </div>
         </div>
       </div>
 
       <div class="testimonial-card">
-        <p class="testimonial-text">
+        <p class="testimonial-text" data-key="t2_text">
           "Highly recommend! Their expertise and attention to detail are unmatched."
         </p>
         <div class="testimonial-author">
           <img src="images/test2.jpg" alt="Client Photo">
           <div>
-            <h4>Mark Thompson</h4>
-            <span>Founder, Vision Corp</span>
+            <h4 data-key="t2_name">Mark Thompson</h4>
+            <span data-key="t2_role">Founder, Vision Corp</span>
           </div>
         </div>
       </div>
 
       <div class="testimonial-card">
-        <p class="testimonial-text">
+        <p class="testimonial-text" data-key="t3_text">
           "The process was smooth, and the results exceeded our expectations!"
         </p>
         <div class="testimonial-author">
           <img src="images/test3.jpg" alt="Client Photo">
           <div>
-            <h4>Emily Davis</h4>
-            <span>Marketing Head, Growthify</span>
+            <h4 data-key="t3_name">Emily Davis</h4>
+            <span data-key="t3_role">Marketing Head, Growthify</span>
           </div>
         </div>
       </div>
@@ -225,9 +287,9 @@
 </section>
 <section class="contact-us">
   <div class="container">
-    <h2>Contact Us</h2>
-    <p>If you have any questions or want to work with us, feel free to reach out. We're here to help you succeed.</p>
-    <a href="contact.html" class="contact-btn">Get in Touch</a>
+    <h2 data-key="contactus_title">Contact Us</h2>
+    <p data-key="contactus_desc">If you have any questions or want to work with us, feel free to reach out. We're here to help you succeed.</p>
+    <a href="contact.html" class="contact-btn" data-key="contactus_btn">Get in Touch</a>
   </div>
 </section>
 
@@ -243,40 +305,40 @@
     <!-- Logo Section -->
     <div class="footer-logo">
       <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
-      <h4>Business Consultation</h4>
+      <h4 data-key="footer_title">Business Consultation</h4>
     </div>
 
     <!-- Quick Links -->
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4 data-key="footer_quick">Quick Links</h4>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="services.html" data-key="nav_services">Services</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-services">
-      <h4>Explore Services</h4>
+      <h4 data-key="footer_services">Explore Services</h4>
       <ul>
-        <li><a href="pages/service1.html">Business</a></li>
-        <li><a href="pages/services2.html">Operations</a></li>
-        <li><a href="pages/services3.html">Financial</a></li>
-        <li><a href="pages/services4.html">Marketing</a></li>
-        <li><a href="pages/services5.html">HR & Talent</a></li>
-        <li><a href="pages/services6.html">Technology</a></li>
+        <li><a href="pages/service1.html" data-key="nav_business">Business</a></li>
+        <li><a href="pages/services2.html" data-key="nav_operations">Operations</a></li>
+        <li><a href="pages/services3.html" data-key="nav_financial">Financial</a></li>
+        <li><a href="pages/services4.html" data-key="nav_marketing">Marketing</a></li>
+        <li><a href="pages/services5.html" data-key="nav_hr">HR & Talent</a></li>
+        <li><a href="pages/services6.html" data-key="nav_digital">Technology</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p><strong>Email:</strong> info@example.com</p>
-      <p><strong>Phone:</strong> +91 1234567890</p>
+      <h4 data-key="footer_contact">Contact Us</h4>
+      <p><strong data-key="footer_email_label">Email:</strong> info@example.com</p>
+      <p><strong data-key="footer_phone_label">Phone:</strong> +91 1234567890</p>
 
-      <h4>Follow Us</h4>
+      <h4 data-key="footer_follow">Follow Us</h4>
       <div class="social">
         <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
         <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
@@ -286,19 +348,19 @@
 
     <!-- Newsletter -->
     <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <h4 data-key="newsletter_title">Newsletter</h4>
+      <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
       <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+        <input type="email" id="newsletter-email" placeholder="Enter your email" data-ph-key="newsletter_ph" required>
+        <button type="submit" data-key="newsletter_btn">Subscribe</button>
       </form>
-      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;">
+      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;" data-key="newsletter_success">
     ✅ Thank you for subscribing!
   </div>
     </div>
   </div>
 
-  <div class="footer-copy">
+  <div class="footer-copy" data-key="footer_copy">
     &copy; 2025 Your Company Name. All Rights Reserved.
   </div>
 </footer>
@@ -310,5 +372,267 @@
 
   <!-- JS -->
   <script src="js/main.js"></script>
+
+  <!-- i18n Script (added) -->
+  <script>
+    const dictionary = {
+      en: {
+        // nav
+        nav_home: "Home", nav_home1: "Home1", nav_home2: "Home2",
+        nav_about: "About", nav_blog: "Blog", nav_services: "Services",
+        nav_business: "Business", nav_operations: "Operations",
+        nav_financial: "Financial", nav_marketing: "Marketing",
+        nav_hr: "HR & Talent", nav_digital: "Digital", nav_contact: "Contact",
+        logout: "Logout",
+
+        // hero
+        hero_title: "Empowering Your Business for Tomorrow",
+        hero_desc: "We provide strategic consulting, innovative solutions, and actionable insights to help your business thrive in a competitive world.",
+        hero_btn_services: "Our Services",
+        hero_btn_contact: "Get in Touch",
+
+        // about
+        about_title: "About Us",
+        about_text: "We are a consulting firm dedicated to helping businesses grow with innovative solutions and actionable strategies. Our team of experts brings years of experience in various industries to ensure measurable success for our clients. We focus on understanding your business needs and delivering tailored solutions. We are a consulting firm dedicated to helping businesses grow with innovative solutions and actionable strategies. Our team of experts brings years of experience in various industries to ensure measurable success for our clients. We focus on understanding your business needs and delivering tailored solutions.",
+        about_btn: "Learn More About Us",
+
+        // services section
+        services_title: "Our Core Services",
+        services_subtitle: "We help businesses grow by providing strategic, actionable, and innovative solutions.",
+        svc1_title: "Strategy Consulting",
+        svc1_desc: "Expert guidance to shape your business strategy and achieve sustainable growth.",
+        svc2_title: "Market Research",
+        svc2_desc: "In-depth market insights and analysis to make informed business decisions.",
+        svc3_title: "Technology Solutions",
+        svc3_desc: "Innovative tech solutions that streamline operations and improve efficiency.",
+        svc_btn: "Learn More",
+
+        // how it works
+        how_title: "How It Works",
+        how_subtitle: "We make it simple for you to get results with our 4-step process.",
+        how1_title: "Consultation",
+        how1_desc: "We start by understanding your business needs and goals.",
+        how2_title: "Strategy",
+        how2_desc: "We design a clear plan to achieve your objectives efficiently.",
+        how3_title: "Execution",
+        how3_desc: "Our team implements the strategy with precision and focus.",
+        how4_title: "Results",
+        how4_desc: "We track progress and deliver results for your business.",
+
+        // testimonials
+        testi_title: "What Our Clients Say",
+        testi_subtitle: "Here’s what our clients have to say about working with us.",
+        t1_text: "\"This team transformed our business! Professional, reliable, and results-driven.\"",
+        t1_name: "Sarah Johnson", t1_role: "CEO, BrightTech",
+        t2_text: "\"Highly recommend! Their expertise and attention to detail are unmatched.\"",
+        t2_name: "Mark Thompson", t2_role: "Founder, Vision Corp",
+        t3_text: "\"The process was smooth, and the results exceeded our expectations!\"",
+        t3_name: "Emily Davis", t3_role: "Marketing Head, Growthify",
+
+        // contact CTA
+        contactus_title: "Contact Us",
+        contactus_desc: "If you have any questions or want to work with us, feel free to reach out. We're here to help you succeed.",
+        contactus_btn: "Get in Touch",
+
+        // footer
+        footer_title: "Business Consultation",
+        footer_quick: "Quick Links",
+        footer_services: "Explore Services",
+        footer_contact: "Contact Us",
+        footer_email_label: "Email:",
+        footer_phone_label: "Phone:",
+        footer_follow: "Follow Us",
+        newsletter_title: "Newsletter",
+        newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+        newsletter_ph: "Enter your email",
+        newsletter_btn: "Subscribe",
+        newsletter_success: "✅ Thank you for subscribing!",
+        footer_copy: "© 2025 Your Company Name. All Rights Reserved."
+      },
+      ar: {
+        // nav
+        nav_home: "الرئيسية", nav_home1: "الرئيسية 1", nav_home2: "الرئيسية 2",
+        nav_about: "معلومات عنا", nav_blog: "المدونة", nav_services: "الخدمات",
+        nav_business: "الأعمال", nav_operations: "العمليات",
+        nav_financial: "المالية", nav_marketing: "التسويق",
+        nav_hr: "الموارد البشرية", nav_digital: "الرقمية", nav_contact: "اتصل بنا",
+        logout: "تسجيل الخروج",
+
+        // hero
+        hero_title: "تمكين عملك من أجل الغد",
+        hero_desc: "نقدم استشارات استراتيجية وحلولًا مبتكرة ورؤى عملية لمساعدة عملك على الازدهار في عالم تنافسي.",
+        hero_btn_services: "خدماتنا",
+        hero_btn_contact: "تواصل معنا",
+
+        // about
+        about_title: "من نحن",
+        about_text: "نحن شركة استشارات تساعد الشركات على النمو بحلول مبتكرة واستراتيجيات عملية. نركّز على فهم احتياجات عملك وتقديم حلول مخصصة يقودها فريق ذو خبرة واسعة.",
+        about_btn: "اعرف المزيد عنا",
+
+        // services
+        services_title: "خدماتنا الأساسية",
+        services_subtitle: "نساعد الشركات على النمو بحلول استراتيجية وعملية ومبتكرة.",
+        svc1_title: "الاستشارات الاستراتيجية",
+        svc1_desc: "توجيه خبير لصياغة استراتيجية عملك وتحقيق نمو مستدام.",
+        svc2_title: "أبحاث السوق",
+        svc2_desc: "رؤى وتحليلات سوقية معمقة لاتخاذ قرارات مدروسة.",
+        svc3_title: "حلول تقنية",
+        svc3_desc: "حلول تقنية مبتكرة لتبسيط العمليات وتحسين الكفاءة.",
+        svc_btn: "اعرف المزيد",
+
+        // how it works
+        how_title: "كيف نعمل",
+        how_subtitle: "نسهّل عليك الحصول على النتائج عبر 4 خطوات.",
+        how1_title: "الاستشارة",
+        how1_desc: "نبدأ بفهم احتياجات وأهداف عملك.",
+        how2_title: "الاستراتيجية",
+        how2_desc: "نضع خطة واضحة لتحقيق أهدافك بكفاءة.",
+        how3_title: "التنفيذ",
+        how3_desc: "ينفّذ فريقنا الاستراتيجية بدقة وتركيز.",
+        how4_title: "النتائج",
+        how4_desc: "نتابع التقدم ونحقق نتائج لعملك.",
+
+        // testimonials
+        testi_title: "آراء عملائنا",
+        testi_subtitle: "آراء عملائنا حول العمل معنا.",
+        t1_text: "«هذا الفريق غيّر أعمالنا! محترفون وموثوقون ونتائجهم مبهرة.»",
+        t1_name: "سارة جونسون", t1_role: "الرئيس التنفيذي، برايت تك",
+        t2_text: "«أنصح بهم بشدة! خبرة عالية وانتباه مذهل للتفاصيل.»",
+        t2_name: "مارك تومسون", t2_role: "المؤسس، فيجن كورب",
+        t3_text: "«كانت العملية سلسة والنتائج أعلى من التوقعات!»",
+        t3_name: "إميلي ديفيس", t3_role: "رئيس التسويق، جروثيفاي",
+
+        // contact CTA
+        contactus_title: "اتصل بنا",
+        contactus_desc: "لديك أسئلة أو ترغب في العمل معنا؟ تواصل معنا — نحن هنا لدعمك.",
+        contactus_btn: "تواصل معنا",
+
+        // footer
+        footer_title: "استشارات الأعمال",
+        footer_quick: "روابط سريعة",
+        footer_services: "استكشف الخدمات",
+        footer_contact: "اتصل بنا",
+        footer_email_label: "البريد الإلكتروني:",
+        footer_phone_label: "الهاتف:",
+        footer_follow: "تابعنا",
+        newsletter_title: "النشرة البريدية",
+        newsletter_text: "احصل على نصائح وتحديثات أسبوعية في بريدك.",
+        newsletter_ph: "أدخل بريدك الإلكتروني",
+        newsletter_btn: "اشترك",
+        newsletter_success: "✅ شكرًا لاشتراكك!",
+        footer_copy: "© 2025 اسم شركتك. جميع الحقوق محفوظة."
+      },
+      he: {
+        // nav
+        nav_home: "בית", nav_home1: "בית 1", nav_home2: "בית 2",
+        nav_about: "עלינו", nav_blog: "בלוג", nav_services: "שירותים",
+        nav_business: "עסקים", nav_operations: "תפעול",
+        nav_financial: "פיננסים", nav_marketing: "שיווק",
+        nav_hr: "משאבי אנוש", nav_digital: "דיגיטל", nav_contact: "צור קשר",
+        logout: "התנתק",
+
+        // hero
+        hero_title: "מעצימים את העסק שלך למחר",
+        hero_desc: "אנו מספקים ייעוץ אסטרטגי, פתרונות חדשניים ותובנות מעשיות כדי לעזור לעסק שלך לשגשג בעולם תחרותי.",
+        hero_btn_services: "השירותים שלנו",
+        hero_btn_contact: "צור קשר",
+
+        // about
+        about_title: "עלינו",
+        about_text: "חברת ייעוץ המסייעת לעסקים לצמוח באמצעות פתרונות חדשניים ואסטרטגיות מעשיות. אנו מתמקדים בהבנת הצרכים שלך ובהתאמת פתרונות מדידים.",
+        about_btn: "למידע נוסף עלינו",
+
+        // services
+        services_title: "שירותי הליבה שלנו",
+        services_subtitle: "מסייעים בצמיחת עסקים באמצעות פתרונות אסטרטגיים, מעשיים וחדשניים.",
+        svc1_title: "ייעוץ אסטרטגי",
+        svc1_desc: "הכוונה מקצועית לעיצוב האסטרטגיה ולהשגת צמיחה בת-קיימא.",
+        svc2_title: "מחקר שוק",
+        svc2_desc: "תובנות וניתוחים מעמיקים לקבלת החלטות מדויקות.",
+        svc3_title: "פתרונות טכנולוגיים",
+        svc3_desc: "פתרונות טכנולוגיים חדשניים לייעול תהליכים ושיפור היעילות.",
+        svc_btn: "למד עוד",
+
+        // how it works
+        how_title: "איך זה עובד",
+        how_subtitle: "ארבעה צעדים פשוטים לתוצאות.",
+        how1_title: "פגישת היכרות",
+        how1_desc: "מבינים את הצרכים והיעדים של העסק.",
+        how2_title: "אסטרטגיה",
+        how2_desc: "בונים תכנית ברורה להשגת היעדים.",
+        how3_title: "ביצוע",
+        how3_desc: "מיישמים את התכנית בדיוק ובמיקוד.",
+        how4_title: "תוצאות",
+        how4_desc: "עוקבים אחר ההתקדמות ומספקים תוצאות לעסק.",
+
+        // testimonials
+        testi_title: "מה הלקוחות שלנו אומרים",
+        testi_subtitle: "כך נשמעים הלקוחות שעבדו איתנו.",
+        t1_text: "״הצוות הזה שינה לנו את העסק! מקצועיים, אמינים ותכליתיים.״",
+        t1_name: "שרה ג׳ונסון", t1_role: "מנכ״לית, BrightTech",
+        t2_text: "״ממליץ מאוד! מומחיות וירידה לפרטים ללא תחרות.״",
+        t2_name: "מארק תומפסון", t2_role: "מייסד, Vision Corp",
+        t3_text: "״תהליך חלק ותוצאות מעבר לציפיות!״",
+        t3_name: "אמילי דייוויס", t3_role: "מנהלת שיווק, Growthify",
+
+        // contact CTA
+        contactus_title: "צור קשר",
+        contactus_desc: "יש לך שאלות או מעוניין לעבוד איתנו? נשמח לשוחח ולעזור לך להצליח.",
+        contactus_btn: "צור קשר",
+
+        // footer
+        footer_title: "ייעוץ עסקי",
+        footer_quick: "קישורים מהירים",
+        footer_services: "חקור שירותים",
+        footer_contact: "צור קשר",
+        footer_email_label: "אימייל:",
+        footer_phone_label: "טלפון:",
+        footer_follow: "עקבו אחרינו",
+        newsletter_title: "ניוזלטר",
+        newsletter_text: "קבלו טיפים ועדכונים שבועיים לתיבת הדואר.",
+        newsletter_ph: "הכנס אימייל",
+        newsletter_btn: "הרשמה",
+        newsletter_success: "✅ תודה שנרשמתם!",
+        footer_copy: "© 2025 שם החברה שלך. כל הזכויות שמורות."
+      }
+    };
+
+    function applyTranslations(lang) {
+      const els = document.querySelectorAll("[data-key]");
+      els.forEach(el => {
+        const key = el.getAttribute("data-key");
+        const txt = dictionary[lang] && dictionary[lang][key];
+        if (typeof txt === "string") el.textContent = txt;
+      });
+
+      // placeholders
+      const phEls = document.querySelectorAll("[data-ph-key]");
+      phEls.forEach(el => {
+        const key = el.getAttribute("data-ph-key");
+        const txt = dictionary[lang] && dictionary[lang][key];
+        if (typeof txt === "string") el.placeholder = txt;
+      });
+
+      // dir + lang
+      const rtl = (lang === "ar" || lang === "he");
+      document.documentElement.lang = lang;
+      document.documentElement.dir = rtl ? "rtl" : "ltr";
+      document.body.dir = rtl ? "rtl" : "ltr";
+    }
+
+    // init
+    (function initI18n(){
+  const select = document.getElementById("languageToggle");
+  const saved = localStorage.getItem("site_lang") || "en";
+  select.value = saved;
+  applyTranslations(saved); // ✅ always apply
+  select.addEventListener("change", e => {
+    const lang = e.target.value;
+    localStorage.setItem("site_lang", lang);
+    applyTranslations(lang);
+  });
+})();
+
+  </script>
 </body>
 </html>

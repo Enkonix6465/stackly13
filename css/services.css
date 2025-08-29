@@ -1,7 +1,5 @@
-
 /* =========================
    COMMON CONTAINER
-  
 ========================= */
 .container {
   max-width: 1200px;
@@ -253,11 +251,11 @@
   background-color: white;
   color:#007b8f;
 }
+
 /* =========================
    BUSINESS CONSULTING PROMO
 ========================= */
 .promo-section {
-    
   position: relative;
   background: url("../images/promo-bg.jpg") center/cover no-repeat;
   padding: 6rem 1.5rem;
@@ -271,7 +269,6 @@
 }
 
 .promo-container {
-
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -325,13 +322,16 @@
 .promo-card:nth-child(2) { animation-delay: 0.3s; }
 .promo-card:nth-child(3) { animation-delay: 0.5s; }
 
-/* Reuse previous keyframes */
 @keyframes fadeSlideUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+/* =========================
+   DARK MODE
+========================= */
 body.dark-mode {
   background-color: #121212;
   color: white;
@@ -353,7 +353,6 @@ body.dark-mode .services-header .container h1{
 body.dark-mode .services-list-section{
   background: black;
   color: white;
-
 }
 body.dark-mode .services-list-section .container .service-card{
   background: black;
@@ -411,7 +410,10 @@ body.dark-mode .contact-btn:hover {
 body.dark-mode .contact-container h2 {
   color: #007BFF;
 }
-/* Mobile menu button */
+
+/* =========================
+   MOBILE MENU
+========================= */
 .mobile-menu-btn {
   display: none;
   background: none;
@@ -435,6 +437,7 @@ body.dark-mode .contact-container h2 {
     background-color: black;
   }
 }
+
 /* Mobile Menu hidden by default */
 .nav-menu.mobile-active {
   display: flex !important;

@@ -49,6 +49,11 @@
   margin-bottom: 20px;
 }
 
+.language-select {
+  margin-bottom: 15px;
+  padding: 6px;
+  border-radius: 6px;
+}
   </style>
 </head>
 <body>
@@ -64,24 +69,128 @@
       <div class="auth-container">
         <img src="images/cropped-logo111.png" alt="Logo" class="auth-logo">
 
-        <h2>Login</h2>
+        <!-- Language Selector -->
+        <select id="language-selector" class="language-select">
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="he">עברית</option>
+        </select>
+
+        <h2 data-key="login_title">Login</h2>
         <form id="loginForm">
-          <input type="text" id="loginUsername" placeholder="Email" required>
+          <input type="text" id="loginUsername" data-key="email" placeholder="Email" required>
 
           <div class="password-field">
-            <input type="password" id="loginPassword" placeholder="Password" required>
+            <input type="password" id="loginPassword" data-key="password" placeholder="Password" required>
             <span class="toggle-password" onclick="togglePassword('loginPassword', this)">👁️</span>
           </div>
 
-          <button type="submit">Login</button>
+          <button type="submit" data-key="login_btn">Login</button>
           <button type="button" id="darkModeToggle">🌙</button>
         </form>
 
-        <p>Don’t have an account? <a href="signup.html">Sign up here</a></p>
-        <a href="forgot.html">Forgot Password?</a>
+        <p><span data-key="no_account">Don’t have an account?</span> <a href="signup.html" data-key="signup_link">Sign up here</a></p>
+        <a href="forgot.html" data-key="forgot_password">Forgot Password?</a>
       </div>
     </div>
   </div>
+
+  <script>
+    // Dictionary
+    const I18N = {
+      en: {
+        page_title: "Login",
+        login_title: "Login",
+        email: "Email",
+        password: "Password",
+        login_btn: "Login",
+        no_account: "Don’t have an account?",
+        signup_link: "Sign up here",
+        forgot_password: "Forgot Password?"
+      },
+      ar: {
+        page_title: "تسجيل الدخول",
+        login_title: "تسجيل الدخول",
+        email: "البريد الإلكتروني",
+        password: "كلمة المرور",
+        login_btn: "تسجيل الدخول",
+        no_account: "ليس لديك حساب؟",
+        signup_link: "سجل هنا",
+        forgot_password: "هل نسيت كلمة المرور؟"
+      },
+      he: {
+        page_title: "התחברות",
+        login_title: "התחברות",
+        email: "אימייל",
+        password: "סיסמה",
+        login_btn: "התחבר",
+        no_account: "אין לך חשבון?",
+        signup_link: "הירשם כאן",
+        forgot_password: "שכחת סיסמה?"
+      }
+    };
+
+    const RTL_LANGS = new Set(["ar", "he"]);
+
+    function applyTranslations(lang) {
+      const dict = I18N[lang] || I18N.en;
+
+      // title
+      if (dict.page_title) document.title = dict.page_title;
+
+      // html dir/lang
+      document.documentElement.lang = lang;
+      document.documentElement.dir = RTL_LANGS.has(lang) ? "rtl" : "ltr";
+
+      // data-key translations
+      document.querySelectorAll("[data-key]").forEach((el) => {
+        const key = el.getAttribute("data-key");
+        if (dict[key]) {
+          if (el.tagName === "INPUT") {
+            el.placeholder = dict[key];
+          } else {
+            el.textContent = dict[key];
+          }
+        }
+      });
+
+      // sync selector
+      const sel = document.getElementById("language-selector");
+      if (sel && sel.value !== lang) sel.value = lang;
+
+      // save
+      localStorage.setItem("site_lang", lang);
+    }
+
+    function detectInitialLang() {
+      return localStorage.getItem("site_lang") || "en";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const initial = detectInitialLang();
+      applyTranslations(initial);
+
+      const selector = document.getElementById("language-selector");
+      if (selector) {
+        selector.value = initial;
+        selector.addEventListener("change", (e) => {
+          applyTranslations(e.target.value);
+        });
+      }
+    });
+
+    // toggle password
+    function togglePassword(id, el) {
+      const input = document.getElementById(id);
+      if (input.type === "password") {
+        input.type = "text";
+        el.textContent = "🙈";
+      } else {
+        input.type = "password";
+        el.textContent = "👁️";
+      }
+    }
+  </script>
 
   <script src="js/auth.js"></script>
 </body>

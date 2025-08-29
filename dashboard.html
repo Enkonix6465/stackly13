@@ -3,96 +3,258 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title data-translate="dashboardTitle">Dashboard</title>
   <link rel="stylesheet" href="css/dashboard.css">
   <script src="js/darkmode.js" defer></script>  
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" href="css/header.css">
-<script src="js/main.js" defer></script>
-
+  <link rel="stylesheet" href="css/header2.css">
+  <script src="js/main.js" defer></script>
+  <style>
+    .lang-selector {
+      margin-left: 15px;
+      padding: 5px;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
+  <header>
+  <div class="logo">
+    <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo" ></a>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html" data-translate="home">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html"  data-translate="home1">Home 1</a></li>
+            <li><a href="pages/home2.html" data-translate="home2">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" data-translate="about">About</a></li>
+        <li><a href="blog.html" data-translate="blog">Blog</a></li>
+        <li class="dropdown">
+          <a href="services.html" data-translate="services">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li class="mobile-only"><a href="services.html" data-i18n="nav_all_services">All Services</a></li>
+            <li><a href="pages/service1.html" data-translate="business">Business</a></li>
+            <li><a href="pages/services2.html" data-translate="operations">Operations</a></li>
+            <li><a href="pages/services3.html" data-translate="financial">Financial</a></li>
+            <li><a href="pages/services4.html" data-translate="marketing">Marketing</a></li>
+            <li><a href="pages/services5.html" data-translate="hr">HR & Talent</a></li>
+            <li><a href="pages/services6.html" data-translate="digital">Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" data-translate="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Language Toggle -->
+    <select id="language-selector" class="lang-selector">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn" data-translate="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+  <!--
   <header>
     <div class="logo">
       <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
     </div>
 
-  <button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
+    <button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
     <nav>
       <ul class="nav-menu">
         <li>
-          <a href="index.html">Home</a>
+          <a href="index.html" data-translate="home">Home</a>
           <ul class="dropdown">
-            <li><a href="index.html">Home1</a></li>
-            <li><a href="pages/home2.html">Home2</a></li>
+            <li><a href="index.html" data-translate="home1">Home1</a></li>
+            <li><a href="pages/home2.html" data-translate="home2">Home2</a></li>
           </ul>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" data-translate="about">About</a></li>
+        <li><a href="blog.html" data-translate="blog">Blog</a></li>
         <li>
-          <a href="services.html">Services</a>
+          <a href="services.html" data-translate="services">Services</a>
           <ul class="dropdown">
-            <li><a href="pages/service1.html">Business</a></li>
-            <li><a href="pages/services2.html">Operations</a></li>
-            <li><a href="pages/services3.html">Financial</a></li>
-            <li><a href="pages/services4.html">Marketing</a></li>
-            <li><a href="pages/services5.html">HR&Talent</a></li>
-            <li><a href="pages/services6.html">Digital</a></li>
+            <li><a href="pages/service1.html" data-translate="business">Business</a></li>
+            <li><a href="pages/services2.html" data-translate="operations">Operations</a></li>
+            <li><a href="pages/services3.html" data-translate="financial">Financial</a></li>
+            <li><a href="pages/services4.html" data-translate="marketing">Marketing</a></li>
+            <li><a href="pages/services5.html" data-translate="hr">HR & Talent</a></li>
+            <li><a href="pages/services6.html" data-translate="digital">Digital</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" data-translate="contact">Contact</a></li>
       </ul>
     </nav>
-<div class="profile-container">
-  <div class="profile" id="profile-dropdown-toggle">
-    <img id="profile-pic" src="../images/.jpg" alt="Profile Picture">
-    <span id="profile-initials" style="display:none;"></span>
-  </div>
 
-  <ul class="profile-dropdown" id="profile-dropdown">
-    <li><a href="dashboard.html">Dashboard </a></li>
-    <li><a href="#" id="logout-btn">Logout</a></li>
-  </ul>
+    <select id="language-selector" class="lang-selector">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
 
-  <button id="dark-mode-toggle">🌙</button>
-</div>
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <img id="profile-pic" src="../images/.jpg" alt="Profile Picture">
+        <span id="profile-initials" style="display:none;"></span>
+      </div>
 
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="dashboard.html" data-translate="dashboard">Dashboard</a></li>
+        <li><a href="#" id="logout-btn" data-translate="logout">Logout</a></li>
+      </ul>
 
-
-
-
-  
-  </header>
+      <button id="dark-mode-toggle">🌙</button>
+    </div>
+  </header>-->
 
   <div class="charts-container">
-  <div class="chart-card">
-    <h4>Total Users</h4>
-    <canvas id="totalUsersChart"></canvas>
+    <div class="chart-card">
+      <h4 data-translate="totalUsers">Total Users</h4>
+      <canvas id="totalUsersChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+      <h4 data-translate="signupsToday">Signups Today</h4>
+      <canvas id="todaySignupChart"></canvas>
+    </div>
   </div>
 
-  <div class="chart-card">
-    <h4>Signups Today</h4>
-    <canvas id="todaySignupChart"></canvas>
-  </div>
-</div>
-
-
-   
   <div class="dashboard-container">
-    <h2>User Dashboard</h2>
+    <h2 data-translate="userDashboard">User Dashboard</h2>
 
     <table border="1">
       <thead>
         <tr>
-          <th>Username</th>
-          <th>Password</th>
-          <th>Actions</th> <!-- new -->
+          <th data-translate="username">Username</th>
+          <th data-translate="password">Password</th>
+          <th data-translate="actions">Actions</th>
         </tr>
       </thead>
       <tbody id="userTableBody"></tbody>
     </table>
-   
   </div>
+
+  <script>
+    const translations = {
+      en: {
+        dashboardTitle: "Dashboard",
+        home: "Home",
+        home1: "Home1",
+        home2: "Home2",
+        about: "About",
+        blog: "Blog",
+        services: "Services",
+        business: "Business",
+        operations: "Operations",
+        financial: "Financial",
+        marketing: "Marketing",
+        hr: "HR & Talent",
+        digital: "Digital",
+        contact: "Contact",
+        dashboard: "Dashboard",
+        logout: "Logout",
+        totalUsers: "Total Users",
+        signupsToday: "Signups Today",
+        userDashboard: "User Dashboard",
+        username: "Username",
+        password: "Password",
+        actions: "Actions"
+      },
+      ar: {
+        dashboardTitle: "لوحة التحكم",
+        home: "الرئيسية",
+        home1: "الصفحة 1",
+        home2: "الصفحة 2",
+        about: "من نحن",
+        blog: "مدونة",
+        services: "الخدمات",
+        business: "الأعمال",
+        operations: "العمليات",
+        financial: "المالية",
+        marketing: "التسويق",
+        hr: "الموارد البشرية",
+        digital: "الرقمية",
+        contact: "اتصل بنا",
+        dashboard: "لوحة التحكم",
+        logout: "تسجيل خروج",
+        totalUsers: "إجمالي المستخدمين",
+        signupsToday: "التسجيلات اليوم",
+        userDashboard: "لوحة المستخدم",
+        username: "اسم المستخدم",
+        password: "كلمة المرور",
+        actions: "الإجراءات"
+      },
+      he: {
+        dashboardTitle: "לוח בקרה",
+        home: "דף הבית",
+        home1: "בית 1",
+        home2: "בית 2",
+        about: "אודות",
+        blog: "בלוג",
+        services: "שירותים",
+        business: "עסקים",
+        operations: "תפעול",
+        financial: "פיננסי",
+        marketing: "שיווק",
+        hr: "כוח אדם",
+        digital: "דיגיטלי",
+        contact: "צור קשר",
+        dashboard: "לוח בקרה",
+        logout: "התנתק",
+        totalUsers: "סה״כ משתמשים",
+        signupsToday: "הרשמות היום",
+        userDashboard: "לוח משתמש",
+        username: "שם משתמש",
+        password: "סיסמה",
+        actions: "פעולות"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll("[data-translate]").forEach(el => {
+        const key = el.getAttribute("data-translate");
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      // RTL support
+      if (lang === "ar" || lang === "he") {
+        document.body.dir = "rtl";
+      } else {
+        document.body.dir = "ltr";
+      }
+    }
+
+    document.getElementById("language-selector").addEventListener("change", function () {
+      setLanguage(this.value);
+      localStorage.setItem("selectedLang", this.value);
+    });
+
+    // Load saved language
+    const savedLang = localStorage.getItem("selectedLang") || "en";
+    document.getElementById("language-selector").value = savedLang;
+    setLanguage(savedLang);
+  </script>
+
   <script src="js/dashboard.js"></script>
 </body>
 </html>

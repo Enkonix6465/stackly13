@@ -1,144 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Financial Advisory & Planning</title>
-  <link rel="stylesheet" href="../css/services1.css">
-  <link rel="stylesheet" href="../css/header.css">
-  <link rel="stylesheet" href="../css/footer.css"> 
+  <link rel="stylesheet" href="../css/services1.css" />
+  <link rel="stylesheet" href="../css/header2.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+
   <script src="../js/home2.js" defer></script>
+ <script src="../js/main.js" defer></script>
 </head>
 <body>
+  
   <header>
-    <div class="logo">
-      <a href="index.html"><img src="../images/cropped-logo111.png" alt="Logo"></a>
-    </div>
-<button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button> 
+  <div class="logo">
+    <a href="../index.html"><img src="../images/cropped-logo111.png" alt="Logo" ></a>
+  </div>
+
+  <div class="header-right">
     <nav>
-      <ul class="nav-menu">
-        <li>
-          <a href="../index.html">Home</a>
-          <ul class="dropdown">
-            <li><a href="../index.html">Home1</a></li>
-            <li><a href="../pages/home2.html">Home2</a></li>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="../index.html" data-key="nav_home">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../index.html"  data-key="nav_home1">Home 1</a></li>
+            <li><a href="../pages/home2.html" data-key="nav_home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-        <li>
-          <a href="../services.html">Services</a>
-          <ul class="dropdown">
-            <li><a href="service1.html">Business</a></li>
-            <li><a href="services2.html">Operations</a></li>
-            <li><a href="services3.html">Financial</a></li>
-            <li><a href="services4.html">Marketing</a></li>
-            <li><a href="services5.html">HR&Talent</a></li>
-            <li><a href="services6.html">Digital</a></li>
+        <li><a href="../about.html" data-key="nav_about">About</a></li>
+        <li><a href="../blog.html" data-key="nav_blog">Blog</a></li>
+        <li class="dropdown">
+          <a href="../services.html" data-key="nav_services">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li class="mobile-only"><a href="../services.html" data-i18n="nav_all_services">All Services</a></li>
+            <li><a href="./service1.html" data-key="service_business">Business</a></li>
+            <li><a href="./services2.html" data-key="service_operations">Operations</a></li>
+            <li><a href="./services3.html" data-key="service_financial">Financial</a></li>
+            <li><a href="./services4.html" data-key="service_marketing">Marketing</a></li>
+            <li><a href="./services5.html" data-key="service_hr">HR & Talent</a></li>
+            <li><a href="./services6.html" data-key="service_digital">Digital</a></li>
           </ul>
         </li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
 
+    <!-- Language Toggle -->
+    <select id="language-selector" aria-label="Language">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
     <div class="profile-container">
-      <div class="profile">
-        <img id="profile-pic" src="../images/profile.jpg" alt="Profile Picture">
-        <span id="profile-initials" style="display:none;"></span>
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
       </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+  <!--
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="../images/cropped-logo111.png" alt="Logo" /></a>
+    </div>
+
+    <button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
+
+    <nav>
+      <ul class="nav-menu">
+        <li>
+          <a href="../index.html" data-key="nav_home">Home</a>
+          <ul class="dropdown">
+            <li><a href="../index.html" data-key="nav_home1">Home1</a></li>
+            <li><a href="../pages/home2.html" data-key="nav_home2">Home2</a></li>
+          </ul>
+        </li>
+        <li><a href="../about.html" data-key="nav_about">About</a></li>
+        <li><a href="../blog.html" data-key="nav_blog">Blog</a></li>
+        <li>
+          <a href="../services.html" data-key="nav_services">Services</a>
+          <ul class="dropdown">
+            <li><a href="service1.html" data-key="service_business">Business</a></li>
+            <li><a href="services2.html" data-key="service_operations">Operations</a></li>
+            <li><a href="services3.html" data-key="service_financial">Financial</a></li>
+            <li><a href="services4.html" data-key="service_marketing">Marketing</a></li>
+            <li><a href="services5.html" data-key="service_hr">HR & Talent</a></li>
+            <li><a href="services6.html" data-key="service_digital">Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="../contact.html" data-key="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+
+  
+      <select id="language-selector" aria-label="Language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <img id="profile-pic" src="../images/.jpg" alt="Profile Picture" />
+        <span id="profile-initials" style="display: none"></span>
+      </div>
+
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
+      </ul>
+
       <button id="dark-mode-toggle">🌙</button>
+
+     
     </div>
   </header>
-
+-->
   <!-- 1. Hero Section -->
-  <section class="hero fade-in" style="background-image: url('../images/s1.jpg');">
+  <section class="hero fade-in" style="background-image: url('../images/s1.jpg')">
     <div class="overlay">
-      <h1>Financial Advisory & Planning</h1>
-      <p>Helping businesses and individuals make smart financial decisions for long-term success.</p>
+      <h1 data-key="hero_title">Financial Advisory & Planning</h1>
+      <p data-key="hero_text">Helping businesses and individuals make smart financial decisions for long-term success.</p>
     </div>
   </section>
 
   <!-- 2. About Section -->
   <section class="about slide-in-left">
     <div class="content">
-      <h2>About This Service</h2>
-      <p>
-        Our Financial Advisory & Planning service provides expert guidance to help you manage 
-        your money effectively, minimize risks, and achieve your financial goals. 
-        We offer personalized strategies for budgeting, investments, tax planning, and 
-        long-term financial growth.
+      <h2 data-key="about_title">About This Service</h2>
+      <p data-key="about_text">
+        Our Financial Advisory & Planning service provides expert guidance to help you manage
+        your money effectively, minimize risks, and achieve your financial goals. We offer
+        personalized strategies for budgeting, investments, tax planning, and long-term
+        financial growth.
       </p>
     </div>
   </section>
 
   <!-- 3. Features Section -->
-  <section class="features fade-in" style="background-image: url('../images/finance.jpeg');">
+  <section class="features fade-in" style="background-image: url('../images/finance.jpeg')">
     <div class="overlay">
-      <h2>What We Offer</h2>
+      <h2 data-key="features_title">What We Offer</h2>
       <div class="grid">
-        <div class="card">💰 
-  <h3>Budgeting & Forecasting</h3>
-  <p>Planning and allocating your financial resources effectively to manage expenses, optimize cash flow, and prepare for future needs.</p>
-</div>
-<div class="card">📈 
-  <h3>Investment Planning</h3>
-  <p>Developing tailored investment strategies to grow your wealth, balance risk, and achieve your financial goals.</p>
-</div>
-<div class="card">🧾 
-  <h3>Tax Optimization</h3>
-  <p>Minimizing tax liabilities through careful planning and leveraging available deductions, credits, and incentives.</p>
-</div>
-<div class="card">🏦 
-  <h3>Retirement Planning</h3>
-  <p>Designing a roadmap to secure your financial future and ensure a comfortable and stress-free retirement.</p>
-</div>
-<div class="card">📊 
-  <h3>Risk Management</h3>
-  <p>Identifying potential financial risks and implementing strategies to protect your assets and investments.</p>
-</div>
-<div class="card">💼 
-  <h3>Corporate Financial Strategy</h3>
-  <p>Providing comprehensive financial planning and strategic advice to help businesses achieve long-term stability and growth.</p>
-</div>
-
+        <div class="card">💰
+          <h3 data-key="features_budget_title">Budgeting & Forecasting</h3>
+          <p data-key="features_budget_text">Planning and allocating your financial resources effectively to manage expenses, optimize cash flow, and prepare for future needs.</p>
+        </div>
+        <div class="card">📈
+          <h3 data-key="features_invest_title">Investment Planning</h3>
+          <p data-key="features_invest_text">Developing tailored investment strategies to grow your wealth, balance risk, and achieve your financial goals.</p>
+        </div>
+        <div class="card">🧾
+          <h3 data-key="features_tax_title">Tax Optimization</h3>
+          <p data-key="features_tax_text">Minimizing tax liabilities through careful planning and leveraging available deductions, credits, and incentives.</p>
+        </div>
+        <div class="card">🏦
+          <h3 data-key="features_retire_title">Retirement Planning</h3>
+          <p data-key="features_retire_text">Designing a roadmap to secure your financial future and ensure a comfortable and stress-free retirement.</p>
+        </div>
+        <div class="card">📊
+          <h3 data-key="features_risk_title">Risk Management</h3>
+          <p data-key="features_risk_text">Identifying potential financial risks and implementing strategies to protect your assets and investments.</p>
+        </div>
+        <div class="card">💼
+          <h3 data-key="features_corp_title">Corporate Financial Strategy</h3>
+          <p data-key="features_corp_text">Providing comprehensive financial planning and strategic advice to help businesses achieve long-term stability and growth.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 4. Case Studies -->
   <section class="case slide-in-right">
-    <h2>Case Studies</h2>
+    <h2 data-key="case_title">Case Studies</h2>
     <div class="case-grid">
       <div class="case-card">
-        <img src="../images/blog1.jpg" alt="Startup Financial Planning">
-        <h3>Startup Financial Planning</h3>
-        <p>Helped a tech startup secure funding and build a 3-year growth roadmap.</p>
+        <img src="../images/blog1.jpg" alt="Startup Financial Planning" />
+        <h3 data-key="case1_title">Startup Financial Planning</h3>
+        <p data-key="case1_text">Helped a tech startup secure funding and build a 3-year growth roadmap.</p>
       </div>
       <div class="case-card">
-        <img src="../images/blog2.jpg" alt="Corporate Budgeting">
-        <h3>Corporate Budgeting</h3>
-        <p>Reduced overspending by 20% through optimized forecasting and tracking.</p>
+        <img src="../images/blog2.jpg" alt="Corporate Budgeting" />
+        <h3 data-key="case2_title">Corporate Budgeting</h3>
+        <p data-key="case2_text">Reduced overspending by 20% through optimized forecasting and tracking.</p>
       </div>
       <div class="case-card">
-        <img src="../images/blog3.jpg" alt="Personal Wealth Management">
-        <h3>Personal Wealth Management</h3>
-        <p>Designed investment strategies that increased ROI by 35% in 18 months.</p>
+        <img src="../images/blog3.jpg" alt="Personal Wealth Management" />
+        <h3 data-key="case3_title">Personal Wealth Management</h3>
+        <p data-key="case3_text">Designed investment strategies that increased ROI by 35% in 18 months.</p>
       </div>
     </div>
   </section>
 
   <!-- 5. Testimonials -->
-  <section class="testimonials fade-in" style="background-image: url('../images/testmonial.jpg');">
+  <section class="testimonials fade-in" style="background-image: url('../images/testmonial.jpg')">
     <div class="overlay">
-      <h2>What Clients Say</h2>
+      <h2 data-key="testimonials_title">What Clients Say</h2>
       <div class="quotes">
         <blockquote>
-          “Their financial expertise helped us stabilize our cash flow and expand strategically.”  
-          <cite>- Anil Mehta, CFO</cite>
+          <span data-key="testimonial1_quote">“Their financial expertise helped us stabilize our cash flow and expand strategically.”</span>
+          <cite data-key="testimonial1_cite">- Anil Mehta, CFO</cite>
         </blockquote>
         <blockquote>
-          “I now feel confident about my retirement plan and investments. Truly reliable advisors!”  
-          <cite>- Sarah Johnson, Individual Client</cite>
+          <span data-key="testimonial2_quote">“I now feel confident about my retirement plan and investments. Truly reliable advisors!”</span>
+          <cite data-key="testimonial2_cite">- Sarah Johnson, Individual Client</cite>
         </blockquote>
       </div>
     </div>
@@ -146,83 +218,375 @@
 
   <!-- 6. Call to Action -->
   <section class="cta slide-in-up">
-    <h2>Plan Your Financial Future Today</h2>
-    <p>Secure your success with expert financial planning and advisory services.</p>
-    <a href="../contact.html" class="btn">Get Started</a>
+    <h2 data-key="cta_title">Plan Your Financial Future Today</h2>
+    <p data-key="cta_text">Secure your success with expert financial planning and advisory services.</p>
+    <a href="../contact.html" class="btn" data-key="cta_btn">Get Started</a>
   </section>
 
   <!-- Footer -->
   <footer>
-  <div class="footer-container">
-    
-    <!-- Logo Section -->
-    <div class="footer-logo">
-      <a href="index.html"><img src="../images/cropped-logo111.png" alt="Logo"></a>
-      <h4>Business Consultation</h4>
-    </div>
+    <div class="footer-container">
+      <!-- Logo Section -->
+      <div class="footer-logo">
+        <a href="index.html"><img src="../images/cropped-logo111.png" alt="Logo" /></a>
+        <h4 data-key="footer_company">Business Consultation</h4>
+      </div>
 
-    <!-- Quick Links -->
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../services.html">Services</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-      </ul>
-    </div>
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4 data-key="footer_links">Quick Links</h4>
+        <ul>
+          <li><a href="../about.html" data-key="nav_about">About</a></li>
+          <li><a href="../services.html" data-key="nav_services">Services</a></li>
+          <li><a href="../blog.html" data-key="nav_blog">Blog</a></li>
+          <li><a href="../contact.html" data-key="nav_contact">Contact</a></li>
+        </ul>
+      </div>
 
-    <!-- Services -->
-    <div class="footer-services">
-      <h4>Explore Services</h4>
-      <ul>
-        <li><a href="../pages/service1.html">Business</a></li>
-        <li><a href="../pages/services2.html">Operations</a></li>
-        <li><a href="../pages/services3.html">Financial</a></li>
-        <li><a href="../pages/services4.html">Marketing</a></li>
-        <li><a href="../pages/services5.html">HR & Talent</a></li>
-        <li><a href="../pages/services6.html">Technology</a></li>
-      </ul>
-    </div>
+      <!-- Services -->
+      <div class="footer-services">
+        <h4 data-key="footer_services">Explore Services</h4>
+        <ul>
+          <li><a href="../pages/service1.html" data-key="service_business">Business</a></li>
+          <li><a href="../pages/services2.html" data-key="service_operations">Operations</a></li>
+          <li><a href="../pages/services3.html" data-key="service_financial">Financial</a></li>
+          <li><a href="../pages/services4.html" data-key="service_marketing">Marketing</a></li>
+          <li><a href="../pages/services5.html" data-key="service_hr">HR & Talent</a></li>
+          <li><a href="../pages/services6.html" data-key="service_technology">Technology</a></li>
+        </ul>
+      </div>
 
-    <!-- Contact -->
-    <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p><strong>Email:</strong> info@example.com</p>
-      <p><strong>Phone:</strong> +91 1234567890</p>
+      <!-- Contact -->
+      <div class="footer-contact">
+        <h4 data-key="footer_contact">Contact Us</h4>
+        <p><strong data-key="footer_email_label">Email:</strong> info@example.com</p>
+        <p><strong data-key="footer_phone_label">Phone:</strong> +91 1234567890</p>
 
-      <h4>Follow Us</h4>
-      <div class="social">
-        <a href="https://facebook.com"><img src="../images/fb.png" alt="Facebook"></a>
-        <a href="https://twitter.com"><img src="../images/x.png" alt="Twitter"></a>
-        <a href="https://instagram.com"><img src="../images/inst.jpeg" alt="Instagram"></a>
+        <h4 data-key="footer_follow">Follow Us</h4>
+        <div class="social">
+          <a href="https://facebook.com"><img src="../images/fb.png" alt="Facebook" /></a>
+          <a href="https://twitter.com"><img src="../images/x.png" alt="Twitter" /></a>
+          <a href="https://instagram.com"><img src="../images/inst.jpeg" alt="Instagram" /></a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h4 data-key="newsletter_title">Newsletter</h4>
+        <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
+        <form id="newsletter-form">
+          <input type="email" id="newsletter-email" data-key="newsletter_placeholder" data-attr="placeholder" placeholder="Enter your email" required />
+          <button type="submit" data-key="newsletter_button">Subscribe</button>
+        </form>
+        <div id="newsletter-success" style="display: none; color: green; margin-top: 8px" data-key="newsletter_success">✅ Thank you for subscribing!</div>
       </div>
     </div>
 
-    <!-- Newsletter -->
-    <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
-      <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;">
-    ✅ Thank you for subscribing!
-  </div>
+    <div class="footer-copy">
+      &copy; 2025 <span data-key="company_name">Your Company Name</span>. <span data-key="rights">All Rights Reserved.</span>
     </div>
-  </div>
-
-  <div class="footer-copy">
-    &copy; 2025 Your Company Name. All Rights Reserved.
-  </div>
-</footer>
-
+  </footer>
 
   <!-- JS -->
   <script src="../js/newsletter.js"></script>
-
   <script src="../js/services1.js"></script>
-  <script src="../js/main.js"></script>
+
+  <!-- i18n dictionary + logic (no external deps) -->
+  <script>
+    const I18N = {
+      en: {
+        /* head/title */
+        page_title: `Financial Advisory & Planning`,
+
+        /* nav */
+        nav_home: `Home`,
+        nav_home1: `Home1`,
+        nav_home2: `Home2`,
+        nav_about: `About`,
+        nav_blog: `Blog`,
+        nav_services: `Services`,
+        nav_contact: `Contact`,
+        service_business: `Business`,
+        service_operations: `Operations`,
+        service_financial: `Financial`,
+        service_marketing: `Marketing`,
+        service_hr: `HR & Talent`,
+        service_digital: `Digital`,
+        service_technology: `Technology`,
+        logout: `Logout`,
+
+        /* hero */
+        hero_title: `Financial Advisory & Planning`,
+        hero_text: `Helping businesses and individuals make smart financial decisions for long-term success.`,
+
+        /* about */
+        about_title: `About This Service`,
+        about_text: `Our Financial Advisory & Planning service provides expert guidance to help you manage your money effectively, minimize risks, and achieve your financial goals. We offer personalized strategies for budgeting, investments, tax planning, and long-term financial growth.`,
+
+        /* features */
+        features_title: `What We Offer`,
+        features_budget_title: `Budgeting & Forecasting`,
+        features_budget_text: `Planning and allocating your financial resources effectively to manage expenses, optimize cash flow, and prepare for future needs.`,
+        features_invest_title: `Investment Planning`,
+        features_invest_text: `Developing tailored investment strategies to grow your wealth, balance risk, and achieve your financial goals.`,
+        features_tax_title: `Tax Optimization`,
+        features_tax_text: `Minimizing tax liabilities through careful planning and leveraging available deductions, credits, and incentives.`,
+        features_retire_title: `Retirement Planning`,
+        features_retire_text: `Designing a roadmap to secure your financial future and ensure a comfortable and stress-free retirement.`,
+        features_risk_title: `Risk Management`,
+        features_risk_text: `Identifying potential financial risks and implementing strategies to protect your assets and investments.`,
+        features_corp_title: `Corporate Financial Strategy`,
+        features_corp_text: `Providing comprehensive financial planning and strategic advice to help businesses achieve long-term stability and growth.`,
+
+        /* case studies */
+        case_title: `Case Studies`,
+        case1_title: `Startup Financial Planning`,
+        case1_text: `Helped a tech startup secure funding and build a 3-year growth roadmap.`,
+        case2_title: `Corporate Budgeting`,
+        case2_text: `Reduced overspending by 20% through optimized forecasting and tracking.`,
+        case3_title: `Personal Wealth Management`,
+        case3_text: `Designed investment strategies that increased ROI by 35% in 18 months.`,
+
+        /* testimonials */
+        testimonials_title: `What Clients Say`,
+        testimonial1_quote: `“Their financial expertise helped us stabilize our cash flow and expand strategically.”`,
+        testimonial1_cite: `- Anil Mehta, CFO`,
+        testimonial2_quote: `“I now feel confident about my retirement plan and investments. Truly reliable advisors!”`,
+        testimonial2_cite: `- Sarah Johnson, Individual Client`,
+
+        /* cta */
+        cta_title: `Plan Your Financial Future Today`,
+        cta_text: `Secure your success with expert financial planning and advisory services.`,
+        cta_btn: `Get Started`,
+
+        /* footer */
+        footer_company: `Business Consultation`,
+        footer_links: `Quick Links`,
+        footer_services: `Explore Services`,
+        footer_contact: `Contact Us`,
+        footer_email_label: `Email:`,
+        footer_phone_label: `Phone:`,
+        footer_follow: `Follow Us`,
+
+        /* newsletter */
+        newsletter_title: `Newsletter`,
+        newsletter_text: `Get weekly tips and updates in your inbox.`,
+        newsletter_placeholder: `Enter your email`,
+        newsletter_button: `Subscribe`,
+        newsletter_success: `✅ Thank you for subscribing!`,
+
+        /* copy */
+        company_name: `Your Company Name`,
+        rights: `All Rights Reserved.`
+      },
+
+      ar: {
+        page_title: `الاستشارات والتخطيط المالي`,
+
+        nav_home: `الرئيسية`,
+        nav_home1: `الصفحة الرئيسية 1`,
+        nav_home2: `الصفحة الرئيسية 2`,
+        nav_about: `من نحن`,
+        nav_blog: `المدونة`,
+        nav_services: `الخدمات`,
+        nav_contact: `اتصل بنا`,
+        service_business: `الأعمال`,
+        service_operations: `العمليات`,
+        service_financial: `المالي`,
+        service_marketing: `التسويق`,
+        service_hr: `الموارد البشرية والمواهب`,
+        service_digital: `الرقمي`,
+        service_technology: `التكنولوجيا`,
+        logout: `تسجيل خروج`,
+
+        hero_title: `الاستشارات والتخطيط المالي`,
+        hero_text: `نساعد الشركات والأفراد على اتخاذ قرارات مالية ذكية لتحقيق نجاح طويل الأمد.`,
+
+        about_title: `عن هذه الخدمة`,
+        about_text: `توفّر خدمة الاستشارات والتخطيط المالي لدينا إرشادًا متخصصًا لإدارة أموالك بفعالية، وتقليل المخاطر، وتحقيق أهدافك المالية. نقدّم استراتيجيات مخصّصة للميزانية والاستثمار والتخطيط الضريبي والنمو المالي طويل الأمد.`,
+
+        features_title: `ماذا نقدم`,
+        features_budget_title: `إعداد الميزانية والتنبؤ`,
+        features_budget_text: `تخطيط وتوزيع الموارد المالية بفعالية لإدارة المصروفات وتحسين التدفق النقدي والاستعداد للاحتياجات المستقبلية.`,
+        features_invest_title: `التخطيط الاستثماري`,
+        features_invest_text: `تطوير استراتيجيات استثمار مخصّصة لنمو الثروة، وموازنة المخاطر، وتحقيق الأهداف المالية.`,
+        features_tax_title: `تحسين الضرائب`,
+        features_tax_text: `تقليل الالتزامات الضريبية من خلال التخطيط الدقيق والاستفادة من الخصومات والائتمانات والحوافز المتاحة.`,
+        features_retire_title: `التخطيط للتقاعد`,
+        features_retire_text: `تصميم خارطة طريق لتأمين مستقبلك المالي وضمان تقاعد مريح وخالٍ من التوتر.`,
+        features_risk_title: `إدارة المخاطر`,
+        features_risk_text: `تحديد المخاطر المالية المحتملة وتطبيق استراتيجيات لحماية أصولك واستثماراتك.`,
+        features_corp_title: `الاستراتيجية المالية للشركات`,
+        features_corp_text: `تقديم تخطيط مالي شامل ونصائح استراتيجية لمساعدة الشركات على تحقيق الاستقرار والنمو طويل الأجل.`,
+
+        case_title: `دراسات حالة`,
+        case1_title: `التخطيط المالي للشركات الناشئة`,
+        case1_text: `ساعدنا شركة تقنية ناشئة في الحصول على التمويل وبناء خارطة طريق للنمو لثلاث سنوات.`,
+        case2_title: `ميزانية الشركات`,
+        case2_text: `خفضنا الإنفاق الزائد بنسبة 20٪ من خلال تحسين التنبؤ والمتابعة.`,
+        case3_title: `إدارة الثروة الشخصية`,
+        case3_text: `صممنا استراتيجيات استثمار رفعت العائد على الاستثمار بنسبة 35٪ خلال 18 شهرًا.`,
+
+        testimonials_title: `آراء العملاء`,
+        testimonial1_quote: `"ساعدتنا خبرتهم المالية على استقرار التدفق النقدي والتوسع بشكل استراتيجي."`,
+        testimonial1_cite: `- أنيل ميهتا، المدير المالي`,
+        testimonial2_quote: `"أصبحت واثقًا الآن من خطة التقاعد واستثماراتي. مستشارون موثوقون بحق!"`,
+        testimonial2_cite: `- سارة جونسون، عميلة فردية`,
+
+        cta_title: `خطط لمستقبلك المالي اليوم`,
+        cta_text: `أمّن نجاحك من خلال التخطيط المالي والخدمات الاستشارية المتخصصة.`,
+        cta_btn: `ابدأ الآن`,
+
+        footer_company: `الاستشارات التجارية`,
+        footer_links: `روابط سريعة`,
+        footer_services: `استكشف الخدمات`,
+        footer_contact: `تواصل معنا`,
+        footer_email_label: `البريد الإلكتروني:`,
+        footer_phone_label: `الهاتف:`,
+        footer_follow: `تابعنا`,
+
+        newsletter_title: `النشرة الإخبارية`,
+        newsletter_text: `احصل على نصائح وتحديثات أسبوعية في بريدك.`,
+        newsletter_placeholder: `أدخل بريدك الإلكتروني`,
+        newsletter_button: `اشترك`,
+        newsletter_success: `✅ شكرًا لاشتراكك!`,
+
+        company_name: `اسم شركتك`,
+        rights: `جميع الحقوق محفوظة.`
+      },
+
+      he: {
+        page_title: `ייעוץ ותכנון פיננסי`,
+
+        nav_home: `בית`,
+        nav_home1: `דף בית 1`,
+        nav_home2: `דף בית 2`,
+        nav_about: `אודות`,
+        nav_blog: `בלוג`,
+        nav_services: `שירותים`,
+        nav_contact: `צור קשר`,
+        service_business: `עסקים`,
+        service_operations: `תפעול`,
+        service_financial: `פיננסים`,
+        service_marketing: `שיווק`,
+        service_hr: `משאבי אנוש וטאלנט`,
+        service_digital: `דיגיטל`,
+        service_technology: `טכנולוגיה`,
+        logout: `התנתק`,
+
+        hero_title: `ייעוץ ותכנון פיננסי`,
+        hero_text: `עוזרים לעסקים ולאנשים פרטיים לקבל החלטות פיננסיות חכמות להצלחה ארוכת טווח.`,
+
+        about_title: `על השירות`,
+        about_text: `שירות הייעוץ והתכנון הפיננסי שלנו מספק הנחיה מקצועית לניהול הכספים שלך ביעילות, להפחתת סיכונים ולהשגת היעדים הפיננסיים שלך. אנו מציעים אסטרטגיות מותאמות אישית לתקצוב, השקעות, תכנון מס וצמיחה לטווח ארוך.`,
+
+        features_title: `מה אנחנו מציעים`,
+        features_budget_title: `תכנון תקציב וחיזוי`,
+        features_budget_text: `תכנון והקצאת משאבים פיננסיים ביעילות לניהול הוצאות, אופטימיזציית תזרימי מזומנים והיערכות לצרכים עתידיים.`,
+        features_invest_title: `תכנון השקעות`,
+        features_invest_text: `פיתוח אסטרטגיות השקעה מותאמות לצמיחת ההון, איזון סיכונים והשגת היעדים הפיננסיים.`,
+        features_tax_title: `אופטימיזציית מס`,
+        features_tax_text: `צמצום חבות המס באמצעות תכנון מדויק וניצול ניכויים, זיכויים ותמריצים זמינים.`,
+        features_retire_title: `תכנון פרישה`,
+        features_retire_text: `בניית מפת דרכים להבטחת עתיד כלכלי יציב ופרישה נוחה וללא לחץ.`,
+        features_risk_title: `ניהול סיכונים`,
+        features_risk_text: `זיהוי סיכונים פיננסיים אפשריים ויישום אסטרטגיות להגנה על הנכסים וההשקעות.`,
+        features_corp_title: `אסטרטגיה פיננסית תאגידית`,
+        features_corp_text: `תכנון פיננסי מקיף וייעוץ אסטרטגי לסיוע לעסקים להשיג יציבות וצמיחה לטווח ארוך.`,
+
+        case_title: `מחקרי מקרה`,
+        case1_title: `תכנון פיננסי לסטארט־אפ`,
+        case1_text: `סייענו לסטארט־אפ טכנולוגי להשיג מימון ולבנות מפת צמיחה ל־3 שנים.`,
+        case2_title: `תקצוב תאגידי`,
+        case2_text: `הפחתנו חריגות תקציב ב־20% בעזרת חיזוי ומעקב משופרים.`,
+        case3_title: `ניהול עושר פרטי`,
+        case3_text: `תכננו אסטרטגיות השקעה שהעלו את ה־ROI ב־35% בתוך 18 חודשים.`,
+
+        testimonials_title: `מה הלקוחות אומרים`,
+        testimonial1_quote: `"המומחיות הפיננסית שלהם עזרה לנו לייצב את תזרים המזומנים ולהתרחב בצורה אסטרטגית."`,
+        testimonial1_cite: `- אניל מהטה, סמנכ"ל כספים`,
+        testimonial2_quote: `"כיום אני בטוח בתוכנית הפרישה וההשקעות שלי. יועצים אמינים באמת!"`,
+        testimonial2_cite: `- שרה ג'ונסון, לקוחה פרטית`,
+
+        cta_title: `תכננו את עתידכם הפיננסי היום`,
+        cta_text: `הבטיחו את הצלחתכם בעזרת תכנון פיננסי וייעוץ מקצועי.`,
+        cta_btn: `התחילו עכשיו`,
+
+        footer_company: `ייעוץ עסקי`,
+        footer_links: `קישורים מהירים`,
+        footer_services: `גלו שירותים`,
+        footer_contact: `צור קשר`,
+        footer_email_label: `דוא"ל:`,
+        footer_phone_label: `טלפון:`,
+        footer_follow: `עקבו אחרינו`,
+
+        newsletter_title: `ניוזלטר`,
+        newsletter_text: `קבלו טיפים ועדכונים שבועיים לתיבת הדואר.`,
+        newsletter_placeholder: `הקלד/י את האימייל`,
+        newsletter_button: `הירשמו`,
+        newsletter_success: `✅ תודה שנרשמתם!`,
+
+        company_name: `שם החברה שלך`,
+        rights: `כל הזכויות שמורות.`
+      }
+    };
+
+    const RTL_LANGS = new Set(["ar", "he"]);
+
+  function applyTranslations(lang) {
+    const dict = I18N[lang] || I18N.en;
+
+    // document title
+    if (dict.page_title) document.title = dict.page_title;
+
+    // Swap dir & lang
+    document.documentElement.lang = lang;
+    document.documentElement.dir = RTL_LANGS.has(lang) ? "rtl" : "ltr";
+    document.body.classList.toggle("rtl", RTL_LANGS.has(lang));
+
+    // All nodes with data-key
+    document.querySelectorAll("[data-key]").forEach((el) => {
+      const key = el.getAttribute("data-key");
+      const val = dict[key];
+      if (val == null) return;
+
+      const attr = el.getAttribute("data-attr");
+      if (attr) {
+        el.setAttribute(attr, val);
+      } else {
+        if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+          el.value = "";
+          if (el.hasAttribute("placeholder")) el.placeholder = val;
+        } else {
+          el.textContent = val;
+        }
+      }
+    });
+
+    // Keep selector in sync
+    const sel = document.getElementById("language-selector");
+    if (sel && sel.value !== lang) sel.value = lang;
+
+    // Save preference
+    localStorage.setItem("site_lang", lang);
+  }
+
+  function detectInitialLang() {
+    return localStorage.getItem("site_lang") || "en";
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const initial = detectInitialLang();
+    applyTranslations(initial);
+
+    const selector = document.getElementById("language-selector");
+    if (selector) {
+      selector.value = initial;
+      selector.addEventListener("change", (e) => {
+        applyTranslations(e.target.value);
+      });
+    }
+  });
+  </script>
 </body>
 </html>

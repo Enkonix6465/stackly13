@@ -5,64 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Operations & Process Improvement</title>
   <link rel="stylesheet" href="../css/services1.css">
-  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/header2.css">
   <link rel="stylesheet" href="../css/footer.css"> 
   <script src="../js/home2.js" defer></script>
+  <script src="../js/main.js" defer></script>
 </head>
 <body>
+
+  <header>
+  <div class="logo">
+    <a href="index.html"><img src="../images/cropped-logo111.png" alt="Logo" ></a>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="../index.html" data-key="nav_home">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../index.html"  data-key="nav_home1">Home 1</a></li>
+            <li><a href="../pages/home2.html" data-key="nav_home2">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="../about.html" data-key="nav_about">About</a></li>
+        <li><a href="../blog.html" data-key="nav_blog">Blog</a></li>
+        <li class="dropdown">
+          <a href="../services.html" data-key="nav_services">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li class="mobile-only"><a href="../services.html" data-i18n="nav_all_services">All Services</a></li>
+            <li><a href="../pages/service1.html" data-key="nav_business">Business</a></li>
+            <li><a href="../pages/services2.html" data-key="nav_operations">Operations</a></li>
+            <li><a href="../pages/services3.html" data-key="nav_financial">Financial</a></li>
+            <li><a href="../pages/services4.html" data-key="nav_marketing">Marketing</a></li>
+            <li><a href="../pages/services5.html" data-key="nav_hr">HR & Talent</a></li>
+            <li><a href="../pages/services6.html" data-key="nav_digital">Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="../contact.html" data-key="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Language Toggle -->
+    <select id="languageToggle" aria-label="Language">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+
+  <!--
   <header>
     <div class="logo">
       <a href="index.html"><img src="../images/cropped-logo111.png" alt="Logo"></a>
     </div>
-<button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
+    <button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
     <nav>
       <ul class="nav-menu">
         <li>
-          <a href="../index.html">Home</a>
+          <a href="../index.html" data-key="nav_home">Home</a>
           <ul class="dropdown">
-            <li><a href="../index.html">Home1</a></li>
-            <li><a href="../pages/home2.html">Home2</a></li>
+            <li><a href="../index.html" data-key="nav_home1">Home1</a></li>
+            <li><a href="../pages/home2.html" data-key="nav_home2">Home2</a></li>
           </ul>
         </li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../about.html" data-key="nav_about">About</a></li>
+        <li><a href="../blog.html" data-key="nav_blog">Blog</a></li>
         <li>
-          <a href="../services.html">Services</a>
+          <a href="../services.html" data-key="nav_services">Services</a>
           <ul class="dropdown">
-            <li><a href="service1.html">Business</a></li>
-            <li><a href="services2.html">Operations</a></li>
-            <li><a href="services3.html">Financial</a></li>
-            <li><a href="services4.html">Marketing</a></li>
-            <li><a href="services5.html">HR&Talent</a></li>
-            <li><a href="services6.html">Digital</a></li>
+            <li><a href="service1.html" data-key="nav_business">Business</a></li>
+            <li><a href="services2.html" data-key="nav_operations">Operations</a></li>
+            <li><a href="services3.html" data-key="nav_financial">Financial</a></li>
+            <li><a href="services4.html" data-key="nav_marketing">Marketing</a></li>
+            <li><a href="services5.html" data-key="nav_hr">HR&Talent</a></li>
+            <li><a href="services6.html" data-key="nav_digital">Digital</a></li>
           </ul>
         </li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
-
+    
+      
+      <select id="languageToggle" aria-label="Language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
     <div class="profile-container">
-      <div class="profile">
-        <img id="profile-pic" src="../images/profile.jpg" alt="Profile Picture">
+      <div class="profile" id="profile-dropdown-toggle">
+        <img id="profile-pic" src="../images/.jpg" alt="Profile Picture">
         <span id="profile-initials" style="display:none;"></span>
       </div>
+
+      <ul class="profile-dropdown" id="profile-dropdown">
+        
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
+      </ul>
+
       <button id="dark-mode-toggle">🌙</button>
+
     </div>
-  </header>
+  </header>-->
 
   <!-- 1. Hero Section -->
   <section class="hero fade-in" style="background-image: url('../images/s2.jpg');">
     <div class="overlay">
-      <h1>Operations & Process Improvement</h1>
-      <p>Streamlining workflows, reducing costs, and enhancing efficiency for sustainable growth.</p>
+      <h1 data-key="hero_title">Operations & Process Improvement</h1>
+      <p data-key="hero_sub">Streamlining workflows, reducing costs, and enhancing efficiency for sustainable growth.</p>
     </div>
   </section>
 
   <!-- 2. About Section -->
   <section class="about slide-in-left">
     <div class="content">
-      <h2>About This Service</h2>
-      <p>
+      <h2 data-key="about_title">About This Service</h2>
+      <p data-key="about_text">
         Our Operations & Process Improvement service is designed to eliminate inefficiencies, 
         optimize resources, and build scalable processes. By analyzing workflows and applying 
         best practices, we ensure your business runs smarter and leaner without compromising quality.
@@ -73,31 +143,31 @@
   <!-- 3. Features Section -->
   <section class="features fade-in" style="background-image: url('../images/blog2.jpg');">
     <div class="overlay">
-      <h2>What We Offer</h2>
+      <h2 data-key="offer_title">What We Offer</h2>
       <div class="grid">
         <div class="card">⚙️ 
-          <h3>Workflow Automation</h3>
-          <p>Streamlining repetitive tasks through automation to enhance productivity and reduce errors.</p>
+          <h3 data-key="f1_title">Workflow Automation</h3>
+          <p data-key="f1_text">Streamlining repetitive tasks through automation to enhance productivity and reduce errors.</p>
         </div>
         <div class="card">💰
-          <h3>Cost Reduction Strategies</h3>
-          <p>We identify areas for cost savings and implement strategies to reduce expenses without sacrificing quality.</p>
+          <h3 data-key="f2_title">Cost Reduction Strategies</h3>
+          <p data-key="f2_text">We identify areas for cost savings and implement strategies to reduce expenses without sacrificing quality.</p>
         </div>
         <div class="card">📊
-          <h3>Operational Optimization</h3>
-          <p>Streamlining processes and improving efficiency to drive better results and reduce costs.</p>
+          <h3 data-key="f3_title">Operational Optimization</h3>
+          <p data-key="f3_text">Streamlining processes and improving efficiency to drive better results and reduce costs.</p>
         </div>
         <div class="card">📈 
-          <h3>Process Mapping & Analysis</h3>
-          <p>Creating detailed process maps to identify bottlenecks and areas for improvement.</p>
+          <h3 data-key="f4_title">Process Mapping & Analysis</h3>
+          <p data-key="f4_text">Creating detailed process maps to identify bottlenecks and areas for improvement.</p>
         </div>
         <div class="card">⏱️
-          <h3>Time & Resource Optimization</h3>
-          <p>Identifying and eliminating wasteful practices to optimize time and resource allocation.</p>
+          <h3 data-key="f5_title">Time & Resource Optimization</h3>
+          <p data-key="f5_text">Identifying and eliminating wasteful practices to optimize time and resource allocation.</p>
         </div>
         <div class="card">✅ 
-          <h3>Quality & Compliance Assurance</h3>
-          <p>Empowering your leaders with the skills and insights needed to drive organizational success.</p>
+          <h3 data-key="f6_title">Quality & Compliance Assurance</h3>
+          <p data-key="f6_text">Empowering your leaders with the skills and insights needed to drive organizational success.</p>
         </div>
       </div>
     </div>
@@ -105,22 +175,22 @@
 
   <!-- 4. Case Studies -->
   <section class="case slide-in-right">
-    <h2>Case Studies</h2>
+    <h2 data-key="case_title">Case Studies</h2>
     <div class="case-grid">
       <div class="case-card">
         <img src="../images/blog1.jpg" alt="Manufacturing Optimization">
-        <h3>Manufacturing Optimization</h3>
-        <p>Reduced production cycle time by 30% through workflow redesign and automation.</p>
+        <h3 data-key="c1_title">Manufacturing Optimization</h3>
+        <p data-key="c1_text">Reduced production cycle time by 30% through workflow redesign and automation.</p>
       </div>
       <div class="case-card">
         <img src="../images/blog2.jpg" alt="Retail Process Efficiency">
-        <h3>Retail Process Efficiency</h3>
-        <p>Cut operational costs by 25% while increasing order fulfillment speed.</p>
+        <h3 data-key="c2_title">Retail Process Efficiency</h3>
+        <p data-key="c2_text">Cut operational costs by 25% while increasing order fulfillment speed.</p>
       </div>
       <div class="case-card">
         <img src="../images/blog1.jpg" alt="Healthcare Process Streamlining">
-        <h3>Healthcare Streamlining</h3>
-        <p>Improved patient service flow, reducing wait times by 40% without extra staffing.</p>
+        <h3 data-key="c3_title">Healthcare Streamlining</h3>
+        <p data-key="c3_text">Improved patient service flow, reducing wait times by 40% without extra staffing.</p>
       </div>
     </div>
   </section>
@@ -128,15 +198,15 @@
   <!-- 5. Testimonials -->
   <section class="testimonials fade-in" style="background-image: url('../images/testmonial.jpg');">
     <div class="overlay">
-      <h2>What Clients Say</h2>
+      <h2 data-key="testimonials_title">What Clients Say</h2>
       <div class="quotes">
         <blockquote>
-          “Their process improvements saved us millions annually. Extremely professional team.”  
-          <cite>- Rajesh Kumar, COO</cite>
+          <span data-key="t1_text">“Their process improvements saved us millions annually. Extremely professional team.”</span>  
+          <cite data-key="t1_cite">- Rajesh Kumar, COO</cite>
         </blockquote>
         <blockquote>
-          “We now run operations twice as fast and at half the cost. Game changer!”  
-          <cite>- Maria Lopez, Operations Head</cite>
+          <span data-key="t2_text">“We now run operations twice as fast and at half the cost. Game changer!”</span>  
+          <cite data-key="t2_cite">- Maria Lopez, Operations Head</cite>
         </blockquote>
       </div>
     </div>
@@ -144,83 +214,373 @@
 
   <!-- 6. Call to Action -->
   <section class="cta slide-in-up">
-    <h2>Ready to Optimize Your Business?</h2>
-    <p>Partner with us to streamline operations and maximize efficiency.</p>
-    <a href="../contact.html" class="btn">Start Now</a>
+    <h2 data-key="cta_title">Ready to Optimize Your Business?</h2>
+    <p data-key="cta_sub">Partner with us to streamline operations and maximize efficiency.</p>
+    <a href="../contact.html" class="btn" data-key="cta_btn">Start Now</a>
   </section>
 
   <!-- Footer -->
   <footer>
-  <div class="footer-container">
-    
-    <!-- Logo Section -->
-    <div class="footer-logo">
-      <a href="index.html"><img src="../images/cropped-logo111.png" alt="Logo"></a>
-      <h4>Business Consultation</h4>
-    </div>
+    <div class="footer-container">
+      
+      <!-- Logo Section -->
+      <div class="footer-logo">
+        <a href="index.html"><img src="../images/cropped-logo111.png" alt="Logo"></a>
+        <h4 data-key="footer_logo_title">Business Consultation</h4>
+      </div>
 
-    <!-- Quick Links -->
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../services.html">Services</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-      </ul>
-    </div>
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4 data-key="footer_quick_title">Quick Links</h4>
+        <ul>
+          <li><a href="../about.html" data-key="nav_about">About</a></li>
+          <li><a href="../services.html" data-key="nav_services">Services</a></li>
+          <li><a href="../blog.html" data-key="nav_blog">Blog</a></li>
+          <li><a href="../contact.html" data-key="nav_contact">Contact</a></li>
+        </ul>
+      </div>
 
-    <!-- Services -->
-    <div class="footer-services">
-      <h4>Explore Services</h4>
-      <ul>
-        <li><a href="../pages/service1.html">Business</a></li>
-        <li><a href="../pages/services2.html">Operations</a></li>
-        <li><a href="../pages/services3.html">Financial</a></li>
-        <li><a href="../pages/services4.html">Marketing</a></li>
-        <li><a href="../pages/services5.html">HR & Talent</a></li>
-        <li><a href="../pages/services6.html">Technology</a></li>
-      </ul>
-    </div>
+      <!-- Services -->
+      <div class="footer-services">
+        <h4 data-key="footer_services_title">Explore Services</h4>
+        <ul>
+          <li><a href="../pages/service1.html" data-key="nav_business">Business</a></li>
+          <li><a href="../pages/services2.html" data-key="nav_operations">Operations</a></li>
+          <li><a href="../pages/services3.html" data-key="nav_financial">Financial</a></li>
+          <li><a href="../pages/services4.html" data-key="nav_marketing">Marketing</a></li>
+          <li><a href="../pages/services5.html" data-key="nav_hr">HR & Talent</a></li>
+          <li><a href="../pages/services6.html" data-key="footer_services_tech">Technology</a></li>
+        </ul>
+      </div>
 
-    <!-- Contact -->
-    <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p><strong>Email:</strong> info@example.com</p>
-      <p><strong>Phone:</strong> +91 1234567890</p>
+      <!-- Contact -->
+      <div class="footer-contact">
+        <h4 data-key="footer_contact_title">Contact Us</h4>
+        <p><strong data-key="footer_email_label">Email:</strong> info@example.com</p>
+        <p><strong data-key="footer_phone_label">Phone:</strong> +91 1234567890</p>
 
-      <h4>Follow Us</h4>
-      <div class="social">
-        <a href="https://facebook.com"><img src="../images/fb.png" alt="Facebook"></a>
-        <a href="https://twitter.com"><img src="../images/x.png" alt="Twitter"></a>
-        <a href="https://instagram.com"><img src="../images/inst.jpeg" alt="Instagram"></a>
+        <h4 data-key="footer_follow_title">Follow Us</h4>
+        <div class="social">
+          <a href="https://facebook.com"><img src="../images/fb.png" alt="Facebook"></a>
+          <a href="https://twitter.com"><img src="../images/x.png" alt="Twitter"></a>
+          <a href="https://instagram.com"><img src="../images/inst.jpeg" alt="Instagram"></a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h4 data-key="footer_newsletter_title">Newsletter</h4>
+        <p data-key="footer_newsletter_desc">Get weekly wellness tips and updates in your inbox.</p>
+        <form id="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="Enter your email" required data-placeholder-key="newsletter_placeholder">
+          <button type="submit" data-key="newsletter_subscribe">Subscribe</button>
+        </form>
+        <div id="newsletter-success" style="display:none; color:green; margin-top:8px;" data-key="newsletter_success">
+          ✅ Thank you for subscribing!
+        </div>
       </div>
     </div>
 
-    <!-- Newsletter -->
-    <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
-      <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;">
-    ✅ Thank you for subscribing!
-  </div>
+    <div class="footer-copy" data-key="footer_copy">
+      © 2025 Your Company Name. All Rights Reserved.
     </div>
-  </div>
-
-  <div class="footer-copy">
-    &copy; 2025 Your Company Name. All Rights Reserved.
-  </div>
-</footer>
+  </footer>
 
 
   <!-- JS -->
   <script src="../js/newsletter.js"></script>
 
   <script src="../js/services1.js"></script>
-  <script src="../js/main.js"></script>
+
+  <!-- Inline i18n dictionary & logic (adds language support without removing any of your code) -->
+  <script>
+    const I18N = {
+      en: {
+        // Meta
+        title: 'Operations & Process Improvement',
+
+        // Nav
+        nav_home: 'Home',
+        nav_home1: 'Home1',
+        nav_home2: 'Home2',
+        nav_about: 'About',
+        nav_blog: 'Blog',
+        nav_services: 'Services',
+        nav_business: 'Business',
+        nav_operations: 'Operations',
+        nav_financial: 'Financial',
+        nav_marketing: 'Marketing',
+        nav_hr: 'HR&Talent',
+        nav_digital: 'Digital',
+        nav_contact: 'Contact',
+        logout: 'Logout',
+
+        // Hero
+        hero_title: 'Operations & Process Improvement',
+        hero_sub: 'Streamlining workflows, reducing costs, and enhancing efficiency for sustainable growth.',
+
+        // About
+        about_title: 'About This Service',
+        about_text: 'Our Operations & Process Improvement service is designed to eliminate inefficiencies, optimize resources, and build scalable processes. By analyzing workflows and applying best practices, we ensure your business runs smarter and leaner without compromising quality.',
+
+        // Features
+        offer_title: 'What We Offer',
+        f1_title: 'Workflow Automation',
+        f1_text: 'Streamlining repetitive tasks through automation to enhance productivity and reduce errors.',
+        f2_title: 'Cost Reduction Strategies',
+        f2_text: 'We identify areas for cost savings and implement strategies to reduce expenses without sacrificing quality.',
+        f3_title: 'Operational Optimization',
+        f3_text: 'Streamlining processes and improving efficiency to drive better results and reduce costs.',
+        f4_title: 'Process Mapping & Analysis',
+        f4_text: 'Creating detailed process maps to identify bottlenecks and areas for improvement.',
+        f5_title: 'Time & Resource Optimization',
+        f5_text: 'Identifying and eliminating wasteful practices to optimize time and resource allocation.',
+        f6_title: 'Quality & Compliance Assurance',
+        f6_text: 'Empowering your leaders with the skills and insights needed to drive organizational success.',
+
+        // Case Studies
+        case_title: 'Case Studies',
+        c1_title: 'Manufacturing Optimization',
+        c1_text: 'Reduced production cycle time by 30% through workflow redesign and automation.',
+        c2_title: 'Retail Process Efficiency',
+        c2_text: 'Cut operational costs by 25% while increasing order fulfillment speed.',
+        c3_title: 'Healthcare Streamlining',
+        c3_text: 'Improved patient service flow, reducing wait times by 40% without extra staffing.',
+
+        // Testimonials
+        testimonials_title: 'What Clients Say',
+        t1_text: '“Their process improvements saved us millions annually. Extremely professional team.”',
+        t1_cite: '- Rajesh Kumar, COO',
+        t2_text: '“We now run operations twice as fast and at half the cost. Game changer!”',
+        t2_cite: '- Maria Lopez, Operations Head',
+
+        // CTA
+        cta_title: 'Ready to Optimize Your Business?',
+        cta_sub: 'Partner with us to streamline operations and maximize efficiency.',
+        cta_btn: 'Start Now',
+
+        // Footer
+        footer_logo_title: 'Business Consultation',
+        footer_quick_title: 'Quick Links',
+        footer_services_title: 'Explore Services',
+        footer_contact_title: 'Contact Us',
+        footer_email_label: 'Email:',
+        footer_phone_label: 'Phone:',
+        footer_follow_title: 'Follow Us',
+        footer_newsletter_title: 'Newsletter',
+        footer_newsletter_desc: 'Get weekly wellness tips and updates in your inbox.',
+        newsletter_placeholder: 'Enter your email',
+        newsletter_subscribe: 'Subscribe',
+        newsletter_success: '✅ Thank you for subscribing!',
+        footer_copy: '© 2025 Your Company Name. All Rights Reserved.',
+        footer_services_tech: 'Technology',
+      },
+
+      ar: {
+        title: 'العمليات وتحسين الإجراءات',
+        // Nav
+        nav_home: 'الصفحة الرئيسية',
+        nav_home1: 'الرئيسية 1',
+        nav_home2: 'الرئيسية 2',
+        nav_about: 'من نحن',
+        nav_blog: 'المدونة',
+        nav_services: 'الخدمات',
+        nav_business: 'الأعمال',
+        nav_operations: 'العمليات',
+        nav_financial: 'المالية',
+        nav_marketing: 'التسويق',
+        nav_hr: 'الموارد البشرية والمواهب',
+        nav_digital: 'الرقمية',
+        nav_contact: 'اتصل بنا',
+        logout: 'تسجيل الخروج',
+
+        // Hero
+        hero_title: 'العمليات وتحسين الإجراءات',
+        hero_sub: 'تبسيط سير العمل، خفض التكاليف، وتعزيز الكفاءة لتحقيق نمو مستدام.',
+
+        // About
+        about_title: 'حول هذه الخدمة',
+        about_text: 'تستهدف خدمة العمليات وتحسين الإجراءات إزالة مواطن الهدر، وتحسين استغلال الموارد، وبناء عمليات قابلة للتوسع. من خلال تحليل سير العمل وتطبيق أفضل الممارسات نضمن تشغيلًا أذكى وأنحف دون المساس بالجودة.',
+
+        // Features
+        offer_title: 'ما نقدمه',
+        f1_title: 'أتمتة سير العمل',
+        f1_text: 'تبسيط المهام المتكررة عبر الأتمتة لتعزيز الإنتاجية وتقليل الأخطاء.',
+        f2_title: 'استراتيجيات خفض التكاليف',
+        f2_text: 'نحدد مجالات التوفير ونطبق استراتيجيات تقلل النفقات دون التأثير على الجودة.',
+        f3_title: 'تحسين العمليات التشغيلية',
+        f3_text: 'تبسيط العمليات ورفع الكفاءة لتحقيق نتائج أفضل وتقليل التكاليف.',
+        f4_title: 'رسم خرائط وتحليل العمليات',
+        f4_text: 'إنشاء خرائط تفصيلية للعمليات لتحديد عنق الزجاجة ومجالات التحسين.',
+        f5_title: 'تحسين الوقت والموارد',
+        f5_text: 'تحديد وإزالة الممارسات المهدرة لتحسين توزيع الوقت والموارد.',
+        f6_title: 'ضمان الجودة والامتثال',
+        f6_text: 'تمكين قادتك بالمهارات والرؤى اللازمة لدفع نجاح المؤسسة.',
+
+        // Case Studies
+        case_title: 'دراسات حالة',
+        c1_title: 'تحسين التصنيع',
+        c1_text: 'تقليص زمن دورة الإنتاج بنسبة 30٪ عبر إعادة تصميم سير العمل والأتمتة.',
+        c2_title: 'كفاءة عمليات التجزئة',
+        c2_text: 'خفض التكاليف التشغيلية بنسبة 25٪ مع تسريع تنفيذ الطلبات.',
+        c3_title: 'تبسيط الرعاية الصحية',
+        c3_text: 'تحسين تدفق خدمة المرضى وتقليل أوقات الانتظار بنسبة 40٪ دون توظيف إضافي.',
+
+        // Testimonials
+        testimonials_title: 'ماذا يقول العملاء',
+        t1_text: '"وفرت تحسيناتهم في العمليات علينا ملايين سنويًا. فريق محترف للغاية."',
+        t1_cite: '- راجِش كومار، مدير العمليات',
+        t2_text: '"نُدير عملياتنا الآن بسرعة مضاعفة ونصف التكلفة. فارق حقيقي!"',
+        t2_cite: '- ماريا لوبيز، رئيسة العمليات',
+
+        // CTA
+        cta_title: 'هل أنت مستعد لتحسين عملياتك؟',
+        cta_sub: 'تشارَك معنا لتبسيط العمليات وتعظيم الكفاءة.',
+        cta_btn: 'ابدأ الآن',
+
+        // Footer
+        footer_logo_title: 'استشارات الأعمال',
+        footer_quick_title: 'روابط سريعة',
+        footer_services_title: 'استكشف الخدمات',
+        footer_contact_title: 'اتصل بنا',
+        footer_email_label: 'البريد الإلكتروني:',
+        footer_phone_label: 'الهاتف:',
+        footer_follow_title: 'تابعنا',
+        footer_newsletter_title: 'النشرة الإخبارية',
+        footer_newsletter_desc: 'احصل على نصائح أسبوعية وتحديثات في بريدك.',
+        newsletter_placeholder: 'أدخل بريدك الإلكتروني',
+        newsletter_subscribe: 'اشتراك',
+        newsletter_success: '✅ شكرًا لاشتراكك!',
+        footer_copy: '© 2025 اسم شركتك. جميع الحقوق محفوظة.',
+        footer_services_tech: 'التكنولوجيا',
+      },
+
+      he: {
+        title: 'שיפור תהליכים ותפעול',
+        // Nav
+        nav_home: 'דף הבית',
+        nav_home1: 'בית 1',
+        nav_home2: 'בית 2',
+        nav_about: 'אודות',
+        nav_blog: 'בלוג',
+        nav_services: 'שירותים',
+        nav_business: 'עסקים',
+        nav_operations: 'תפעול',
+        nav_financial: 'פיננסים',
+        nav_marketing: 'שיווק',
+        nav_hr: 'משאבי אנוש וטאלנט',
+        nav_digital: 'דיגיטל',
+        nav_contact: 'צרו קשר',
+        logout: 'התנתקות',
+
+        // Hero
+        hero_title: 'שיפור תהליכים ותפעול',
+        hero_sub: 'ייעול זרימות עבודה, הפחתת עלויות ושיפור יעילות לצמיחה בת-קיימא.',
+
+        // About
+        about_title: 'על השירות',
+        about_text: 'שירות התפעול ושיפור התהליכים שלנו נועד לבטל בזבוזים, לייעל משאבים ולבנות תהליכים שניתנים להרחבה. באמצעות ניתוח זרימות עבודה ויישום Best Practices אנו מבטיחים תפעול חכם ורזה מבלי לפגוע באיכות.',
+
+        // Features
+        offer_title: 'מה אנו מציעים',
+        f1_title: 'אוטומציית זרימת עבודה',
+        f1_text: 'ייעול משימות חוזרות באמצעות אוטומציה לשיפור פרודוקטיביות והפחתת טעויות.',
+        f2_title: 'אסטרטגיות להפחתת עלויות',
+        f2_text: 'זיהוי מוקדי חיסכון ויישום אסטרטגיות להפחתת הוצאות ללא פגיעה באיכות.',
+        f3_title: 'אופטימיזציה תפעולית',
+        f3_text: 'שיפור תהליכים והגברת היעילות להשגת תוצאות טובות יותר והפחתת עלויות.',
+        f4_title: 'מיפוי וניתוח תהליכים',
+        f4_text: 'יצירת מפות תהליך מפורטות לזיהוי צווארי בקבוק ומוקדי שיפור.',
+        f5_title: 'אופטימיזציית זמן ומשאבים',
+        f5_text: 'זיהוי והסרה של פרקטיקות מבזבזות לשיפור הקצאת זמן ומשאבים.',
+        f6_title: 'אבטחת איכות וציות',
+        f6_text: 'העצמת המנהיגים שלך בכישורים ותובנות לקידום הצלחת הארגון.',
+
+        // Case Studies
+        case_title: 'מחקרי מקרה',
+        c1_title: 'אופטימיזציית ייצור',
+        c1_text: 'קיצור זמן מחזור הייצור ב-30% באמצעות עיצוב מחדש ואוטומציה.',
+        c2_title: 'יעילות קמעונאית',
+        c2_text: 'הפחתת עלויות תפעול ב-25% תוך האצת אספקת ההזמנות.',
+        c3_title: 'ייעול בריאות',
+        c3_text: 'שיפור זרימת השירות למטופלים והפחתת זמני המתנה ב-40% ללא תוספת כוח אדם.',
+
+        // Testimonials
+        testimonials_title: 'מה הלקוחות אומרים',
+        t1_text: '"שיפורי התהליכים שלהם חסכו לנו מיליונים בשנה. צוות מקצועי ביותר."',
+        t1_cite: '- רג׳ש קומר, סמנכ"ל תפעול',
+        t2_text: '"אנחנו מפעילים כיום את התהליכים פי שניים מהר ובחצי עלות. שינוי משחק!"',
+        t2_cite: '- מריה לופז, ראש תחום תפעול',
+
+        // CTA
+        cta_title: 'מוכנים לאופטימיזציה של התפעול?',
+        cta_sub: 'עבדו איתנו כדי לייצר תפעול יעיל, מדרגי ובר-קיימא.',
+        cta_btn: 'התחילו עכשיו',
+
+        // Footer
+        footer_logo_title: 'ייעוץ עסקי',
+        footer_quick_title: 'קישורים מהירים',
+        footer_services_title: 'גלו שירותים',
+        footer_contact_title: 'צרו קשר',
+        footer_email_label: 'אימייל:',
+        footer_phone_label: 'טלפון:',
+        footer_follow_title: 'עקבו אחרינו',
+        footer_newsletter_title: 'ניוזלטר',
+        footer_newsletter_desc: 'קבלו טיפים ועדכונים שבועיים ישירות למייל.',
+        newsletter_placeholder: 'הכניסו את האימייל שלכם',
+        newsletter_subscribe: 'הירשם',
+        newsletter_success: '✅ תודה שנרשמת!',
+        footer_copy: '© 2025 שם החברה שלך. כל הזכויות שמורות.',
+        footer_services_tech: 'טכנולוגיה',
+      },
+    };
+
+    function isRTL(lang){ return lang === 'ar' || lang === 'he'; }
+
+    function applyTranslations(lang){
+      const dict = I18N[lang] || I18N.en;
+
+      // Update visible text
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if(key && Object.prototype.hasOwnProperty.call(dict, key)){
+          el.textContent = dict[key];
+        }
+      });
+
+      // Update placeholders
+      document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+        const key = el.getAttribute('data-placeholder-key');
+        if(key && Object.prototype.hasOwnProperty.call(dict, key)){
+          el.setAttribute('placeholder', dict[key]);
+        }
+      });
+
+      // Title
+      if(dict.title){ document.title = dict.title; }
+
+      // Direction & lang
+      document.documentElement.setAttribute('lang', lang);
+      document.documentElement.setAttribute('dir', isRTL(lang) ? 'rtl' : 'ltr');
+      document.body.classList.toggle('rtl', isRTL(lang));
+    }
+
+    function setLanguage(lang){
+      localStorage.setItem('site_lang', lang);
+      const select = document.getElementById('languageToggle');
+      if(select && select.value !== lang) select.value = lang;
+      applyTranslations(lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const select = document.getElementById('languageToggle');
+      const saved = localStorage.getItem('site_lang') || 'en';
+      if(select){
+        select.value = saved;
+        select.addEventListener('change', (e) => setLanguage(e.target.value));
+      }
+      setLanguage(saved);
+    });
+  </script>
 </body>
 </html>

@@ -3,66 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marketing & Brand Development</title>
+  <title data-key="pageTitle">Marketing & Brand Development</title>
   <link rel="stylesheet" href="../css/services1.css">
-  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/header2.css">
   <link rel="stylesheet" href="../css/footer.css"> 
   <script src="../js/home2.js" defer></script>
+  <script src="../js/main.js" defer></script>
 </head>
 <body>
+
+  <header>
+  <div class="logo">
+    <a href="../index.html"><img src="../images/cropped-logo111.png" alt="Logo" ></a>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="../index.html" data-key="navHome">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../index.html"  data-key="navHome1">Home 1</a></li>
+            <li><a href="../pages/home2.html" data-key="navHome2">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="../about.html" data-key="navAbout">About</a></li>
+        <li><a href="../blog.html" data-key="navBlog">Blog</a></li>
+        <li class="dropdown">
+          <a href="../services.html" data-key="navServices">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li class="mobile-only"><a href="../services.html" data-i18n="nav_all_services">All Services</a></li>
+            <li><a href="./service1.html" data-key="navBusiness">Business</a></li>
+            <li><a href="./services2.html" data-key="navOperations">Operations</a></li>
+            <li><a href="./services3.html" data-key="navFinancial">Financial</a></li>
+            <li><a href="./services4.html" data-key="navMarketing">Marketing</a></li>
+            <li><a href="./services5.html" data-key="navHR">HR & Talent</a></li>
+            <li><a href="./services6.html" data-key="navDigital">Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="../contact.html" data-key="navContact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Language Toggle -->
+    <select id="language-selector" aria-label="Select language">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+  <!--
   <header>
     <div class="logo">
       <a href="index.html"><img src="../images/cropped-logo111.png" alt="Logo"></a>
     </div>
-<button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
+    <button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
     <nav>
       <ul class="nav-menu">
         <li>
-          <a href="../index.html">Home</a>
+          <a href="../index.html" data-key="navHome">Home</a>
           <ul class="dropdown">
-            <li><a href="../index.html">Home1</a></li>
-            <li><a href="../pages/home2.html">Home2</a></li>
+            <li><a href="../index.html" data-key="navHome1">Home1</a></li>
+            <li><a href="../pages/home2.html" data-key="navHome2">Home2</a></li>
           </ul>
         </li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../about.html" data-key="navAbout">About</a></li>
+        <li><a href="../blog.html" data-key="navBlog">Blog</a></li>
         <li>
-          <a href="../services.html">Services</a>
+          <a href="../services.html" data-key="navServices">Services</a>
           <ul class="dropdown">
-            <li><a href="service1.html">Business</a></li>
-            <li><a href="services2.html">Operations</a></li>
-            <li><a href="services3.html">Financial</a></li>
-            <li><a href="services4.html">Marketing</a></li>
-            <li><a href="services5.html">HR&Talent</a></li>
-            <li><a href="services6.html">Digital</a></li>
+            <li><a href="service1.html" data-key="navBusiness">Business</a></li>
+            <li><a href="services2.html" data-key="navOperations">Operations</a></li>
+            <li><a href="services3.html" data-key="navFinancial">Financial</a></li>
+            <li><a href="services4.html" data-key="navMarketing">Marketing</a></li>
+            <li><a href="services5.html" data-key="navHR">HR&Talent</a></li>
+            <li><a href="services6.html" data-key="navDigital">Digital</a></li>
           </ul>
         </li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../contact.html" data-key="navContact">Contact</a></li>
       </ul>
     </nav>
 
+    <div class="lang-selector" style="margin-left:12px;">
+      <select id="language-selector" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
+
     <div class="profile-container">
-      <div class="profile">
-        <img id="profile-pic" src="../images/profile.jpg" alt="Profile Picture">
+      <div class="profile" id="profile-dropdown-toggle">
+        <img id="profile-pic" src="../images/.jpg" alt="Profile Picture">
         <span id="profile-initials" style="display:none;"></span>
       </div>
+
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
+      </ul>
+
       <button id="dark-mode-toggle">🌙</button>
+    
+
     </div>
-  </header>
+  </header>-->
 
   <!-- 1. Hero Section -->
   <section class="hero fade-in" style="background-image: url('../images/service4.jpg');">
     <div class="overlay">
-      <h1>Marketing & Brand Development</h1>
-      <p>Creating strong brand identities and marketing strategies that drive growth and recognition.</p>
+      <h1 data-key="heroTitle">Marketing & Brand Development</h1>
+      <p data-key="heroDesc">Creating strong brand identities and marketing strategies that drive growth and recognition.</p>
     </div>
   </section>
 
   <!-- 2. About Section -->
   <section class="about slide-in-left">
     <div class="content">
-      <h2>About This Service</h2>
-      <p>
+      <h2 data-key="aboutTitle">About This Service</h2>
+      <p data-key="aboutDesc">
         Our Marketing & Brand Development service helps businesses establish a powerful identity 
         and build meaningful connections with their target audience. From brand positioning to 
         multi-channel campaigns, we create strategies that deliver measurable impact and 
@@ -74,55 +145,54 @@
   <!-- 3. Features Section -->
   <section class="features fade-in" style="background-image: url('../images/service44.jpg');">
     <div class="overlay">
-      <h2>What We Offer</h2>
+      <h2 data-key="featuresTitle">What We Offer</h2>
       <div class="grid">
         <div class="card">🎯 
-  <h3>Brand Strategy & Positioning</h3>
-  <p>Defining your brand’s unique identity and positioning it effectively in the market to connect with your target audience.</p>
-</div>
-<div class="card">📢 
-  <h3>Digital Marketing Campaigns</h3>
-  <p>Planning and executing online campaigns across multiple channels to increase visibility, engagement, and conversions.</p>
-</div>
-<div class="card">📱 
-  <h3>Social Media Management</h3>
-  <p>Managing your social presence across platforms, engaging with your audience, and growing your online community.</p>
-</div>
-<div class="card">🖼️ 
-  <h3>Visual Identity & Design</h3>
-  <p>Creating compelling visuals, graphics, and design elements that reflect your brand’s personality and values.</p>
-</div>
-<div class="card">✍️ 
-  <h3>Content Marketing</h3>
-  <p>Developing high-quality content that educates, engages, and builds trust with your audience to drive growth.</p>
-</div>
-<div class="card">📊 
-  <h3>Marketing Analytics & Insights</h3>
-  <p>Analyzing performance data to measure effectiveness, optimize strategies, and make data-driven marketing decisions.</p>
-</div>
-
+          <h3 data-key="feature1Title">Brand Strategy & Positioning</h3>
+          <p data-key="feature1Desc">Defining your brand’s unique identity and positioning it effectively in the market to connect with your target audience.</p>
+        </div>
+        <div class="card">📢 
+          <h3 data-key="feature2Title">Digital Marketing Campaigns</h3>
+          <p data-key="feature2Desc">Planning and executing online campaigns across multiple channels to increase visibility, engagement, and conversions.</p>
+        </div>
+        <div class="card">📱 
+          <h3 data-key="feature3Title">Social Media Management</h3>
+          <p data-key="feature3Desc">Managing your social presence across platforms, engaging with your audience, and growing your online community.</p>
+        </div>
+        <div class="card">🖼️ 
+          <h3 data-key="feature4Title">Visual Identity & Design</h3>
+          <p data-key="feature4Desc">Creating compelling visuals, graphics, and design elements that reflect your brand’s personality and values.</p>
+        </div>
+        <div class="card">✍️ 
+          <h3 data-key="feature5Title">Content Marketing</h3>
+          <p data-key="feature5Desc">Developing high-quality content that educates, engages, and builds trust with your audience to drive growth.</p>
+        </div>
+        <div class="card">📊 
+          <h3 data-key="feature6Title">Marketing Analytics & Insights</h3>
+          <p data-key="feature6Desc">Analyzing performance data to measure effectiveness, optimize strategies, and make data-driven marketing decisions.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 4. Case Studies -->
   <section class="case slide-in-right">
-    <h2>Case Studies</h2>
+    <h2 data-key="caseTitle">Case Studies</h2>
     <div class="case-grid">
       <div class="case-card">
         <img src="../images/blog1.jpg" alt="Brand Identity Project">
-        <h3>Brand Identity Revamp</h3>
-        <p>Rebranded a retail company, increasing customer engagement by 40%.</p>
+        <h3 data-key="case1Title">Brand Identity Revamp</h3>
+        <p data-key="case1Desc">Rebranded a retail company, increasing customer engagement by 40%.</p>
       </div>
       <div class="case-card">
         <img src="../images/blog2.jpg" alt="Digital Campaign">
-        <h3>Digital Marketing Campaign</h3>
-        <p>Executed a cross-channel campaign that boosted leads by 65% in 3 months.</p>
+        <h3 data-key="case2Title">Digital Marketing Campaign</h3>
+        <p data-key="case2Desc">Executed a cross-channel campaign that boosted leads by 65% in 3 months.</p>
       </div>
       <div class="case-card">
         <img src="../images/blog3.jpg" alt="Social Media Growth">
-        <h3>Social Media Growth</h3>
-        <p>Increased a client’s Instagram following by 200% with tailored strategies.</p>
+        <h3 data-key="case3Title">Social Media Growth</h3>
+        <p data-key="case3Desc">Increased a client’s Instagram following by 200% with tailored strategies.</p>
       </div>
     </div>
   </section>
@@ -130,15 +200,15 @@
   <!-- 5. Testimonials -->
   <section class="testimonials fade-in" style="background-image: url('../images/testmonial.jpg');">
     <div class="overlay">
-      <h2>What Clients Say</h2>
+      <h2 data-key="testimonialsTitle">What Clients Say</h2>
       <div class="quotes">
         <blockquote>
-          “Our brand finally reflects our vision and values. Their creative input was invaluable.”  
-          <cite>- Priya Sharma, CEO</cite>
+          <span data-key="testimonial1Text">“Our brand finally reflects our vision and values. Their creative input was invaluable.”</span>  
+          <cite data-key="testimonial1Author">- Priya Sharma, CEO</cite>
         </blockquote>
         <blockquote>
-          “Their marketing strategies helped us achieve record-breaking sales in one quarter.”  
-          <cite>- Michael Lee, Head of Marketing</cite>
+          <span data-key="testimonial2Text">“Their marketing strategies helped us achieve record-breaking sales in one quarter.”</span>  
+          <cite data-key="testimonial2Author">- Michael Lee, Head of Marketing</cite>
         </blockquote>
       </div>
     </div>
@@ -146,83 +216,250 @@
 
   <!-- 6. Call to Action -->
   <section class="cta slide-in-up">
-    <h2>Grow Your Brand With Us</h2>
-    <p>Let’s craft a unique identity and marketing strategy that sets you apart.</p>
-    <a href="../contact.html" class="btn">Get Started</a>
+    <h2 data-key="ctaTitle">Grow Your Brand With Us</h2>
+    <p data-key="ctaDesc">Let’s craft a unique identity and marketing strategy that sets you apart.</p>
+    <a href="../contact.html" class="btn" data-key="ctaBtn">Get Started</a>
   </section>
 
   <!-- Footer -->
   <footer>
-  <div class="footer-container">
-    
-    <!-- Logo Section -->
-    <div class="footer-logo">
-      <a href="index.html"><img src="../images/cropped-logo111.png" alt="Logo"></a>
-      <h4>Business Consultation</h4>
-    </div>
+    <div class="footer-container">
+      
+      <!-- Logo Section -->
+      <div class="footer-logo">
+        <a href="index.html"><img src="../images/cropped-logo111.png" alt="Logo"></a>
+        <h4 data-key="footerCompany">Business Consultation</h4>
+      </div>
 
-    <!-- Quick Links -->
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../services.html">Services</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-      </ul>
-    </div>
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4 data-key="quickLinks">Quick Links</h4>
+        <ul>
+          <li><a href="../about.html" data-key="navAbout">About</a></li>
+          <li><a href="../services.html" data-key="navServices">Services</a></li>
+          <li><a href="../blog.html" data-key="navBlog">Blog</a></li>
+          <li><a href="../contact.html" data-key="navContact">Contact</a></li>
+        </ul>
+      </div>
 
-    <!-- Services -->
-    <div class="footer-services">
-      <h4>Explore Services</h4>
-      <ul>
-        <li><a href="../pages/service1.html">Business</a></li>
-        <li><a href="../pages/services2.html">Operations</a></li>
-        <li><a href="../pages/services3.html">Financial</a></li>
-        <li><a href="../pages/services4.html">Marketing</a></li>
-        <li><a href="../pages/services5.html">HR & Talent</a></li>
-        <li><a href="../pages/services6.html">Technology</a></li>
-      </ul>
-    </div>
+      <!-- Services -->
+      <div class="footer-services">
+        <h4 data-key="exploreServices">Explore Services</h4>
+        <ul>
+          <li><a href="../pages/service1.html" data-key="navBusiness">Business</a></li>
+          <li><a href="../pages/services2.html" data-key="navOperations">Operations</a></li>
+          <li><a href="../pages/services3.html" data-key="navFinancial">Financial</a></li>
+          <li><a href="../pages/services4.html" data-key="navMarketing">Marketing</a></li>
+          <li><a href="../pages/services5.html" data-key="navHR">HR & Talent</a></li>
+          <li><a href="../pages/services6.html" data-key="navDigital">Technology</a></li>
+        </ul>
+      </div>
 
-    <!-- Contact -->
-    <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p><strong>Email:</strong> info@example.com</p>
-      <p><strong>Phone:</strong> +91 1234567890</p>
+      <!-- Contact -->
+      <div class="footer-contact">
+        <h4 data-key="footerContactTitle">Contact Us</h4>
+        <p><strong data-key="contactEmailLabel">Email:</strong> <span data-key="contactEmail">info@example.com</span></p>
+        <p><strong data-key="contactPhoneLabel">Phone:</strong> <span data-key="contactPhone">+91 1234567890</span></p>
 
-      <h4>Follow Us</h4>
-      <div class="social">
-        <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
-        <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
-        <a href="https://instagram.com"><img src="images/inst.jpeg" alt="Instagram"></a>
+        <h4 data-key="followUsTitle">Follow Us</h4>
+        <div class="social">
+          <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
+          <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
+          <a href="https://instagram.com"><img src="images/inst.jpeg" alt="Instagram"></a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h4 data-key="newsletterTitle">Newsletter</h4>
+        <p data-key="newsletterDesc">Get weekly wellness tips and updates in your inbox.</p>
+        <form id="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+          <button type="submit" data-key="newsletterBtn">Subscribe</button>
+        </form>
+        <div id="newsletter-success" style="display:none; color:green; margin-top:8px;" data-key="newsletterSuccess">✅ Thank you for subscribing!</div>
       </div>
     </div>
 
-    <!-- Newsletter -->
-    <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
-      <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;">
-    ✅ Thank you for subscribing!
-  </div>
+    <div class="footer-copy">
+      &copy; <span data-key="footerYear">2025</span> <span data-key="footerCompanyName">Your Company Name</span>. <span data-key="rights">All Rights Reserved.</span>
     </div>
-  </div>
-
-  <div class="footer-copy">
-    &copy; 2025 Your Company Name. All Rights Reserved.
-  </div>
-</footer>
-
-
+  </footer>
   <!-- JS -->
   <script src="../js/newsletter.js"></script>
 
   <script src="../js/services1.js"></script>
-  <script src="../js/main.js"></script>
+
+  <!-- Language dictionary + runtime -->
+  <script>
+    (function () {
+  const translations = {
+    en: {
+      pageTitle: "Marketing & Brand Development",
+      navHome: "Home", navHome1: "Home1", navHome2: "Home2",
+      navAbout: "About", navBlog: "Blog", navServices: "Services",
+      navBusiness: "Business", navOperations: "Operations", navFinancial: "Financial",
+      navMarketing: "Marketing", navHR: "HR & Talent", navDigital: "Digital",
+      navContact: "Contact", logout: "Logout",
+      heroTitle: "Marketing & Brand Development",
+      heroDesc: "Creating strong brand identities and marketing strategies that drive growth and recognition.",
+      aboutTitle: "About This Service",
+      aboutDesc: "Our Marketing & Brand Development service helps businesses establish a powerful identity and build meaningful connections with their target audience. From brand positioning to multi-channel campaigns, we create strategies that deliver measurable impact and long-lasting value.",
+      featuresTitle: "What We Offer",
+      feature1Title: "Brand Strategy & Positioning", feature1Desc: "Defining your brand’s unique identity and positioning it effectively in the market to connect with your target audience.",
+      feature2Title: "Digital Marketing Campaigns", feature2Desc: "Planning and executing online campaigns across multiple channels to increase visibility, engagement, and conversions.",
+      feature3Title: "Social Media Management", feature3Desc: "Managing your social presence across platforms, engaging with your audience, and growing your online community.",
+      feature4Title: "Visual Identity & Design", feature4Desc: "Creating compelling visuals, graphics, and design elements that reflect your brand’s personality and values.",
+      feature5Title: "Content Marketing", feature5Desc: "Developing high-quality content that educates, engages, and builds trust with your audience to drive growth.",
+      feature6Title: "Marketing Analytics & Insights", feature6Desc: "Analyzing performance data to measure effectiveness, optimize strategies, and make data-driven marketing decisions.",
+      caseTitle: "Case Studies",
+      case1Title: "Brand Identity Revamp", case1Desc: "Rebranded a retail company, increasing customer engagement by 40%.",
+      case2Title: "Digital Marketing Campaign", case2Desc: "Executed a cross-channel campaign that boosted leads by 65% in 3 months.",
+      case3Title: "Social Media Growth", case3Desc: "Increased a client’s Instagram following by 200% with tailored strategies.",
+      testimonialsTitle: "What Clients Say",
+      testimonial1Text: "“Our brand finally reflects our vision and values. Their creative input was invaluable.”",
+      testimonial1Author: "- Priya Sharma, CEO",
+      testimonial2Text: "“Their marketing strategies helped us achieve record-breaking sales in one quarter.”",
+      testimonial2Author: "- Michael Lee, Head of Marketing",
+      ctaTitle: "Grow Your Brand With Us", ctaDesc: "Let’s craft a unique identity and marketing strategy that sets you apart.", ctaBtn: "Get Started",
+      footerCompany: "Business Consultation", quickLinks: "Quick Links", exploreServices: "Explore Services",
+      footerContactTitle: "Contact Us", contactEmailLabel: "Email:", contactPhoneLabel: "Phone:", contactEmail: "info@example.com", contactPhone: "+91 1234567890",
+      followUsTitle: "Follow Us",
+      newsletterTitle: "Newsletter", newsletterDesc: "Get weekly wellness tips and updates in your inbox.", newsletterBtn: "Subscribe", newsletterPlaceholder: "Enter your email", newsletterSuccess: "✅ Thank you for subscribing!",
+      footerYear: "2025", footerCompanyName: "Your Company Name", rights: "All Rights Reserved."
+    },
+    ar: {
+      pageTitle: "التسويق وتطوير العلامة التجارية",
+      navHome: "الرئيسية", navHome1: "الصفحة 1", navHome2: "الصفحة 2",
+      navAbout: "من نحن", navBlog: "المدونة", navServices: "الخدمات",
+      navBusiness: "الأعمال", navOperations: "العمليات", navFinancial: "المالية",
+      navMarketing: "التسويق", navHR: "الموارد البشرية", navDigital: "الرقمية",
+      navContact: "اتصل بنا", logout: "تسجيل الخروج",
+      heroTitle: "التسويق وتطوير العلامة التجارية",
+      heroDesc: "إنشاء هويات قوية واستراتيجيات تسويق تدفع النمو والاعتراف بالعلامة.",
+      aboutTitle: "حول هذه الخدمة",
+      aboutDesc: "خدمة التسويق وتطوير العلامة التجارية لدينا تساعد الشركات على إنشاء هوية قوية وبناء علاقات ذات معنى مع جمهورها المستهدف. من تحديد موقع العلامة إلى الحملات متعددة القنوات، نبتكر استراتيجيات تقيس الأثر وتستمر طويلاً.",
+      featuresTitle: "ماذا نقدم",
+      feature1Title: "استراتيجية العلامة التجارية والموقع", feature1Desc: "تحديد هوية علامتك التجارية الفريدة وتحديد موقعها بشكل فعال في السوق للتواصل مع جمهورك.",
+      feature2Title: "حملات التسويق الرقمي", feature2Desc: "تخطيط وتنفيذ حملات عبر قنوات متعددة لزيادة الظهور والمشاركة والتحويلات.",
+      feature3Title: "إدارة وسائل التواصل الاجتماعي", feature3Desc: "إدارة تواجدك على الشبكات الاجتماعية والتفاعل مع جمهورك وتنمية مجتمعك.",
+      feature4Title: "الهوية البصرية والتصميم", feature4Desc: "إنشاء مرئيات جذابة تعكس شخصية وقيم علامتك التجارية.",
+      feature5Title: "تسويق المحتوى", feature5Desc: "تطوير محتوى عالي الجودة يثقف ويجذب ويبني الثقة مع جمهورك لدفع النمو.",
+      feature6Title: "تحليلات التسويق والرؤى", feature6Desc: "تحليل بيانات الأداء لقياس الفاعلية وتحسين الاستراتيجيات واتخاذ قرارات قائمة على البيانات.",
+      caseTitle: "دراسات حالة",
+      case1Title: "إعادة تصميم هوية العلامة", case1Desc: "إعادة تصميم هوية شركة تجارة بالتجزئة، مما زاد مشاركة العملاء بنسبة 40%.",
+      case2Title: "حملة تسويق رقمي", case2Desc: "تنفيذ حملة عبر القنوات زاد العملاء المحتملين بنسبة 65% خلال 3 أشهر.",
+      case3Title: "نمو وسائل التواصل", case3Desc: "زيادة متابعي إنستغرام لعميل بنسبة 200% باستراتيجيات مخصصة.",
+      testimonialsTitle: "آراء العملاء",
+      testimonial1Text: "“تعكس علامتنا الآن رؤيتنا وقيمنا. كان لإسهاماتهم الإبداعية قيمة كبيرة.”",
+      testimonial1Author: "- بريا شارما، المديرة التنفيذية",
+      testimonial2Text: "“ساعدتنا استراتيجياتهم التسويقية على تحقيق مبيعات قياسية في ربع واحد.”",
+      testimonial2Author: "- مايكل لي، رئيس التسويق",
+      ctaTitle: "نمِّ علامتك التجارية معنا", ctaDesc: "دعونا نصنع هوية واستراتيجية تسويق فريدة تميزك.", ctaBtn: "ابدأ الآن",
+      footerCompany: "الاستشارات التجارية", quickLinks: "روابط سريعة", exploreServices: "استكشف الخدمات",
+      footerContactTitle: "تواصل معنا", contactEmailLabel: "البريد الإلكتروني:", contactPhoneLabel: "الهاتف:", contactEmail: "info@example.com", contactPhone: "+91 1234567890",
+      followUsTitle: "تابعنا",
+      newsletterTitle: "النشرة الإخبارية", newsletterDesc: "احصل على نصائح أسبوعية وتحديثات في صندوق الوارد.", newsletterBtn: "اشترك", newsletterPlaceholder: "أدخل بريدك الإلكتروني", newsletterSuccess: "✅ شكراً لاشتراكك!",
+      footerYear: "2025", footerCompanyName: "اسم شركتك", rights: "جميع الحقوق محفوظة."
+    },
+    he: {
+      pageTitle: "שיווק ופיתוח מותג",
+      navHome: "בית", navHome1: "בית 1", navHome2: "בית 2",
+      navAbout: "אודות", navBlog: "בלוג", navServices: "שירותים",
+      navBusiness: "עסקים", navOperations: "תפעול", navFinancial: "פיננסי",
+      navMarketing: "שיווק", navHR: "משאבי אנוש", navDigital: "דיגיטלי",
+      navContact: "צור קשר", logout: "התנתק",
+      heroTitle: "שיווק ופיתוח מותג",
+      heroDesc: "יצירת זהויות מותג חזקות ואסטרטגיות שיווק שמקדמות צמיחה והכרה.",
+      aboutTitle: "על השירות הזה",
+      aboutDesc: "השירות שלנו מסייע לעסקים לבנות זהות חזקה וליצור קשרים משמעותיים עם קהל היעד. מאיתור המותג ועד קמפיינים רב-ערוציים, אנו יוצרים אסטרטגיות שמביאות תוצאות מדידות וערך מתמשך.",
+      featuresTitle: "מה אנחנו מציעים",
+      feature1Title: "אסטרטגיית מותג ומיצוב", feature1Desc: "הגדרת זהות המותג שלך ומיצובו בצורה יעילה בשוק.",
+      feature2Title: "קמפיינים שיווקיים דיגיטליים", feature2Desc: "תכנון וביצוע קמפיינים בערוצים שונים להגברת נראות, מעורבות והמרות.",
+      feature3Title: "ניהול רשתות חברתיות", feature3Desc: "ניהול הנוכחות החברתית שלך, מעורבות עם קהל והגדלת הקהילה.",
+      feature4Title: "זהות ויזואלית ועיצוב", feature4Desc: "יצירת ויז'ואלים מרתקים המשקפים את אישיות המותג והערכים שלו.",
+      feature5Title: "שיווק תוכן", feature5Desc: "פיתוח תוכן איכותי שמחנך, מעורב ובונה אמון בקהל שלך.",
+      feature6Title: "ניתוח שיווק ותובנות", feature6Desc: "ניתוח נתוני ביצועים למדידת יעילות ושיפור אסטרטגיות על בסיס נתונים.",
+      caseTitle: "מקרי בוחן",
+      case1Title: "שדרוג זהות המותג", case1Desc: "שידרגנו זהות של חנות קמעונאית והגברנו מעורבות לקוחות ב-40%.",
+      case2Title: "קמפיין שיווק דיגיטלי", case2Desc: "ביצוע קמפיין רב-ערוצי שהגביר לידים ב-65% ב-3 חודשים.",
+      case3Title: "צמיחת מדיה חברתית", case3Desc: "הגדלנו עוקבים ללקוח באינסטגרם ב-200% עם אסטרטגיות מותאמות.",
+      testimonialsTitle: "מה הלקוחות אומרים",
+      testimonial1Text: "“המותג שלנו משקף כעת את החזון והערכים שלנו. התרומה היצירתית שלהם הייתה חשובה ביותר.”",
+      testimonial1Author: "- פריה שארמה, מנכ\"לית",
+      testimonial2Text: "“האסטרטגיות השיווקיות שלהם סייעו לנו להשיג מכירות שיא ברבעון אחד.”",
+      testimonial2Author: "- מייקל לי, ראש שיווק",
+      ctaTitle: "פיתוח המותג שלך איתנו", ctaDesc: "בואו נבנה זהות ואסטרטגיה ייחודית שתבדיל אתכם.", ctaBtn: "התחל",
+      footerCompany: "ייעוץ עסקי", quickLinks: "קישורים מהירים", exploreServices: "חקור שירותים",
+      footerContactTitle: "צור קשר", contactEmailLabel: "דוא\"ל:", contactPhoneLabel: "טלפון:", contactEmail: "info@example.com", contactPhone: "+91 1234567890",
+      followUsTitle: "עקבו אחרינו",
+      newsletterTitle: "ניוזלטר", newsletterDesc: "קבל טיפים ועדכונים שבועיים לתיבת הדואר שלך.", newsletterBtn: "הירשם", newsletterPlaceholder: "הכנס את המייל שלך", newsletterSuccess: "✅ תודה שנרשמת!",
+      footerYear: "2025", footerCompanyName: "שם החברה שלך", rights: "כל הזכויות שמורות."
+    }
+  };
+
+  const RTL_LANGS = new Set(["ar", "he"]);
+
+  function applyTranslations(lang) {
+    const dict = translations[lang] || translations.en;
+
+    // set html lang & dir
+    document.documentElement.lang = lang;
+    document.documentElement.dir = RTL_LANGS.has(lang) ? "rtl" : "ltr";
+    document.body.classList.toggle("rtl", RTL_LANGS.has(lang));
+
+    // update all data-key elements
+    document.querySelectorAll("[data-key]").forEach(el => {
+      const key = el.getAttribute("data-key");
+      const val = dict[key];
+      if (val == null) return;
+
+      const attr = el.getAttribute("data-attr");
+      if (attr) {
+        el.setAttribute(attr, val);
+      } else if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+        if (el.hasAttribute("placeholder")) el.placeholder = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    // newsletter input
+    const newsletterInput = document.getElementById("newsletter-email");
+    if (newsletterInput && dict.newsletterPlaceholder) {
+      newsletterInput.placeholder = dict.newsletterPlaceholder;
+    }
+
+    // page title
+    if (dict.pageTitle) document.title = dict.pageTitle;
+
+    // keep selector in sync
+    const sel = document.getElementById("language-selector");
+    if (sel && sel.value !== lang) sel.value = lang;
+
+    // save preference
+    try {
+      localStorage.setItem("site_lang", lang);
+    } catch {}
+  }
+
+  function detectInitialLang() {
+    return localStorage.getItem("site_lang") || "en";
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const initial = detectInitialLang();
+    applyTranslations(initial);
+
+    const selector = document.getElementById("language-selector");
+    if (selector) {
+      selector.value = initial;
+      selector.addEventListener("change", e => {
+        applyTranslations(e.target.value);
+      });
+    }
+  });
+})();
+  </script>
 </body>
 </html>

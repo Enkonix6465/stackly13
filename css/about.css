@@ -8,22 +8,7 @@ body.dark-mode {
   color: white;
 }
 
-body.dark-mode header {
-  background-color: #1f1f1f;
-  color: white;
-}
 
-body.dark-mode nav ul li a {
-  color:white;
-}
-
-body.dark-mode .dropdown {
-  background:white;
-}
-
-body.dark-mode .dropdown li a {
-  color:black;
-}
 body.dark-mode footer {
   background-color: #111;
   color: white;

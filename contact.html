@@ -3,14 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title data-key="page_title">Contact Us</title>
     <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/header2.css">
     <link rel="stylesheet" href="css/footer.css">
     <script src="js/main.js" defer></script>
     <script src="js/contact.js" defer></script>
+   
 </head>
 <body>
+
+  <header>
+  <div class="logo">
+    <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo" ></a>
+  </div>
+
+  <div class="header-right">
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="index.html" data-key="nav_home">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html"  data-key="nav_home1">Home 1</a></li>
+            <li><a href="pages/home2.html" data-key="nav_home2">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
+        <li class="dropdown">
+          <a href="services.html" data-key="nav_services">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li class="mobile-only"><a href="services.html" data-key="nav_all_services">All Services</a></li>
+            <li><a href="pages/service1.html" data-key="service_business">Business</a></li>
+            <li><a href="pages/services2.html" data-key="service_operations">Operations</a></li>
+            <li><a href="pages/services3.html" data-key="service_financial">Financial</a></li>
+            <li><a href="pages/services4.html" data-key="service_marketing">Marketing</a></li>
+            <li><a href="pages/services5.html" data-key="service_hr">HR & Talent</a></li>
+            <li><a href="pages/services6.html" data-key="service_digital">Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Language Toggle -->
+    <select id="language-selector"  aria-label="Language">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger">☰</button>
+  </div>
+</header>
+  <!--
     <header>
     <div class="logo">
       <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
@@ -19,29 +75,38 @@
     <nav>
       <ul class="nav-menu">
         <li>
-          <a href="index.html">Home</a>
+          <a href="index.html" data-key="nav_home">Home</a>
           <ul class="dropdown">
-            <li><a href="index.html">Home1</a></li>
-            <li><a href="pages/home2.html">Home2</a></li>
+            <li><a href="index.html" data-key="nav_home1">Home1</a></li>
+            <li><a href="pages/home2.html" data-key="nav_home2">Home2</a></li>
           </ul>
         </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="blog.html" data-key="nav_blog">Blog</a></li>
         <li>
-          <a href="services.html">Services</a>
+          <a href="services.html" data-key="nav_services">Services</a>
           <ul class="dropdown">
-            <li><a href="pages/service1.html">Business</a></li>
-            <li><a href="pages/services2.html">Operations</a></li>
-            <li><a href="pages/services3.html">Financial</a></li>
-            <li><a href="pages/services4.html">Marketing</a></li>
-            <li><a href="pages/services5.html">HR&Talent</a></li>
-            <li><a href="pages/services6.html">Digital</a></li>
+            <li><a href="pages/service1.html" data-key="service_business">Business</a></li>
+            <li><a href="pages/services2.html" data-key="service_operations">Operations</a></li>
+            <li><a href="pages/services3.html" data-key="service_financial">Financial</a></li>
+            <li><a href="pages/services4.html" data-key="service_marketing">Marketing</a></li>
+            <li><a href="pages/services5.html" data-key="service_hr">HR&Talent</a></li>
+            <li><a href="pages/services6.html" data-key="service_digital">Digital</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
+     <div style="display:inline-block; vertical-align:middle;">
+      <select id="language-selector" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="he">עברית</option>
+      </select>
+    </div>
 
+ 
+    
     <div class="profile-container">
   <div class="profile" id="profile-dropdown-toggle">
     <img id="profile-pic" src="../images/.jpg" alt="Profile Picture">
@@ -50,15 +115,17 @@
 
   <ul class="profile-dropdown" id="profile-dropdown">
     
-    <li><a href="#" id="logout-btn">Logout</a></li>
+    <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
   </ul>
 
   <button id="dark-mode-toggle">🌙</button>
+ 
+
 </div>
 
 
   
-  </header>
+  </header>-->
   <!-- HERO SECTION -->
   <section class="hero">
     <video autoplay muted loop playsinline class="hero-video">
@@ -67,13 +134,13 @@
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Let’s Shape Your Business Future</h1>
-      <p>
+      <h1 data-key="hero_title">Let’s Shape Your Business Future</h1>
+      <p data-key="hero_text">
         Whether you need expert advice, a fresh strategy, or a trusted partner to guide your next big move, our team is ready to help. Reach out today and let’s start building your path to sustainable growth and success.
       </p>
       <div class="hero-buttons">
-        <a href="services.html" class="btn-secondary">Our Services</a>
-        <a href="contact.html" class="btn-secondary">Get in Touch</a>
+        <a href="services.html" class="btn-secondary" data-key="hero_btn_services">Our Services</a>
+        <a href="contact.html" class="btn-secondary" data-key="hero_btn_contact">Get in Touch</a>
       </div>
     </div>
   </section>
@@ -82,41 +149,41 @@
     <!-- Hero Section -->
 <section class="contact-hero fade-in">
   <div class="overlay">
-    <h1>Get in Touch</h1>
-    <p>We’re here to help your business grow. Let’s talk strategy.</p>
+    <h1 data-key="contact_hero_title">Get in Touch</h1>
+    <p data-key="contact_hero_text">We’re here to help your business grow. Let’s talk strategy.</p>
   </div>
 </section>
 
 <!-- Contact Info Section -->
 <section class="contact-info fade-in">
   <div class="info-card">
-    <h3>📍 Address</h3>
-    <p>123 Business Avenue, Corporate City, 45678</p>
+    <h3 data-key="address_title">📍 Address</h3>
+    <p data-key="address_text">123 Business Avenue, Corporate City, 45678</p>
   </div>
   <div class="info-card">
-    <h3>📞 Phone</h3>
-    <p>+1 (555) 123-4567</p>
+    <h3 data-key="phone_title">📞 Phone</h3>
+    <p data-key="phone_text">+1 (555) 123-4567</p>
   </div>
   <div class="info-card">
-    <h3>📧 Email</h3>
-    <p>contact@bizconsult.com</p>
+    <h3 data-key="email_title">📧 Email</h3>
+    <p data-key="email_text">contact@bizconsult.com</p>
   </div>
 </section>
 
 <!-- Contact Form -->
 <section class="contact-form-section fade-in">
-  <h2>Send Us a Message</h2>
+  <h2 data-key="form_title">Send Us a Message</h2>
   <form id="contactForm">
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send Message</button>
+    <input type="text" placeholder="Your Name" data-key="input_name" required />
+    <input type="email" placeholder="Your Email" data-key="input_email" required />
+    <textarea placeholder="Your Message" rows="5" data-key="input_message" required></textarea>
+    <button type="submit" data-key="form_submit">Send Message</button>
   </form>
 </section>
 
 <!-- Map Section -->
 <section class="map-section fade-in">
-  <h2>Our Location</h2>
+  <h2 data-key="map_title">Our Location</h2>
   <iframe 
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531561687!3d-37.816279742021865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c1e88c50a3f!2sVictoria%20Harbour!5e0!3m2!1sen!2sau!4v1614033600000!5m2!1sen!2sau" 
   width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
@@ -125,35 +192,35 @@
 </section>
 <!-- FAQ Section -->
 <section class="faq-section">
-  <h2>Quick Help</h2>
+  <h2 data-key="faq_title">Quick Help</h2>
 
   <div class="faq-item">
-    <h4>What services do you offer?</h4>
-    <p>We provide business strategy consulting, operations improvement, financial advisory, marketing solutions, and technology integration.</p>
+    <h4 data-key="faq1_q">What services do you offer?</h4>
+    <p data-key="faq1_a">We provide business strategy consulting, operations improvement, financial advisory, marketing solutions, and technology integration.</p>
   </div>
 
   <div class="faq-item">
-    <h4>How soon will you respond?</h4>
-    <p>We usually respond within 24 hours during business days.</p>
+    <h4 data-key="faq2_q">How soon will you respond?</h4>
+    <p data-key="faq2_a">We usually respond within 24 hours during business days.</p>
   </div>
 
   <div class="faq-item">
-    <h4>Do you work with startups?</h4>
-    <p>Absolutely! We have tailored packages to help startups establish a solid foundation and grow sustainably.</p>
+    <h4 data-key="faq3_q">Do you work with startups?</h4>
+    <p data-key="faq3_a">Absolutely! We have tailored packages to help startups establish a solid foundation and grow sustainably.</p>
   </div>
 
   <div class="faq-item">
-    <h4>Can I schedule a free consultation?</h4>
-    <p>Yes, we offer a complimentary initial consultation to understand your needs and explore how we can help.</p>
+    <h4 data-key="faq4_q">Can I schedule a free consultation?</h4>
+    <p data-key="faq4_a">Yes, we offer a complimentary initial consultation to understand your needs and explore how we can help.</p>
   </div>
 </section>
 
 
 <!-- CTA Section -->
 <section class="cta-section fade-in">
-  <h2>Let’s Build Something Great Together</h2>
-  <p>Our experts are ready to guide your business towards success.</p>
-  <a href="services.html" class="cta-btn">Explore Services</a>
+  <h2 data-key="cta_title">Let’s Build Something Great Together</h2>
+  <p data-key="cta_text">Our experts are ready to guide your business towards success.</p>
+  <a href="services.html" class="cta-btn" data-key="cta_btn">Explore Services</a>
 </section>
 <footer>
   <div class="footer-container">
@@ -161,40 +228,40 @@
     <!-- Logo Section -->
     <div class="footer-logo">
       <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
-      <h4>Business Consultation</h4>
+      <h4 data-key="footer_company">Business Consultation</h4>
     </div>
 
     <!-- Quick Links -->
     <div class="footer-links">
-      <h4>Quick Links</h4>
+      <h4 data-key="footer_links">Quick Links</h4>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" data-key="nav_about_foot">About</a></li>
+        <li><a href="services.html" data-key="nav_services_foot">Services</a></li>
+        <li><a href="blog.html" data-key="nav_blog_foot">Blog</a></li>
+        <li><a href="contact.html" data-key="nav_contact_foot">Contact</a></li>
       </ul>
     </div>
 
     <!-- Services -->
     <div class="footer-services">
-      <h4>Explore Services</h4>
+      <h4 data-key="footer_services">Explore Services</h4>
       <ul>
-        <li><a href="pages/service1.html">Business</a></li>
-        <li><a href="pages/services2.html">Operations</a></li>
-        <li><a href="pages/services3.html">Financial</a></li>
-        <li><a href="pages/services4.html">Marketing</a></li>
-        <li><a href="pages/services5.html">HR & Talent</a></li>
-        <li><a href="pages/services6.html">Technology</a></li>
+        <li><a href="pages/service1.html" data-key="service_business_foot">Business</a></li>
+        <li><a href="pages/services2.html" data-key="service_operations_foot">Operations</a></li>
+        <li><a href="pages/services3.html" data-key="service_financial_foot">Financial</a></li>
+        <li><a href="pages/services4.html" data-key="service_marketing_foot">Marketing</a></li>
+        <li><a href="pages/services5.html" data-key="service_hr_foot">HR & Talent</a></li>
+        <li><a href="pages/services6.html" data-key="service_digital_foot">Technology</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
     <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p><strong>Email:</strong> info@example.com</p>
-      <p><strong>Phone:</strong> +91 1234567890</p>
+      <h4 data-key="footer_contact_title">Contact Us</h4>
+      <p><strong data-key="footer_email_label">Email:</strong> <span data-key="footer_email">info@example.com</span></p>
+      <p><strong data-key="footer_phone_label">Phone:</strong> <span data-key="footer_phone">+91 1234567890</span></p>
 
-      <h4>Follow Us</h4>
+      <h4 data-key="footer_follow">Follow Us</h4>
       <div class="social">
         <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
         <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
@@ -204,25 +271,282 @@
 
     <!-- Newsletter -->
     <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
+      <h4 data-key="newsletter_title">Newsletter</h4>
+      <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
       <form id="newsletter-form">
         <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+        <button type="submit" data-key="newsletter_button">Subscribe</button>
       </form>
-      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;">
+      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;" data-key="newsletter_success">
     ✅ Thank you for subscribing!
   </div>
     </div>
   </div>
 
   <div class="footer-copy">
-    &copy; 2025 Your Company Name. All Rights Reserved.
+    &copy; <span data-key="footer_year">2025</span> <span data-key="company_name">Your Company Name</span>. <span data-key="rights">All Rights Reserved.</span>
   </div>
 </footer>
 
 
   <!-- JS -->
   <script src="js/newsletter.js"></script>
+
+  <!-- Language dictionary + runtime (keeps your page unchanged and only swaps text) -->
+  <script>
+  (function () {
+    const I18N = {
+      en: {
+        page_title: "Contact Us",
+
+        /* nav */
+        nav_home: "Home", nav_home1: "Home1", nav_home2: "Home2",
+        nav_about: "About", nav_blog: "Blog", nav_services: "Services", nav_contact: "Contact",
+        service_business: "Business", service_operations: "Operations", service_financial: "Financial",
+        service_marketing: "Marketing", service_hr: "HR & Talent", service_digital: "Digital",
+        logout: "Logout",
+
+        /* hero */
+        hero_title: "Let’s Shape Your Business Future",
+        hero_text: "Whether you need expert advice, a fresh strategy, or a trusted partner to guide your next big move, our team is ready to help. Reach out today and let’s start building your path to sustainable growth and success.",
+        hero_btn_services: "Our Services",
+        hero_btn_contact: "Get in Touch",
+
+        contact_hero_title: "Get in Touch",
+        contact_hero_text: "We’re here to help your business grow. Let’s talk strategy.",
+
+        /* contact info */
+        address_title: "📍 Address", address_text: "123 Business Avenue, Corporate City, 45678",
+        phone_title: "📞 Phone", phone_text: "+1 (555) 123-4567",
+        email_title: "📧 Email", email_text: "contact@bizconsult.com",
+
+        /* form */
+        form_title: "Send Us a Message",
+        input_name: "Your Name",
+        input_email: "Your Email",
+        input_message: "Your Message",
+        form_submit: "Send Message",
+
+        /* map */
+        map_title: "Our Location",
+
+        /* faq */
+        faq_title: "Quick Help",
+        faq1_q: "What services do you offer?", faq1_a: "We provide business strategy consulting, operations improvement, financial advisory, marketing solutions, and technology integration.",
+        faq2_q: "How soon will you respond?", faq2_a: "We usually respond within 24 hours during business days.",
+        faq3_q: "Do you work with startups?", faq3_a: "Absolutely! We have tailored packages to help startups establish a solid foundation and grow sustainably.",
+        faq4_q: "Can I schedule a free consultation?", faq4_a: "Yes, we offer a complimentary initial consultation to understand your needs and explore how we can help.",
+
+        /* cta */
+        cta_title: "Let’s Build Something Great Together",
+        cta_text: "Our experts are ready to guide your business towards success.",
+        cta_btn: "Explore Services",
+
+        /* footer */
+        footer_company: "Business Consultation", footer_links: "Quick Links", footer_services: "Explore Services",
+        footer_contact_title: "Contact Us", footer_email_label: "Email:", footer_phone_label: "Phone:",
+        footer_email: "info@example.com", footer_phone: "+91 1234567890", footer_follow: "Follow Us",
+
+        newsletter_title: "Newsletter", newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+        newsletter_placeholder: "Enter your email", newsletter_button: "Subscribe", newsletter_success: "✅ Thank you for subscribing!",
+
+        footer_year: "2025", company_name: "Your Company Name", rights: "All Rights Reserved.",
+        service_business_foot:"Business",service_operations_foot:"Operations",service_financial_foot:"Financial",
+        service_marketing_foot:"Marketing",service_hr_foot:"HR & Talent",service_digital_foot:"Digital",
+        nav_about_foot:"About",nav_services_foot:"Services",nav_blog_foot:"Blog",nav_contact_foot:"Contact"
+
+      },
+
+      ar: {
+        page_title: "اتصل بنا",
+
+        /* nav */
+        nav_home: "الرئيسية", nav_home1: "الصفحة 1", nav_home2: "الصفحة 2",
+        nav_about: "من نحن", nav_blog: "المدونة", nav_services: "الخدمات", nav_contact: "اتصل",
+        service_business: "الأعمال", service_operations: "العمليات", service_financial: "المالية",
+        service_marketing: "التسويق", service_hr: "الموارد البشرية", service_digital: "الرقمية",
+        logout: "تسجيل خروج",
+
+        /* hero */
+        hero_title: "لنشكل مستقبل عملك",
+        hero_text: "سواء كنت بحاجة إلى نصيحة خبراء أو استراتيجية جديدة أو شريك موثوق، فريقنا جاهز لمساعدتك. تواصل اليوم لنبدأ في بناء طريقك نحو النمو المستدام والنجاح.",
+        hero_btn_services: "خدماتنا",
+        hero_btn_contact: "تواصل معنا",
+
+        contact_hero_title: "تواصل معنا",
+        contact_hero_text: "نحن هنا لمساعدة عملك على النمو. هيا نتحدث عن الاستراتيجية.",
+
+        /* contact info */
+        address_title: "📍 العنوان", address_text: "123 شارع الأعمال، مدينة الشركات، 45678",
+        phone_title: "📞 الهاتف", phone_text: "+1 (555) 123-4567",
+        email_title: "📧 البريد الإلكتروني", email_text: "contact@bizconsult.com",
+
+        /* form */
+        form_title: "أرسل لنا رسالة",
+        input_name: "اسمك",
+        input_email: "بريدك الإلكتروني",
+        input_message: "رسالتك",
+        form_submit: "إرسال",
+
+        /* map */
+        map_title: "موقعنا",
+
+        /* faq */
+        faq_title: "مساعدة سريعة",
+        faq1_q: "ما الخدمات التي تقدمونها؟", faq1_a: "نقدم استشارات استراتيجية الأعمال وتحسين العمليات والاستشارات المالية وحلول التسويق وتكامل التكنولوجيا.",
+        faq2_q: "متى ستردون؟", faq2_a: "عادة نرد خلال 24 ساعة في أيام العمل.",
+        faq3_q: "هل تعملون مع الشركات الناشئة؟", faq3_a: "بالتأكيد! لدينا باقات مخصصة لمساعدة الشركات الناشئة على بناء أساس قوي والنمو sustainably.",
+        faq4_q: "هل يمكنني جدولة استشارة مجانية؟", faq4_a: "نعم، نقدم استشارة أولية مجانية لفهم احتياجاتك واستكشاف كيف يمكننا المساعدة.",
+
+        /* cta */
+        cta_title: "لنبنِ شيئًا عظيمًا معًا",
+        cta_text: "خبراؤنا جاهزون لتوجيه عملك نحو النجاح.",
+        cta_btn: "استكشف الخدمات",
+
+        /* footer */
+        footer_company: "استشارات الأعمال", footer_links: "روابط سريعة", footer_services: "استكشف الخدمات",
+        footer_contact_title: "تواصل معنا", footer_email_label: "البريد الإلكتروني:", footer_phone_label: "الهاتف:",
+        footer_email: "info@example.com", footer_phone: "+91 1234567890", footer_follow: "تابعنا",
+
+        newsletter_title: "النشرة الإخبارية", newsletter_text: "احصل على نصائح وتحديثات أسبوعية في بريدك.",
+        newsletter_placeholder: "أدخل بريدك الإلكتروني", newsletter_button: "اشترك", newsletter_success: "✅ شكرًا لاشتراكك!",
+
+        footer_year: "2025", company_name: "اسم شركتك", rights: "جميع الحقوق محفوظة.",
+        service_business_foot:"الأعمال",service_operations_foot:"العمليات",service_financial_foot:"المالية",
+        service_marketing_foot:"التسويق",service_hr_foot:"الموارد البشرية",service_digital_foot:"الرقمية",
+        nav_about_foot:"من نحن",nav_services_foot:"الخدمات",nav_blog_foot:"المدونة",nav_contact_foot:"اتصل"
+      },
+
+      he: {
+        page_title: "צור קשר",
+
+        /* nav */
+        nav_home: "בית", nav_home1: "בית 1", nav_home2: "בית 2",
+        nav_about: "אודות", nav_blog: "בלוג", nav_services: "שירותים", nav_contact: "צור קשר",
+        service_business: "עסקים", service_operations: "תפעול", service_financial: "פיננסי",
+        service_marketing: "שיווק", service_hr: "משאבי אנוש", service_digital: "דיגיטלי",
+        logout: "התנתק",
+
+        /* hero */
+        hero_title: "בואו נעצב את עתיד העסק שלכם",
+        hero_text: "בין אם אתם זקוקים לייעוץ מקצועי או לאסטרטגיה חדשה — הצוות שלנו מוכן לעזור. פנו אלינו היום ונבנה יחד נתיב לצמיחה ברת-קיימא והצלחה.",
+        hero_btn_services: "השירותים שלנו",
+        hero_btn_contact: "צור קשר",
+
+        contact_hero_title: "צור קשר",
+        contact_hero_text: "אנו כאן כדי לעזור לעסק שלך לצמוח. בוא נדבר על אסטרטגיה.",
+
+        /* contact info */
+        address_title: "📍 כתובת", address_text: "123 שדרת העסקים, עיר התאגידים, 45678",
+        phone_title: "📞 טלפון", phone_text: "+1 (555) 123-4567",
+        email_title: "📧 אימייל", email_text: "contact@bizconsult.com",
+
+        /* form */
+        form_title: "שלח לנו הודעה",
+        input_name: "השם שלך",
+        input_email: "האימייל שלך",
+        input_message: "ההודעה שלך",
+        form_submit: "שלח הודעה",
+
+        /* map */
+        map_title: "המיקום שלנו",
+
+        /* faq */
+        faq_title: "עזרה מהירה",
+        faq1_q: "אילו שירותים אתם מציעים?", faq1_a: "אנו מספקים ייעוץ אסטרטגי, שיפור תפעולי, ייעוץ פיננסי, פתרונות שיווק ושילוב טכנולוגיות.",
+        faq2_q: "כמה מהר תחזרו אליי?", faq2_a: "בדרך כלל אנו חוזרים תוך 24 שעות בימי עסקים.",
+        faq3_q: "האם אתם עובדים עם סטארט-אפים?", faq3_a: "בהחלט! יש לנו חבילות מותאמות לסטארט-אפים כדי לסייע בבניית בסיס חזק וצמיחה.",
+        faq4_q: "האם ניתן לקבוע פגישת ייעוץ חינם?", faq4_a: "כן — אנו מציעים פגישת ייעוץ ראשונית ללא תשלום כדי להבין את הצרכים שלך.",
+
+        /* cta */
+        cta_title: "בואו נבנה משהו גדול יחד",
+        cta_text: "המומחים שלנו מוכנים להדריך את העסק שלך להצלחה.",
+        cta_btn: "גלה שירותים",
+
+        /* footer */
+        footer_company: "ייעוץ עסקי", footer_links: "קישורים מהירים", footer_services: "גלה שירותים",
+        footer_contact_title: "צור קשר", footer_email_label: "דוא\"ל:", footer_phone_label: "טלפון:",
+        footer_email: "info@example.com", footer_phone: "+91 1234567890", footer_follow: "עקבו אחרינו",
+
+        newsletter_title: "ניוזלטר", newsletter_text: "קבל טיפים ועדכונים שבועיים לתיבת הדואר שלך.",
+        newsletter_placeholder: "הקלד/י את המייל", newsletter_button: "הירשם", newsletter_success: "✅ תודה שנרשמת!",
+
+        footer_year: "2025", company_name: "שם החברה שלך", rights: "כל הזכויות שמורות.",
+        service_business_foot:"עסקים",service_operations_foot:"תפעול",service_financial_foot:"פיננסי",service_marketing_foot:"שיווק",service_hr_foot:"משאבי אנוש",service_digital_foot:"דיגיטלי"  ,
+        nav_about_foot:"אודות",nav_services_foot:"שירותים",nav_blog_foot:"בלוג",nav_contact_foot:"צור קשר"
+      }
+    };
+
+    const RTL_LANGS = new Set(["ar", "he"]);
+
+    function applyTranslations(lang) {
+      const dict = I18N[lang] || I18N.en;
+
+      // set html lang & dir, toggle body.rtl
+      document.documentElement.lang = lang;
+      document.documentElement.dir = RTL_LANGS.has(lang) ? "rtl" : "ltr";
+      document.body.classList.toggle("rtl", RTL_LANGS.has(lang));
+
+      // update <title> explicitly
+      if (dict.page_title) {
+        const titleEl = document.querySelector("title");
+        if (titleEl) titleEl.textContent = dict.page_title;
+      }
+
+      // update all nodes with data-key
+      document.querySelectorAll("[data-key]").forEach((el) => {
+        const key = el.getAttribute("data-key");
+        if (!key) return;
+        const val = dict[key];
+        if (val == null) return;
+
+        const attr = el.getAttribute("data-attr");
+        if (attr) {
+          el.setAttribute(attr, val);
+        } else {
+          if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+            // for inputs/textareas that have placeholder, set placeholder
+            if (el.hasAttribute("placeholder")) {
+              el.placeholder = val;
+            } else {
+              el.value = "";
+            }
+          } else {
+            el.textContent = val;
+          }
+        }
+      });
+
+      // newsletter input (id-based fallback)
+      const newsletterInput = document.getElementById("newsletter-email");
+      if (newsletterInput && dict.newsletter_placeholder) {
+        newsletterInput.placeholder = dict.newsletter_placeholder;
+      }
+
+      // keep selector in sync
+      const sel = document.getElementById("language-selector");
+      if (sel && sel.value !== lang) sel.value = lang;
+
+      // persist
+      try { localStorage.setItem("site_lang", lang); } catch (e) {}
+    }
+
+    function detectInitialLang() {
+      return localStorage.getItem("site_lang") || "en";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const initial = detectInitialLang();
+      applyTranslations(initial);
+
+      const selector = document.getElementById("language-selector");
+      if (selector) {
+        selector.value = initial;
+        selector.addEventListener("change", (e) => applyTranslations(e.target.value));
+      }
+    });
+
+  })();
+  </script>
 </body>
 </html>

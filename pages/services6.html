@@ -5,64 +5,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Technology & Digital Transformation</title>
   <link rel="stylesheet" href="../css/services1.css">
-  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/header2.css">
   <link rel="stylesheet" href="../css/footer.css"> 
   <script src="../js/home2.js" defer></script>
+  <script src="../js/main.js" defer></script>
+
+ 
 </head>
 <body>
+
   <header>
-    <div class="logo">
-      <a href="../index.html"><img src="../images/cropped-logo111.png" alt="Logo"></a>
-    </div>
-<button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
+  <div class="logo">
+    <a href="../index.html"><img src="../images/cropped-logo111.png" alt="Logo" ></a>
+  </div>
+
+  <div class="header-right">
     <nav>
-      <ul class="nav-menu">
-        <li>
-          <a href="../index.html">Home</a>
-          <ul class="dropdown">
-            <li><a href="../index.html">Home1</a></li>
-            <li><a href="../pages/home2.html">Home2</a></li>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="../index.html" data-key="nav_home">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../index.html" data-key="nav_home1">Home 1</a></li>
+            <li><a href="../pages/home2.html" data-key="nav_home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-        <li>
-          <a href="../services.html">Services</a>
-          <ul class="dropdown">
-            <li><a href="service1.html">Business</a></li>
-            <li><a href="services2.html">Operations</a></li>
-            <li><a href="services3.html">Financial</a></li>
-            <li><a href="services4.html">Marketing</a></li>
-            <li><a href="services5.html">HR&Talent</a></li>
-            <li><a href="services6.html">Digital</a></li>
+        <li><a href="../about.html" data-key="nav_about">About</a></li>
+        <li><a href="../blog.html" data-key="nav_blog">Blog</a></li>
+        <li class="dropdown">
+          <a href="../services.html" data-key="nav_services">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li class="mobile-only"><a href="../services.html" data-i18n="nav_all_services">All Services</a></li>
+            <li><a href="./service1.html" data-key="nav_business">Business</a></li>
+            <li><a href="./services2.html" data-key="nav_operations">Operations</a></li>
+            <li><a href="./services3.html" data-key="nav_financial">Financial</a></li>
+            <li><a href="./services4.html" data-key="nav_marketing">Marketing</a></li>
+            <li><a href="./services5.html" data-key="nav_hr">HR & Talent</a></li>
+            <li><a href="./services6.html" data-key="nav_digital">Digital</a></li>
           </ul>
         </li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../contact.html" data-key="nav_contact">Contact</a></li>
       </ul>
     </nav>
 
+    <!-- Language Toggle -->
+    <select id="language-selector" aria-label="Select language">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+
     <div class="profile-container">
-      <div class="profile">
-        <img id="profile-pic" src="../images/profile.jpg" alt="Profile Picture">
+      <div class="profile" id="profile-dropdown-toggle">
+        <span id="profile-initials"></span>
+      </div>
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
+      </ul>
+    </div>
+
+    <button id="toggle-dark">🌙</button>
+    <button id="mobile-menu-toggle" class="hamburger"  data-key="mobile_menu_label" data-attr="aria-label">☰</button>
+  </div>
+</header>
+
+  <!--
+  <header>
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../images/cropped-logo111.png"
+             alt="Logo"
+             data-key="img_logo_alt"
+             data-attr="alt">
+      </a>
+    </div>
+
+    <button id="mobile-menu-toggle" class="mobile-menu-btn"
+            aria-label="Open menu"
+            data-key="mobile_menu_label"
+            data-attr="aria-label">☰</button>
+
+    <nav>
+      <ul class="nav-menu">
+        <li>
+          <a href="../index.html" data-key="nav_home">Home</a>
+          <ul class="dropdown">
+            <li><a href="../index.html" data-key="nav_home1">Home1</a></li>
+            <li><a href="../pages/home2.html" data-key="nav_home2">Home2</a></li>
+          </ul>
+        </li>
+        <li><a href="../about.html" data-key="nav_about">About</a></li>
+        <li><a href="../blog.html" data-key="nav_blog">Blog</a></li>
+        <li>
+          <a href="../services.html" data-key="nav_services">Services</a>
+          <ul class="dropdown">
+            <li><a href="service1.html" data-key="nav_business">Business</a></li>
+            <li><a href="services2.html" data-key="nav_operations">Operations</a></li>
+            <li><a href="services3.html" data-key="nav_financial">Financial</a></li>
+            <li><a href="services4.html" data-key="nav_marketing">Marketing</a></li>
+            <li><a href="services5.html" data-key="nav_hr">HR&Talent</a></li>
+            <li><a href="services6.html" data-key="nav_digital">Digital</a></li>
+          </ul>
+        </li>
+        <li><a href="../contact.html" data-key="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+          
+    <select id="language-selector" aria-label="Select language">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="he">עברית</option>
+    </select>
+   
+    <div class="profile-container">
+      <div class="profile" id="profile-dropdown-toggle">
+        <img id="profile-pic" src="../images/.jpg"
+             alt="Profile Picture"
+             data-key="profile_pic_alt"
+             data-attr="alt">
         <span id="profile-initials" style="display:none;"></span>
       </div>
-      <button id="dark-mode-toggle">🌙</button>
+
+      <ul class="profile-dropdown" id="profile-dropdown">
+        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
+      </ul>
+
+      <button id="dark-mode-toggle"
+              aria-label="Toggle dark mode"
+              data-key="dark_mode_label"
+              data-attr="aria-label">🌙</button>
+
+    
+
     </div>
-  </header>
+  </header>-->
 
   <!-- 1. Hero Section -->
   <section class="hero fade-in" style="background-image: url('../images/services6.jpg');">
     <div class="overlay">
-      <h1>Technology & Digital Transformation</h1>
-      <p>Harnessing innovation and digital solutions to accelerate growth and efficiency.</p>
+      <h1 data-key="hero_title">Technology & Digital Transformation</h1>
+      <p data-key="hero_text">Harnessing innovation and digital solutions to accelerate growth and efficiency.</p>
     </div>
   </section>
 
   <!-- 2. About Section -->
   <section class="about slide-in-left">
     <div class="content">
-      <h2>About This Service</h2>
-      <p>
+      <h2 data-key="about_title">About This Service</h2>
+      <p data-key="about_text">
         In today’s fast-paced world, digital transformation is essential for staying competitive.  
         We guide organizations in adopting emerging technologies, automating workflows, and modernizing 
         their digital infrastructure to achieve operational excellence and customer satisfaction.
@@ -73,55 +162,57 @@
   <!-- 3. Features Section -->
   <section class="features fade-in" style="background-image: url('../images/services62.jpg');">
     <div class="overlay">
-      <h2>What We Offer</h2>
+      <h2 data-key="features_title">What We Offer</h2>
       <div class="grid">
         <div class="card">💻 
-  <h3>IT Infrastructure Modernization</h3>
-  <p>Upgrading and optimizing your IT systems to improve performance, scalability, and reliability across the organization.</p>
-</div>
-<div class="card">☁️ 
-  <h3>Cloud Solutions & Migration</h3>
-  <p>Planning and implementing cloud adoption strategies to enhance flexibility, collaboration, and cost-efficiency.</p>
-</div>
-<div class="card">🤖 
-  <h3>AI & Automation</h3>
-  <p>Leveraging artificial intelligence and automation tools to streamline operations, improve decision-making, and drive innovation.</p>
-</div>
-<div class="card">📱 
-  <h3>Digital Product Development</h3>
-  <p>Designing and building digital products, apps, and platforms that deliver exceptional user experiences and business value.</p>
-</div>
-<div class="card">🔒 
-  <h3>Cybersecurity Solutions</h3>
-  <p>Protecting your data, systems, and networks with robust cybersecurity strategies and risk management practices.</p>
-</div>
-<div class="card">📊 
-  <h3>Data Analytics & Insights</h3>
-  <p>Collecting and analyzing data to generate actionable insights, optimize operations, and support informed business decisions.</p>
-</div>
-
+          <h3 data-key="feature1_title">IT Infrastructure Modernization</h3>
+          <p data-key="feature1_text">Upgrading and optimizing your IT systems to improve performance, scalability, and reliability across the organization.</p>
+        </div>
+        <div class="card">☁️ 
+          <h3 data-key="feature2_title">Cloud Solutions & Migration</h3>
+          <p data-key="feature2_text">Planning and implementing cloud adoption strategies to enhance flexibility, collaboration, and cost-efficiency.</p>
+        </div>
+        <div class="card">🤖 
+          <h3 data-key="feature3_title">AI & Automation</h3>
+          <p data-key="feature3_text">Leveraging artificial intelligence and automation tools to streamline operations, improve decision-making, and drive innovation.</p>
+        </div>
+        <div class="card">📱 
+          <h3 data-key="feature4_title">Digital Product Development</h3>
+          <p data-key="feature4_text">Designing and building digital products, apps, and platforms that deliver exceptional user experiences and business value.</p>
+        </div>
+        <div class="card">🔒 
+          <h3 data-key="feature5_title">Cybersecurity Solutions</h3>
+          <p data-key="feature5_text">Protecting your data, systems, and networks with robust cybersecurity strategies and risk management practices.</p>
+        </div>
+        <div class="card">📊 
+          <h3 data-key="feature6_title">Data Analytics & Insights</h3>
+          <p data-key="feature6_text">Collecting and analyzing data to generate actionable insights, optimize operations, and support informed business decisions.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 4. Case Studies -->
   <section class="case slide-in-right">
-    <h2>Case Studies</h2>
+    <h2 data-key="case_title">Case Studies</h2>
     <div class="case-grid">
       <div class="case-card">
-        <img src="../images/blog1.jpg" alt="Cloud Migration">
-        <h3>Cloud Transformation</h3>
-        <p>Enabled a large enterprise to cut IT costs by 40% with seamless cloud migration.</p>
+        <img src="../images/blog1.jpg" alt="Cloud Migration"
+             data-key="case1_img_alt" data-attr="alt">
+        <h3 data-key="case1_title">Cloud Transformation</h3>
+        <p data-key="case1_text">Enabled a large enterprise to cut IT costs by 40% with seamless cloud migration.</p>
       </div>
       <div class="case-card">
-        <img src="../images/blog2.jpg" alt="AI Automation">
-        <h3>AI Automation</h3>
-        <p>Implemented AI chatbots that reduced customer service response times by 60%.</p>
+        <img src="../images/blog2.jpg" alt="AI Automation"
+             data-key="case2_img_alt" data-attr="alt">
+        <h3 data-key="case2_title">AI Automation</h3>
+        <p data-key="case2_text">Implemented AI chatbots that reduced customer service response times by 60%.</p>
       </div>
       <div class="case-card">
-        <img src="../images/blog3.jpg" alt="Cybersecurity">
-        <h3>Cybersecurity Upgrade</h3>
-        <p>Developed robust security measures that protected sensitive financial data.</p>
+        <img src="../images/blog3.jpg" alt="Cybersecurity"
+             data-key="case3_img_alt" data-attr="alt">
+        <h3 data-key="case3_title">Cybersecurity Upgrade</h3>
+        <p data-key="case3_text">Developed robust security measures that protected sensitive financial data.</p>
       </div>
     </div>
   </section>
@@ -129,15 +220,15 @@
   <!-- 5. Testimonials -->
   <section class="testimonials fade-in" style="background-image: url('../images/testmonial.jpg');">
     <div class="overlay">
-      <h2>What Clients Say</h2>
+      <h2 data-key="testimonials_title">What Clients Say</h2>
       <div class="quotes">
         <blockquote>
-          “Their digital transformation roadmap revolutionized the way we operate.”  
-          <cite>- Priya Sharma, CTO</cite>
+          <span data-key="testimonial1_text">“Their digital transformation roadmap revolutionized the way we operate.”</span>
+          <cite data-key="testimonial1_author">- Priya Sharma, CTO</cite>
         </blockquote>
         <blockquote>
-          “We saw immediate improvements in efficiency and customer engagement.”  
-          <cite>- John Williams, CEO</cite>
+          <span data-key="testimonial2_text">“We saw immediate improvements in efficiency and customer engagement.”</span>
+          <cite data-key="testimonial2_author">- John Williams, CEO</cite>
         </blockquote>
       </div>
     </div>
@@ -145,83 +236,320 @@
 
   <!-- 6. Call to Action -->
   <section class="cta slide-in-up">
-    <h2>Transform Your Business</h2>
-    <p>Embrace innovation with our technology and digital transformation solutions.</p>
-    <a href="../contact.html" class="btn">Get Started</a>
+    <h2 data-key="cta_title">Transform Your Business</h2>
+    <p data-key="cta_text">Embrace innovation with our technology and digital transformation solutions.</p>
+    <a href="../contact.html" class="btn" data-key="cta_btn">Get Started</a>
   </section>
 
   <!-- Footer -->
   <footer>
-  <div class="footer-container">
-    
-    <!-- Logo Section -->
-    <div class="footer-logo">
-      <a href="index.html"><img src="../images/cropped-logo111.png" alt="Logo"></a>
-      <h4>Business Consultation</h4>
-    </div>
+    <div class="footer-container">
 
-    <!-- Quick Links -->
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../services.html">Services</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Services -->
-    <div class="footer-services">
-      <h4>Explore Services</h4>
-      <ul>
-        <li><a href="../pages/service1.html">Business</a></li>
-        <li><a href="../pages/services2.html">Operations</a></li>
-        <li><a href="../pages/services3.html">Financial</a></li>
-        <li><a href="../pages/services4.html">Marketing</a></li>
-        <li><a href="../pages/services5.html">HR & Talent</a></li>
-        <li><a href="../pages/services6.html">Technology</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p><strong>Email:</strong> info@example.com</p>
-      <p><strong>Phone:</strong> +91 1234567890</p>
-
-      <h4>Follow Us</h4>
-      <div class="social">
-        <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook"></a>
-        <a href="https://twitter.com"><img src="images/x.png" alt="Twitter"></a>
-        <a href="https://instagram.com"><img src="images/inst.jpeg" alt="Instagram"></a>
+      <!-- Logo Section -->
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="../images/cropped-logo111.png" alt="Logo"
+               data-key="footer_logo_alt" data-attr="alt">
+        </a>
+        <h4 data-key="footer_company">Business Consultation</h4>
       </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4 data-key="footer_links">Quick Links</h4>
+        <ul>
+          <li><a href="../about.html" data-key="nav_about_foot">About</a></li>
+          <li><a href="../services.html" data-key="nav_services_foot">Services</a></li>
+          <li><a href="../blog.html" data-key="nav_blog_foot">Blog</a></li>
+          <li><a href="../contact.html" data-key="nav_contact_foot">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-services">
+        <h4 data-key="footer_services">Explore Services</h4>
+        <ul>
+          <li><a href="../pages/service1.html" data-key="service_business_foot">Business</a></li>
+          <li><a href="../pages/services2.html" data-key="service_operations_foot">Operations</a></li>
+          <li><a href="../pages/services3.html" data-key="service_financial_foot">Financial</a></li>
+          <li><a href="../pages/services4.html" data-key="service_marketing_foot">Marketing</a></li>
+          <li><a href="../pages/services5.html" data-key="service_hr_foot">HR & Talent</a></li>
+          <li><a href="../pages/services6.html" data-key="service_digital_foot">Technology</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-contact">
+        <h4 data-key="footer_contact_title">Contact Us</h4>
+        <p><strong data-key="footer_email_label">Email:</strong> <span data-key="footer_email">info@example.com</span></p>
+        <p><strong data-key="footer_phone_label">Phone:</strong> <span data-key="footer_phone">+91 1234567890</span></p>
+
+        <h4 data-key="footer_follow">Follow Us</h4>
+        <div class="social">
+          <a href="https://facebook.com"><img src="images/fb.png" alt="Facebook" data-key="social_fb_alt" data-attr="alt"></a>
+          <a href="https://twitter.com"><img src="images/x.png" alt="Twitter" data-key="social_tw_alt" data-attr="alt"></a>
+          <a href="https://instagram.com"><img src="images/inst.jpeg" alt="Instagram" data-key="social_ig_alt" data-attr="alt"></a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h4 data-key="newsletter_title">Newsletter</h4>
+        <p data-key="newsletter_text">Get weekly wellness tips and updates in your inbox.</p>
+        <form id="newsletter-form">
+          <input type="email"
+                 id="newsletter-email"
+                 placeholder="Enter your email"
+                 data-key="newsletter_placeholder"
+                 data-attr="placeholder"
+                 required>
+          <button type="submit" data-key="newsletter_button">Subscribe</button>
+        </form>
+        <div id="newsletter-success" style="display:none; color:green; margin-top:8px;" data-key="newsletter_success">
+          ✅ Thank you for subscribing!
+        </div>
+      </div>
+
     </div>
 
-    <!-- Newsletter -->
-    <div class="footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Get weekly wellness tips and updates in your inbox.</p>
-      <form id="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <div id="newsletter-success" style="display:none; color:green; margin-top:8px;">
-    ✅ Thank you for subscribing!
-  </div>
+    <div class="footer-copy">
+      &copy; <span data-key="footer_year">2025</span> <span data-key="company_name">Your Company Name</span>. <span data-key="rights">All Rights Reserved.</span>
     </div>
-  </div>
-
-  <div class="footer-copy">
-    &copy; 2025 Your Company Name. All Rights Reserved.
-  </div>
-</footer>
-
+  </footer>
 
   <!-- JS -->
   <script src="../js/newsletter.js"></script>
-
   <script src="../js/services1.js"></script>
-  <script src="../js/main.js"></script>
+
+  <!-- Language dictionary + runtime -->
+  <script>
+    (function () {
+      const I18N = {
+        en: {
+          page_title: "Technology & Digital Transformation",
+          img_logo_alt: "Logo",
+          mobile_menu_label: "Open menu",
+          nav_home: "Home", nav_home1: "Home1", nav_home2: "Home2",
+          nav_about: "About", nav_blog: "Blog", nav_services: "Services", nav_contact: "Contact",
+          nav_business: "Business", nav_operations: "Operations", nav_financial: "Financial",
+          nav_marketing: "Marketing", nav_hr: "HR & Talent", nav_digital: "Digital",
+          profile_pic_alt: "Profile Picture",
+          logout: "Logout",
+          dark_mode_label: "Toggle dark mode",
+
+          hero_title: "Technology & Digital Transformation",
+          hero_text: "Harnessing innovation and digital solutions to accelerate growth and efficiency.",
+
+          about_title: "About This Service",
+          about_text: "In today’s fast-paced world, digital transformation is essential for staying competitive. We guide organizations in adopting emerging technologies, automating workflows, and modernizing their digital infrastructure to achieve operational excellence and customer satisfaction.",
+
+          features_title: "What We Offer",
+          feature1_title: "IT Infrastructure Modernization", feature1_text: "Upgrading and optimizing your IT systems to improve performance, scalability, and reliability across the organization.",
+          feature2_title: "Cloud Solutions & Migration", feature2_text: "Planning and implementing cloud adoption strategies to enhance flexibility, collaboration, and cost-efficiency.",
+          feature3_title: "AI & Automation", feature3_text: "Leveraging artificial intelligence and automation tools to streamline operations, improve decision-making, and drive innovation.",
+          feature4_title: "Digital Product Development", feature4_text: "Designing and building digital products, apps, and platforms that deliver exceptional user experiences and business value.",
+          feature5_title: "Cybersecurity Solutions", feature5_text: "Protecting your data, systems, and networks with robust cybersecurity strategies and risk management practices.",
+          feature6_title: "Data Analytics & Insights", feature6_text: "Collecting and analyzing data to generate actionable insights, optimize operations, and support informed business decisions.",
+
+          case_title: "Case Studies",
+          case1_img_alt: "Cloud Migration", case1_title: "Cloud Transformation", case1_text: "Enabled a large enterprise to cut IT costs by 40% with seamless cloud migration.",
+          case2_img_alt: "AI Automation", case2_title: "AI Automation", case2_text: "Implemented AI chatbots that reduced customer service response times by 60%.",
+          case3_img_alt: "Cybersecurity", case3_title: "Cybersecurity Upgrade", case3_text: "Developed robust security measures that protected sensitive financial data.",
+
+          testimonials_title: "What Clients Say",
+          testimonial1_text: "“Their digital transformation roadmap revolutionized the way we operate.”", testimonial1_author: "- Priya Sharma, CTO",
+          testimonial2_text: "“We saw immediate improvements in efficiency and customer engagement.”", testimonial2_author: "- John Williams, CEO",
+
+          cta_title: "Transform Your Business", cta_text: "Embrace innovation with our technology and digital transformation solutions.", cta_btn: "Get Started",
+
+          footer_logo_alt: "Logo", footer_company: "Business Consultation",
+          footer_links: "Quick Links", nav_about_foot: "About", nav_services_foot: "Services", nav_blog_foot: "Blog", nav_contact_foot: "Contact",
+          footer_services: "Explore Services",
+          service_business_foot: "Business", service_operations_foot: "Operations", service_financial_foot: "Financial",
+          service_marketing_foot: "Marketing", service_hr_foot: "HR & Talent", service_digital_foot: "Technology",
+
+          footer_contact_title: "Contact Us", footer_email_label: "Email:", footer_phone_label: "Phone:",
+          footer_email: "info@example.com", footer_phone: "+91 1234567890", footer_follow: "Follow Us",
+
+          social_fb_alt: "Facebook", social_tw_alt: "Twitter", social_ig_alt: "Instagram",
+
+          newsletter_title: "Newsletter", newsletter_text: "Get weekly wellness tips and updates in your inbox.",
+          newsletter_placeholder: "Enter your email", newsletter_button: "Subscribe", newsletter_success: "✅ Thank you for subscribing!",
+
+          footer_year: "2025", company_name: "Your Company Name", rights: "All Rights Reserved."
+        },
+
+        ar: {
+          page_title: "التكنولوجيا والتحول الرقمي",
+          img_logo_alt: "الشعار",
+          mobile_menu_label: "فتح القائمة",
+          nav_home: "الرئيسية", nav_home1: "الصفحة الرئيسية 1", nav_home2: "الصفحة الرئيسية 2",
+          nav_about: "عن", nav_blog: "المدونة", nav_services: "الخدمات", nav_contact: "اتصل بنا",
+          nav_business: "الأعمال", nav_operations: "العمليات", nav_financial: "المالية",
+          nav_marketing: "التسويق", nav_hr: "الموارد البشرية", nav_digital: "الرقمية",
+          profile_pic_alt: "صورة الملف الشخصي",
+          logout: "تسجيل خروج",
+          dark_mode_label: "تبديل الوضع الداكن",
+
+          hero_title: "التكنولوجيا والتحول الرقمي",
+          hero_text: "استغلال الابتكار والحلول الرقمية لتسريع النمو وتحسين الكفاءة.",
+
+          about_title: "حول هذه الخدمة",
+          about_text: "في عالم سريع التغير، يُعد التحول الرقمي أمرًا أساسيًا للبقاء تنافسياً. نرشد المؤسسات إلى تبني التقنيات الناشئة وأتمتة سير العمل وتحديث البنية التحتية الرقمية لتحقيق التميز التشغيلي ورضا العملاء.",
+
+          features_title: "ما نقدمه",
+          feature1_title: "تحديث بنية تحتية لتقنية المعلومات", feature1_text: "ترقية وتحسين أنظمة تكنولوجيا المعلومات لتحسين الأداء وقابلية التوسع والموثوقية في جميع أنحاء المؤسسة.",
+          feature2_title: "حلول السحابة والهجرة", feature2_text: "تخطيط وتنفيذ استراتيجيات اعتماد السحابة لتعزيز المرونة والتعاون وكفاءة التكلفة.",
+          feature3_title: "الذكاء الاصطناعي والأتمتة", feature3_text: "الاستفادة من الذكاء الاصطناعي وأدوات الأتمتة لتبسيط العمليات وتحسين اتخاذ القرار ودفع الابتكار.",
+          feature4_title: "تطوير المنتجات الرقمية", feature4_text: "تصميم وبناء منتجات وتطبيقات رقمية ومنصات تقدم تجارب مستخدم استثنائية وقيمة تجارية.",
+          feature5_title: "حلول الأمن السيبراني", feature5_text: "حماية بياناتك وأنظمتك وشبكاتك باستراتيجيات أمنية قوية وممارسات إدارة المخاطر.",
+          feature6_title: "تحليلات البيانات والرؤى", feature6_text: "جمع وتحليل البيانات لتوليد رؤى قابلة للتنفيذ، وتحسين العمليات، ودعم اتخاذ القرار المدروس.",
+
+          case_title: "دراسات الحالة",
+          case1_img_alt: "هجرة السحابة", case1_title: "التحول السحابي", case1_text: "مكنّا مؤسسة كبيرة من خفض تكاليف تكنولوجيا المعلومات بنسبة 40٪ من خلال هجرة سلسة إلى السحابة.",
+          case2_img_alt: "أتمتة الذكاء الاصطناعي", case2_title: "أتمتة الذكاء الاصطناعي", case2_text: "نفذنا روبوتات محادثة ذكية خفّضت أوقات استجابة خدمة العملاء بنسبة 60٪.",
+          case3_img_alt: "الأمن السيبراني", case3_title: "ترقية الأمن السيبراني", case3_text: "وضعنا تدابير أمنية قوية لحماية البيانات الحساسة.",
+
+          testimonials_title: "آراء العملاء",
+          testimonial1_text: "“خريطة التحول الرقمي الخاصة بهم أحدثت ثورة في عملياتنا.”", testimonial1_author: "- بريا شارما، المدير التقني",
+          testimonial2_text: "“شهدنا تحسّنًا فوريًا في الكفاءة وتفاعل العملاء.”", testimonial2_author: "- جون ويليامز، المدير التنفيذي",
+
+          cta_title: "حوّل عملك", cta_text: "احتضن الابتكار مع حلولنا التقنية.", cta_btn: "ابدأ الآن",
+
+          footer_logo_alt: "الشعار", footer_company: "الاستشارات التجارية",
+          footer_links: "روابط سريعة", nav_about_foot: "عن", nav_services_foot: "الخدمات", nav_blog_foot: "المدونة", nav_contact_foot: "اتصل بنا",
+          footer_services: "استكشف الخدمات",
+          service_business_foot: "الأعمال", service_operations_foot: "العمليات", service_financial_foot: "المالية",
+          service_marketing_foot: "التسويق", service_hr_foot: "الموارد البشرية", service_digital_foot: "التكنولوجيا",
+
+          footer_contact_title: "تواصل معنا", footer_email_label: "البريد الإلكتروني:", footer_phone_label: "الهاتف:",
+          footer_email: "info@example.com", footer_phone: "+91 1234567890", footer_follow: "تابعنا",
+
+          social_fb_alt: "فيسبوك", social_tw_alt: "تويتر", social_ig_alt: "انستاغرام",
+
+          newsletter_title: "النشرة الإخبارية", newsletter_text: "احصل على نصائح وتحديثات أسبوعية في بريدك.",
+          newsletter_placeholder: "أدخل بريدك الإلكتروني", newsletter_button: "اشترك", newsletter_success: "✅ شكرًا لاشتراكك!",
+
+          footer_year: "2025", company_name: "اسم شركتك", rights: "جميع الحقوق محفوظة."
+        },
+
+        he: {
+          page_title: "טכנולוגיה וטרנספורמציה דיגיטלית",
+          img_logo_alt: "לוגו",
+          mobile_menu_label: "פתח תפריט",
+          nav_home: "בית", nav_home1: "בית 1", nav_home2: "בית 2",
+          nav_about: "אודות", nav_blog: "בלוג", nav_services: "שירותים", nav_contact: "צור קשר",
+          nav_business: "עסקים", nav_operations: "תפעול", nav_financial: "פיננסי",
+          nav_marketing: "שיווק", nav_hr: "משאבי אנוש", nav_digital: "דיגיטלי",
+          profile_pic_alt: "תמונת פרופיל",
+          logout: "התנתק",
+          dark_mode_label: "החלף מצב חשוך",
+
+          hero_title: "טכנולוגיה וטרנספורמציה דיגיטלית",
+          hero_text: "ניצול חדשנות ופתרונות דיגיטליים להאצת צמיחה ויעילות.",
+
+          about_title: "על השירות",
+          about_text: "בעולם הנע במהירות, טרנספורמציה דיגיטלית היא חיונית לשמירה על תחרותיות. אנו מדריכים ארגונים באימוץ טכנולוגיות חדשות, אוטומציה של תהליכים ומודרניזציה של התשתיות הדיגיטליות להשגת מצוינות תפעולית ושביעות רצון לקוחות.",
+
+          features_title: "מה אנו מציעים",
+          feature1_title: "מודרניזציה של תשתיות IT", feature1_text: "שדרוג ואופטימיזציה של מערכות ה-IT לשיפור ביצועים, קיבולת ואמינות.",
+          feature2_title: "פתרונות ענן והעברה לענן", feature2_text: "תכנון וביצוע אסטרטגיות אימוץ ענן להגברת גמישות, שיתוף פעולה וחיסכון בעלויות.",
+          feature3_title: "בינה מלאכותית ואוטומציה", feature3_text: "ניצול בינה מלאכותית וכלי אוטומציה לייעול תהליכים, שיפור קבלת ההחלטות וקידום חדשנות.",
+          feature4_title: "פיתוח מוצר דיגיטלי", feature4_text: "תכנון ובניית מוצרים דיגיטליים, אפליקציות ופלטפורמות שמספקות חוויות משתמש מעולות וערך עסקי.",
+          feature5_title: "פתרונות אבטחת סייבר", feature5_text: "הגנה על הנתונים, המערכות והרשתות עם אסטרטגיות אבטחה וניהול סיכונים חזקים.",
+          feature6_title: "אנליטיקס ותובנות נתונים", feature6_text: "איסוף וניתוח נתונים להפקת תובנות מעשיות, שיפור תפעולי ותמיכה בהחלטות עסקיות.",
+
+          case_title: "מקרי בוחן",
+          case1_img_alt: "העברת ענן", case1_title: "טרנספורמציית ענן", case1_text: "איפשרנו לארגון גדול לחתוך עלויות IT ב-40% באמצעות העברה חלקה לענן.",
+          case2_img_alt: "אוטומציה AI", case2_title: "אוטומציית AI", case2_text: "יישמנו צ'אבטים חכמים שהפחיתו זמני תגובה של שירות לקוחות ב-60%.",
+          case3_img_alt: "אבטחת סייבר", case3_title: "שדרוג אבטחת סייבר", case3_text: "פיתחנו אמצעי אבטחה חזקים שהגנו על נתונים רגישים.",
+
+          testimonials_title: "מה הלקוחות אומרים",
+          testimonial1_text: "“מפת הטרנספורמציה הדיגיטלית שלהם שינתה לחלוטין את פעולותינו.”", testimonial1_author: "- פריה שארמה, CTO",
+          testimonial2_text: "“ראינו שיפורים מיידיים ביעילות ומעורבות הלקוחות.”", testimonial2_author: "- ג'ון ויליאמס, מנכ\"ל",
+
+          cta_title: "הפוך את העסק שלך", cta_text: "אמצו חדשנות עם פתרונות הטכנולוגיה שלנו.", cta_btn: "התחל עכשיו",
+
+          footer_logo_alt: "לוגו", footer_company: "ייעוץ עסקי",
+          footer_links: "קישורים מהירים", nav_about_foot: "אודות", nav_services_foot: "שירותים", nav_blog_foot: "בלוג", nav_contact_foot: "צור קשר",
+          footer_services: "גלה שירותים",
+          service_business_foot: "עסקים", service_operations_foot: "תפעול", service_financial_foot: "פיננסי",
+          service_marketing_foot: "שיווק", service_hr_foot: "משאבי אנוש", service_digital_foot: "טכנולוגיה",
+
+          footer_contact_title: "צור קשר", footer_email_label: "דוא\"ל:", footer_phone_label: "טלפון:",
+          footer_email: "info@example.com", footer_phone: "+91 1234567890", footer_follow: "עקבו אחרינו",
+
+          social_fb_alt: "פייסבוק", social_tw_alt: "טוויטר", social_ig_alt: "אינסטגרם",
+
+          newsletter_title: "ניוזלטר", newsletter_text: "קבל טיפים ועדכונים שבועיים.",
+          newsletter_placeholder: "הכנס את המייל שלך", newsletter_button: "הירשם", newsletter_success: "✅ תודה שנרשמת!",
+
+          footer_year: "2025", company_name: "שם החברה שלך", rights: "כל הזכויות שמורות."
+        }
+      };
+
+      const RTL_LANGS = new Set(["ar", "he"]);
+
+      function applyTranslations(lang) {
+        const dict = I18N[lang] || I18N.en;
+
+        // document title
+        if (dict.page_title) document.title = dict.page_title;
+
+        // html lang + dir
+        document.documentElement.lang = lang;
+        document.documentElement.dir = RTL_LANGS.has(lang) ? "rtl" : "ltr";
+        document.body.classList.toggle("rtl", RTL_LANGS.has(lang));
+
+        // update elements
+        document.querySelectorAll("[data-key]").forEach(el => {
+          const key = el.getAttribute("data-key");
+          if (!key) return;
+          const val = dict[key];
+          if (val == null) return;
+
+          const attr = el.getAttribute("data-attr");
+          if (attr) {
+            el.setAttribute(attr, val);
+          } else {
+            const tag = el.tagName.toUpperCase();
+            if ((tag === "INPUT" || tag === "TEXTAREA") && el.hasAttribute("placeholder")) {
+              el.placeholder = val;
+            } else {
+              el.textContent = val;
+            }
+          }
+        });
+
+        // newsletter input fallback (by id)
+        const newsletterInput = document.getElementById("newsletter-email");
+        if (newsletterInput && dict.newsletter_placeholder) {
+          newsletterInput.placeholder = dict.newsletter_placeholder;
+        }
+
+        // sync selector
+        const sel = document.getElementById("language-selector");
+        if (sel && sel.value !== lang) sel.value = lang;
+
+        // persist
+        try { localStorage.setItem("site_lang", lang); } catch (e) {}
+      }
+
+      function detectInitialLang() {
+        return localStorage.getItem("site_lang") || "en";
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const initial = detectInitialLang();
+        applyTranslations(initial);
+
+        const selector = document.getElementById("language-selector");
+        if (selector) {
+          selector.value = initial;
+          selector.addEventListener("change", (e) => applyTranslations(e.target.value));
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
