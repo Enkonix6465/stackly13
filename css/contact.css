@@ -11,7 +11,7 @@
 
 /* Hero Section */
 .contact-hero {
-  background: url('images/contact-bg.jpg') center/cover no-repeat;
+  background: url('../images/hero-bg.jpg') center/cover no-repeat;
   height: 50vh;
   display: flex;
   align-items: center;

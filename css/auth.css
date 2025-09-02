@@ -204,7 +204,7 @@ html[dir="rtl"] .lang-toggle,
 html[dir="rtl"] .language-select {
   text-align: left;
 }
-
+url
 /* In RTL, links should flow naturally */
 html[dir="rtl"] .auth-container p {
   text-align: right;

@@ -8,7 +8,7 @@ body.dark-mode {
 /* Hero Section */
 body.dark-mode .hero {
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-              url("images/hero-bg.jpg") center/cover no-repeat;
+              url("../images/hero-bg.jpg") center/cover no-repeat;
 }
 body.dark-mode .hero h1,
 body.dark-mode .hero p {

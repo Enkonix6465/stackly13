@@ -218,7 +218,7 @@ body.dark-mode footer .newsletter button {
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url("images/hero-bg.jpg") center/cover no-repeat;
+    url("../images/hero-bg.jpg") center/cover no-repeat;
   text-align: center;
   color: white;
 }
@@ -280,7 +280,7 @@ body.dark-mode .hero {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    url("images/hero-bg.jpg") center/cover no-repeat;
+    url("../images/hero-bg.jpg") center/cover no-repeat;
 }
 
 body.dark-mode .btn-secondary {
