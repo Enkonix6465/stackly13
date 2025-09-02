@@ -176,7 +176,10 @@
         userDashboard: "User Dashboard",
         username: "Username",
         password: "Password",
-        actions: "Actions"
+        actions: "Actions",
+        delete: "Delete",
+    chartUsers: "Users",
+    chartSignups: "Signups Today"
       },
       ar: {
         dashboardTitle: "لوحة التحكم",
@@ -200,7 +203,10 @@
         userDashboard: "لوحة المستخدم",
         username: "اسم المستخدم",
         password: "كلمة المرور",
-        actions: "الإجراءات"
+        actions: "الإجراءات",
+         delete: "حذف",
+    chartUsers: "المستخدمين",
+    chartSignups: "التسجيلات اليوم"
       },
       he: {
         dashboardTitle: "לוח בקרה",
@@ -224,7 +230,10 @@
         userDashboard: "לוח משתמש",
         username: "שם משתמש",
         password: "סיסמה",
-        actions: "פעולות"
+        actions: "פעולות",
+        delete: "מחק",
+    chartUsers: "משתמשים",
+    chartSignups: "הרשמות היום"
       }
     };
 
@@ -234,7 +243,8 @@
         if (translations[lang][key]) {
           el.textContent = translations[lang][key];
         }
-      });
+      }
+      );
 
       // RTL support
       if (lang === "ar" || lang === "he") {
@@ -242,6 +252,10 @@
       } else {
         document.body.dir = "ltr";
       }
+
+      renderUsers();
+renderCharts();
+
     }
 
     document.getElementById("language-selector").addEventListener("change", function () {

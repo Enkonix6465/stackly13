@@ -183,3 +183,29 @@ body.dark-mode .auth-container a {
   transition: border 0.3s, background 0.3s;
   box-sizing: border-box;
 }
+
+
+/* =========================
+   RTL SUPPORT
+========================= */
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Flip password toggle to the left in RTL */
+html[dir="rtl"] .password-field .toggle-password {
+  right: auto;
+  left: 12px;
+}
+
+/* Align language selector to left in RTL */
+html[dir="rtl"] .lang-toggle,
+html[dir="rtl"] .language-select {
+  text-align: left;
+}
+
+/* In RTL, links should flow naturally */
+html[dir="rtl"] .auth-container p {
+  text-align: right;
+}
