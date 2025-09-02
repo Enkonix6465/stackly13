@@ -327,7 +327,7 @@ body.dark-mode .hero {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    url("images/hero-bg.jpg") center/cover no-repeat;
+    url("../images/hero-bg.jpg") center/cover no-repeat;
 }
 
 body.dark-mode .btn-secondary {
@@ -400,6 +400,7 @@ body.dark-mode .btn-secondary:hover {
 
 
 /* Contact Section with Background Image */
+
 .contact-section {
   background: url("../images/im5.jpeg") center/cover no-repeat;
   position: relative;
@@ -461,7 +462,7 @@ body.dark-mode .hero {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    url("images/hero-bg.jpg") center/cover no-repeat;
+    url("../images/hero-bg.jpg") center/cover no-repeat;
 }
 body.dark-mode .hero h1,
 body.dark-mode .hero p {
