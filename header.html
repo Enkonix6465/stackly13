@@ -3,37 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dropdown Navigation</title>
+  <title>Beautiful Dropdown</title>
   <style>
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
-      background: #f4f4f4;
-    }
-
-    .logo {
-      float: left;
-    }
-
-    .logo img {
-      height: 50px;
+      background: linear-gradient(135deg, #ece9e6, #ffffff);
     }
 
     nav {
-      background: #1a1a1a;
-      padding: 15px 30px;
-      border-radius: 12px;
+      background: #111;
+      padding: 15px 40px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
     }
 
     .nav-menu {
       list-style: none;
       display: flex;
-      gap: 25px;
-      font-weight: 500;
+      gap: 30px;
       margin: 0;
       padding: 0;
+      font-weight: 500;
     }
 
     .nav-menu > li {
@@ -41,13 +34,12 @@
       color: #fff;
       cursor: pointer;
       padding: 10px 15px;
+      transition: all 0.3s ease;
       border-radius: 8px;
-      transition: background 0.3s ease, transform 0.2s ease;
     }
 
     .nav-menu > li:hover {
-      background: #333;
-      transform: translateY(-2px);
+      background: rgba(255,255,255,0.1);
     }
 
     .nav-menu a {
@@ -56,30 +48,34 @@
       display: block;
     }
 
+    /* Modern Dropdown */
     .dropdown {
       list-style: none;
       position: absolute;
-      top: 100%;
+      top: 120%;
       left: 0;
-      background: #222;
-      padding: 10px 0;
-      min-width: 180px;
-      border-radius: 12px;
-      box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+      background: rgba(30,30,30,0.9);
+      backdrop-filter: blur(12px);
+      padding: 12px 0;
+      min-width: 200px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
       opacity: 0;
       visibility: hidden;
-      transform: translateY(15px);
-      transition: all 0.3s ease;
-      z-index: 100;
+      transform: translateY(20px) scale(0.95);
+      transition: all 0.35s ease;
+      z-index: 99;
     }
 
     .dropdown li {
-      padding: 10px 20px;
-      transition: background 0.3s;
+      padding: 12px 20px;
+      transition: background 0.3s, transform 0.2s;
+      border-radius: 10px;
     }
 
     .dropdown li:hover {
-      background: #444;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      transform: translateX(4px);
     }
 
     .dropdown a {
@@ -91,7 +87,7 @@
     .nav-menu li:hover > .dropdown {
       opacity: 1;
       visibility: visible;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
 
     /* Profile + Button */
@@ -103,16 +99,16 @@
     }
 
     #profile-pic {
-      width: 35px;
-      height: 35px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid #fff;
     }
 
     #profile-initial {
-      width: 35px;
-      height: 35px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       background: #555;
       color: #fff;
@@ -124,10 +120,10 @@
 
     #dark-mode-toggle {
       margin-left: 20px;
-      background: #333;
+      background: #222;
       border: none;
-      padding: 8px 12px;
-      border-radius: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
       color: #fff;
       font-size: 18px;
       cursor: pointer;
@@ -135,39 +131,35 @@
     }
 
     #dark-mode-toggle:hover {
-      background: #555;
+      background: #444;
     }
   </style>
 </head>
 <body>
-
-  <div class="logo">
-    <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
-  </div>
 
   <nav>
     <ul class="nav-menu">
       <li>
         Home
         <ul class="dropdown">
-          <li><a href="home1.html">Home1</a></li>
-          <li><a href="home2.html">Home2</a></li>
+          <li><a href="home1.html">🏠 Home 1</a></li>
+          <li><a href="home2.html">🏡 Home 2</a></li>
         </ul>
       </li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">ℹ️ About</a></li>
+      <li><a href="blog.html">📝 Blog</a></li>
       <li>
         Services
         <ul class="dropdown">
-          <li><a href="service1.html">Service1</a></li>
-          <li><a href="service2.html">Service2</a></li>
-          <li><a href="service3.html">Service3</a></li>
-          <li><a href="service4.html">Service4</a></li>
-          <li><a href="service5.html">Service5</a></li>
-          <li><a href="service6.html">Service6</a></li>
+          <li><a href="service1.html">💼 Service 1</a></li>
+          <li><a href="service2.html">⚙️ Service 2</a></li>
+          <li><a href="service3.html">🚀 Service 3</a></li>
+          <li><a href="service4.html">🎨 Service 4</a></li>
+          <li><a href="service5.html">📊 Service 5</a></li>
+          <li><a href="service6.html">🔧 Service 6</a></li>
         </ul>
       </li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html">📞 Contact</a></li>
     </ul>
 
     <div class="profile">
@@ -180,4 +172,3 @@
 
 </body>
 </html>
-
