@@ -4,160 +4,182 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forgot Password</title>
-  <link rel="stylesheet" href="css/auth.css">
-  <script src="js/darkmode.js" defer></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
-    .forgot-container {
-      width: 400px;
-      margin: 80px auto;
-      padding: 30px;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: background 0.3s, color 0.3s;
     }
-    .forgot-container h2 {
-      margin-bottom: 20px;
-    }
-    .forgot-container input {
+    body.dark { background: #1a1a1a; color: #f1f1f1; }
+
+    .forgot-container {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 400px;
       width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+      padding: 40px 30px;
+      transition: background 0.3s, color 0.3s;
     }
-    .forgot-container button {
-      width: 100%;
-      padding: 12px;
-      background: #007bff;
-      border: none;
-      border-radius: 6px;
-      color: white;
-      font-size: 16px;
+    body.dark .forgot-container { background: #2a2a2a; }
+
+    .top-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .auth-logo { width: 80px; }
+
+    .controls { display: flex; gap: 10px; }
+    .language-select, .dark-mode-toggle {
+      padding: 5px 10px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      background: white;
       cursor: pointer;
+      font-size: 13px;
+      transition: all 0.3s ease;
     }
-    .forgot-container button:hover {
-      background: #0056b3;
+    body.dark .language-select, body.dark .dark-mode-toggle {
+      background: #333; color: #fff; border-color: #666;
     }
-    .forgot-container p {
-      margin-top: 15px;
-      font-size: 14px;
+
+    h2 { text-align: center; margin-bottom: 25px; font-size: 1.8rem; }
+
+    .form-group { margin-bottom: 18px; position: relative; }
+    .form-input {
+      width: 100%;
+      padding: 12px 40px 12px 12px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: 0.3s;
     }
-    .forgot-container a {
-      color: #007bff;
-      text-decoration: none;
+    .form-input:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 2px rgba(102,126,234,0.15);
     }
-    .forgot-container a:hover {
-      text-decoration: underline;
+    body.dark .form-input { background: #333; color: #fff; border-color: #666; }
+
+    .form-group i {
+      position: absolute;
+      right: 12px; top: 50%; transform: translateY(-50%);
+      color: #999;
     }
-    #forgotMsg {
-      display: none;
-      margin-top: 10px;
-      font-weight: bold;
+
+    .password-toggle {
+      position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+      cursor: pointer; color: #999;
     }
-    .lang-toggle {
-      margin-bottom: 15px;
-      text-align: right;
+
+    .reset-btn {
+      width: 100%; padding: 14px;
+      background: linear-gradient(135deg,#667eea,#764ba2);
+      color: #fff; border: none; border-radius: 10px;
+      font-size: 1.05rem; font-weight: 600;
+      margin-top: 18px;
+      cursor: pointer; transition: all 0.3s ease;
     }
+    .reset-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(102,126,234,0.3); }
+
+    .extra-links { text-align: center; margin-top: 16px; font-size: 0.9rem; }
+    .extra-links a { color: #667eea; text-decoration: none; font-weight: 500; }
+    .extra-links a:hover { text-decoration: underline; }
+
+    .lang-toggle { text-align: right; margin-bottom: 20px; }
+
   </style>
 </head>
 <body>
   <div class="forgot-container">
-    <!-- Language Toggle -->
-    <div class="lang-toggle">
-      <select id="language-selector">
-        <option value="en">English</option>
-        <option value="ar">العربية</option>
-        <option value="he">עברית</option>
-      </select>
+    <div class="top-controls">
+      <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo" class="auth-logo"></a>
+      <div class="controls">
+        <select id="language-selector" class="language-select">
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="he">עברית</option>
+        </select>
+        <button type="button" id="darkModeToggle" class="dark-mode-toggle">🌙</button>
+      </div>
     </div>
 
     <h2 data-key="title">Forgot Password</h2>
     <form id="forgotForm">
-      <input type="text" id="forgotUsername" data-key="email" placeholder="Enter your email" required>
-      <input type="password" id="forgotPassword" data-key="newPassword" placeholder="Enter new password" required>
-      <button type="submit" data-key="resetBtn">Reset Password</button>
+      <div class="form-group">
+        <input type="text" id="forgotUsername" class="form-input" placeholder="Enter your email" data-key="email" required>
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div class="form-group">
+        <input type="password" id="forgotPassword" class="form-input" placeholder="Enter new password" data-key="newPassword" required>
+        <i class="fas fa-lock"></i>
+        <span class="password-toggle"><i class="fas fa-eye"></i></span>
+      </div>
+      <button type="submit" class="reset-btn" data-key="resetBtn">Reset Password</button>
     </form>
-    <p id="forgotMsg" data-key="message"></p>
-    <p><a href="login.html" data-key="backLink">Back to Login</a></p>
+
+    <p id="forgotMsg" data-key="message" style="display:none;"></p>
+    <div class="extra-links">
+      <p><a href="login.html" data-key="backLink">Back to Login</a></p>
+    </div>
   </div>
 
   <script>
     const I18N = {
-      en: {
-        title: "Forgot Password",
-        email: "Enter your email",
-        newPassword: "Enter new password",
-        resetBtn: "Reset Password",
-        message: "Your password has been reset!",
-        backLink: "Back to Login"
-      },
-      ar: {
-        title: "نسيت كلمة المرور",
-        email: "أدخل بريدك الإلكتروني",
-        newPassword: "أدخل كلمة مرور جديدة",
-        resetBtn: "إعادة تعيين كلمة المرور",
-        message: "تمت إعادة تعيين كلمة المرور الخاصة بك!",
-        backLink: "العودة إلى تسجيل الدخول"
-      },
-      he: {
-        title: "שחזור סיסמה",
-        email: "הכנס את האימייל שלך",
-        newPassword: "הכנס סיסמה חדשה",
-        resetBtn: "אפס סיסמה",
-        message: "הסיסמה שלך אופסה בהצלחה!",
-        backLink: "חזרה להתחברות"
-      }
+      en: { title:"Forgot Password", email:"Enter your email", newPassword:"Enter new password", resetBtn:"Reset Password", message:"Your password has been reset!", backLink:"Back to Login" },
+      ar: { title:"نسيت كلمة المرور", email:"أدخل بريدك الإلكتروني", newPassword:"أدخل كلمة مرور جديدة", resetBtn:"إعادة تعيين كلمة المرور", message:"تمت إعادة تعيين كلمة المرور الخاصة بك!", backLink:"العودة إلى تسجيل الدخول" },
+      he: { title:"שחזור סיסמה", email:"הכנס את האימייל שלך", newPassword:"הכנס סיסמה חדשה", resetBtn:"אפס סיסמה", message:"הסיסמה שלך אופסה בהצלחה!", backLink:"חזרה להתחברות" }
     };
+    const RTL_LANGS = new Set(["ar","he"]);
 
-    const RTL_LANGS = new Set(["ar", "he"]);
-
-    function applyTranslations(lang) {
+    function applyTranslations(lang){
       const dict = I18N[lang] || I18N.en;
-
-      // Swap dir & lang
       document.documentElement.lang = lang;
       document.documentElement.dir = RTL_LANGS.has(lang) ? "rtl" : "ltr";
-
-      // All nodes with data-key
-      document.querySelectorAll("[data-key]").forEach((el) => {
-        const key = el.getAttribute("data-key");
-        const val = dict[key];
-        if (!val) return;
-
-        if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-          if (el.hasAttribute("placeholder")) el.placeholder = val;
-        } else {
-          el.textContent = val;
-        }
+      document.querySelectorAll("[data-key]").forEach(el=>{
+        const key=el.getAttribute("data-key");
+        if(!dict[key]) return;
+        if(el.tagName==="INPUT"||el.tagName==="TEXTAREA"){
+          if(el.hasAttribute("placeholder")) el.placeholder=dict[key];
+        } else el.textContent=dict[key];
       });
-
-      // Keep selector in sync
-      const sel = document.getElementById("language-selector");
-      if (sel && sel.value !== lang) sel.value = lang;
-
-      // Save preference
-      localStorage.setItem("site_lang", lang);
+      localStorage.setItem("site_lang",lang);
     }
 
-    function detectInitialLang() {
-      return localStorage.getItem("site_lang") || "en";
-    }
+    const savedLang=localStorage.getItem("site_lang")||"en";
+    applyTranslations(savedLang);
+    document.getElementById("language-selector").value=savedLang;
+    document.getElementById("language-selector").addEventListener("change", e=>{
+      applyTranslations(e.target.value);
+    });
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const initial = detectInitialLang();
-      applyTranslations(initial);
+    // Dark mode
+    const darkBtn=document.getElementById("darkModeToggle");
+    if(localStorage.getItem("dark_mode")==="true") document.body.classList.add("dark");
+    darkBtn.addEventListener("click", ()=>{
+      document.body.classList.toggle("dark");
+      localStorage.setItem("dark_mode", document.body.classList.contains("dark"));
+    });
 
-      const selector = document.getElementById("language-selector");
-      if (selector) {
-        selector.value = initial;
-        selector.addEventListener("change", (e) => {
-          applyTranslations(e.target.value);
-        });
-      }
+    // Password toggle
+    document.querySelectorAll(".password-toggle").forEach(toggle=>{
+      toggle.addEventListener("click", ()=>{
+        const input=toggle.parentElement.querySelector("input");
+        const icon=toggle.querySelector("i");
+        if(input.type==="password"){ input.type="text"; icon.classList.replace("fa-eye","fa-eye-slash"); }
+        else{ input.type="password"; icon.classList.replace("fa-eye-slash","fa-eye"); }
+      });
     });
   </script>
-
   <script src="js/forgot.js"></script>
 </body>
 </html>
