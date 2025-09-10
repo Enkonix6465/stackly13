@@ -32,7 +32,7 @@
 
     /* Left Image */
     .auth-image {
-      flex: 0.8;
+      flex: 0.804; /* increased by 4px approx in ratio */
       background: #f2f5f9;
     }
 
@@ -141,6 +141,23 @@
     a:hover {
       text-decoration: underline;
     }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .auth-wrapper {
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0;
+      }
+      .auth-image {
+        display: none;
+      }
+      .auth-container {
+        flex: none;
+        width: 100%;
+        padding: 30px 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -183,7 +200,92 @@
   </div>
 
   <script>
-    // same translation + togglePassword logic from your code
+    // Dictionary
+    const I18N = {
+      en: {
+        page_title: "Login",
+        login_title: "Login",
+        email: "Email",
+        password: "Password",
+        login_btn: "Login",
+        no_account: "Don’t have an account?",
+        signup_link: "Sign up here",
+        forgot_password: "Forgot Password?"
+      },
+      ar: {
+        page_title: "تسجيل الدخول",
+        login_title: "تسجيل الدخول",
+        email: "البريد الإلكتروني",
+        password: "كلمة المرور",
+        login_btn: "تسجيل الدخول",
+        no_account: "ليس لديك حساب؟",
+        signup_link: "سجل هنا",
+        forgot_password: "هل نسيت كلمة المرور؟"
+      },
+      he: {
+        page_title: "התחברות",
+        login_title: "התחברות",
+        email: "אימייל",
+        password: "סיסמה",
+        login_btn: "התחבר",
+        no_account: "אין לך חשבון?",
+        signup_link: "הירשם כאן",
+        forgot_password: "שכחת סיסמה?"
+      }
+    };
+
+    const RTL_LANGS = new Set(["ar", "he"]);
+
+    function applyTranslations(lang) {
+      const dict = I18N[lang] || I18N.en;
+
+      document.title = dict.page_title || "Login";
+      document.documentElement.lang = lang;
+      document.documentElement.dir = RTL_LANGS.has(lang) ? "rtl" : "ltr";
+
+      document.querySelectorAll("[data-key]").forEach((el) => {
+        const key = el.getAttribute("data-key");
+        if (dict[key]) {
+          if (el.tagName === "INPUT") {
+            el.placeholder = dict[key];
+          } else {
+            el.textContent = dict[key];
+          }
+        }
+      });
+
+      const sel = document.getElementById("language-selector");
+      if (sel && sel.value !== lang) sel.value = lang;
+      localStorage.setItem("site_lang", lang);
+    }
+
+    function detectInitialLang() {
+      return localStorage.getItem("site_lang") || "en";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const initial = detectInitialLang();
+      applyTranslations(initial);
+
+      const selector = document.getElementById("language-selector");
+      if (selector) {
+        selector.value = initial;
+        selector.addEventListener("change", (e) => {
+          applyTranslations(e.target.value);
+        });
+      }
+    });
+
+    function togglePassword(id, el) {
+      const input = document.getElementById(id);
+      if (input.type === "password") {
+        input.type = "text";
+        el.textContent = "🙈";
+      } else {
+        input.type = "password";
+        el.textContent = "👁️";
+      }
+    }
   </script>
   <script src="js/auth.js"></script>
 </body>
