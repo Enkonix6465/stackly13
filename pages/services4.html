@@ -181,50 +181,49 @@
 
   <header>
   <div class="logo">
-    <a href="../index.html"><img src="../images/cropped-logo111.png" alt="Logo" ></a>
+    <a href="../index.html"><img src="../images/cropped-logo111.png" alt="Logo"></a>
   </div>
 
   <div class="header-right">
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="../index.html" data-key="navHome">Home ▾</a>
+          <a href="../index.html" data-i18n="home">Home ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="../index.html"  data-key="navHome1">Home 1</a></li>
-            <li><a href="../pages/home2.html" data-key="navHome2">Home 2</a></li>
+            <li><a href="../index.html" data-i18n="home1">Home 1</a></li>
+            <li><a href="../pages/home2.html" data-i18n="home2">Home 2</a></li>
           </ul>
         </li>
-        <li><a href="../about.html" data-key="navAbout">About</a></li>
-        <li><a href="../blog.html" data-key="navBlog">Blog</a></li>
+        <li><a href="../about.html" data-i18n="about">About</a></li>
+        <li><a href="../blog.html" data-i18n="blog">Blog</a></li>
         <li class="dropdown">
-          <a href="../services.html" data-key="navServices">Services ▾</a>
+          <a href="services.html" data-i18n="services">Services ▾</a>
           <ul class="dropdown-menu">
-            <li class="mobile-only"><a href="../services.html" data-i18n="nav_all_services">All Services</a></li>
-            <li><a href="./service1.html" data-key="navBusiness">Business</a></li>
-            <li><a href="./services2.html" data-key="navOperations">Operations</a></li>
-            <li><a href="./services3.html" data-key="navFinancial">Financial</a></li>
-            <li><a href="./services4.html" data-key="navMarketing">Marketing</a></li>
-            <li><a href="./services5.html" data-key="navHR">HR & Talent</a></li>
-            <li><a href="./services6.html" data-key="navDigital">Digital</a></li>
+            <li><a href="../services.html" data-i18n="nav_all_services">All Services</a></li>
+            <li><a href="../pages/service1.html" data-i18n="business">Business</a></li>
+            <li><a href="../pages/services2.html" data-i18n="operations">Operations</a></li>
+            <li><a href="../pages/services3.html" data-i18n="financial">Financial</a></li>
+            <li><a href="../pages/services4.html" data-i18n="marketing">Marketing</a></li>
+            <li><a href="../pages/services5.html" data-i18n="hr">HR & Talent</a></li>
+            <li><a href="../pages/services6.html" data-i18n="digital">Digital</a></li>
           </ul>
         </li>
-        <li><a href="../contact.html" data-key="navContact">Contact</a></li>
+        <li><a href="../contact.html" data-i18n="contact">Contact</a></li>
       </ul>
     </nav>
 
-    <!-- Language Toggle -->
-    <select id="language-selector" aria-label="Select language">
+    <select id="languageToggle" aria-label="Select language">
       <option value="en">English</option>
       <option value="ar">العربية</option>
       <option value="he">עברית</option>
     </select>
 
-    <div class="profile-container">
+    <div class="profile-container" id="profile-container">
       <div class="profile" id="profile-dropdown-toggle">
-        <span id="profile-initials"></span>
+        <span id="profile-initials">K</span>
       </div>
       <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn" data-key="logout">Logout</a></li>
+        <li><a href="#" id="logout-btn" data-i18n="logout">Logout</a></li>
       </ul>
     </div>
 
