@@ -3,98 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beautiful Dropdown</title>
+  <title>Modern Navbar</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #ece9e6, #ffffff);
+    }
+
+    body {
+      background: #f5f7fa;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 40px;
+      background: #1e293b;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 50px;
     }
 
     nav {
-      background: #111;
-      padding: 15px 40px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+      flex: 1;
+      margin-left: 40px;
     }
 
     .nav-menu {
       list-style: none;
       display: flex;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
-      font-weight: 500;
+      gap: 25px;
     }
 
-    .nav-menu > li {
+    .nav-menu li {
       position: relative;
+    }
+
+    .nav-menu > li > a,
+    .nav-menu > li {
       color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px;
       cursor: pointer;
-      padding: 10px 15px;
+      transition: 0.3s;
+    }
+
+    .nav-menu > li:hover > a {
+      color: #38bdf8;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #334155;
+      list-style: none;
+      min-width: 180px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(15px);
       transition: all 0.3s ease;
+    }
+
+    .dropdown li a {
+      display: block;
+      padding: 12px 16px;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
       border-radius: 8px;
     }
 
-    .nav-menu > li:hover {
-      background: rgba(255,255,255,0.1);
+    .dropdown li a:hover {
+      background: #475569;
+      color: #38bdf8;
     }
 
-    .nav-menu a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
-    /* Modern Dropdown */
-    .dropdown {
-      list-style: none;
-      position: absolute;
-      top: 120%;
-      left: 0;
-      background: rgba(30,30,30,0.9);
-      backdrop-filter: blur(12px);
-      padding: 12px 0;
-      min-width: 200px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(20px) scale(0.95);
-      transition: all 0.35s ease;
-      z-index: 99;
-    }
-
-    .dropdown li {
-      padding: 12px 20px;
-      transition: background 0.3s, transform 0.2s;
-      border-radius: 10px;
-    }
-
-    .dropdown li:hover {
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      transform: translateX(4px);
-    }
-
-    .dropdown a {
-      color: #fff;
-      font-size: 15px;
-      font-weight: 400;
-    }
-
-    .nav-menu li:hover > .dropdown {
+    .nav-menu li:hover .dropdown {
       opacity: 1;
       visibility: visible;
-      transform: translateY(0) scale(1);
+      transform: translateY(0);
     }
 
-    /* Profile + Button */
+    /* Profile */
     .profile {
       display: flex;
       align-items: center;
-      margin-left: auto;
       gap: 10px;
     }
 
@@ -103,72 +110,125 @@
       height: 40px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid #fff;
+      background: #94a3b8;
     }
 
     #profile-initial {
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: #555;
-      color: #fff;
+      background: #38bdf8;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 600;
+      font-weight: bold;
     }
 
+    /* Dark Mode Toggle */
     #dark-mode-toggle {
       margin-left: 20px;
-      background: #222;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 12px;
-      color: #fff;
       font-size: 18px;
+      background: transparent;
+      border: none;
       cursor: pointer;
-      transition: background 0.3s;
+      color: #fff;
+      transition: transform 0.3s;
     }
 
     #dark-mode-toggle:hover {
-      background: #444;
+      transform: rotate(20deg);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      nav {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background: #1e293b;
+        transition: 0.4s;
+      }
+
+      nav.active {
+        left: 0;
+      }
+
+      .nav-menu {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .nav-menu li {
+        text-align: center;
+      }
+
+      .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+
+    .menu-toggle {
+      display: none;
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
+    </div>
 
-  <nav>
-    <ul class="nav-menu">
-      <li>
-        Home
-        <ul class="dropdown">
-          <li><a href="home1.html">🏠 Home 1</a></li>
-          <li><a href="home2.html">🏡 Home 2</a></li>
-        </ul>
-      </li>
-      <li><a href="about.html">ℹ️ About</a></li>
-      <li><a href="blog.html">📝 Blog</a></li>
-      <li>
-        Services
-        <ul class="dropdown">
-          <li><a href="service1.html">💼 Service 1</a></li>
-          <li><a href="service2.html">⚙️ Service 2</a></li>
-          <li><a href="service3.html">🚀 Service 3</a></li>
-          <li><a href="service4.html">🎨 Service 4</a></li>
-          <li><a href="service5.html">📊 Service 5</a></li>
-          <li><a href="service6.html">🔧 Service 6</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">📞 Contact</a></li>
-    </ul>
+    <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+
+    <nav id="nav">
+      <ul class="nav-menu">
+        <li>
+          Home
+          <ul class="dropdown">
+            <li><a href="home1.html">Home1</a></li>
+            <li><a href="home2.html">Home2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li>
+          Services
+          <ul class="dropdown">
+            <li><a href="service1.html">Service1</a></li>
+            <li><a href="service2.html">Service2</a></li>
+            <li><a href="service3.html">Service3</a></li>
+            <li><a href="service4.html">Service4</a></li>
+            <li><a href="service5.html">Service5</a></li>
+            <li><a href="service6.html">Service6</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
     <div class="profile">
       <img id="profile-pic" src="" alt="Profile Picture">
       <div id="profile-initial">K</div>
     </div>
 
-    <button id="dark-mode-toggle">🌙</button>
-  </nav>
+    <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+  </header>
 
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    const darkModeBtn = document.getElementById("dark-mode-toggle");
+    darkModeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
 </body>
 </html>
