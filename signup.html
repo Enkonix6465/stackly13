@@ -16,6 +16,7 @@
       align-items: center;
       justify-content: center;
       padding: 20px;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .auth-container {
@@ -26,9 +27,10 @@
       overflow: hidden;
       max-width: 950px;
       width: 100%;
-      min-height: 550px;
+      min-height: 450px; /* reduced height */
       border: 1px solid #eee;
       animation: slideUp 0.8s ease-out;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     @keyframes slideUp {
@@ -48,18 +50,19 @@
 
     .right-panel {
       flex: 1;
-      padding: 60px 50px;
+      padding: 40px; /* reduced padding */
       display: flex;
       flex-direction: column;
       justify-content: center;
       background: #fff;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .top-controls {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
     .controls { display: flex; gap: 10px; }
 
@@ -77,22 +80,22 @@
       box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
     }
 
-    .auth-header { margin-bottom: 30px; }
+    .auth-header { margin-bottom: 20px; }
     .auth-header h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: 700;
       color: #1a1a1a;
       margin-bottom: 8px;
     }
 
-    .form-group { margin-bottom: 20px; }
+    .form-group { margin-bottom: 15px; }
     .input-container { position: relative; }
     .input-container i {
       position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #999;
     }
 
     .form-input {
-      width: 100%; padding: 15px 15px 15px 45px;
+      width: 100%; padding: 14px 14px 14px 45px;
       border: 2px solid #e1e5e9;
       border-radius: 12px;
       font-size: 1rem;
@@ -110,21 +113,28 @@
     }
 
     .auth-btn {
-      width: 100%; padding: 16px;
+      width: 100%; padding: 14px;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white; border: none; border-radius: 12px;
-      font-size: 1.1rem; font-weight: 600; cursor: pointer;
-      margin: 25px 0; transition: all 0.3s ease;
+      font-size: 1rem; font-weight: 600; cursor: pointer;
+      margin: 20px 0; transition: all 0.3s ease;
     }
     .auth-btn:hover { box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3); transform: translateY(-2px); }
 
     .auth-footer { font-size: 0.9rem; color: #666; }
     .auth-footer a { color: #667eea; text-decoration: none; font-weight: 500; }
 
+    /* Dark Mode */
+    body.dark { background: #121212; color: #eee; }
+    body.dark .auth-container { background: #1e1e1e; border: 1px solid #333; }
+    body.dark .right-panel { background: #1e1e1e; color: #eee; }
+    body.dark .form-input { background: #2c2c2c; color: #fff; border-color: #444; }
+    body.dark .form-input:focus { border-color: #764ba2; }
+
     /* Responsive */
     @media (max-width: 768px) {
       .auth-container { flex-direction: column; }
-      .left-panel { height: 250px; }
+      .left-panel { height: 200px; }
       .left-panel img { object-fit: contain; }
     }
   </style>
@@ -189,40 +199,11 @@
   </div>
 
   <script>
+    // i18n
     const I18N = {
-      en: {
-        title: "Sign Up",
-        firstName: "First Name",
-        lastName: "Last Name",
-        email: "Email",
-        password: "Password",
-        confirmPassword: "Confirm Password",
-        signupBtn: "Sign Up",
-        haveAccount: "Already have an account?",
-        loginLink: "Login here"
-      },
-      ar: {
-        title: "إنشاء حساب",
-        firstName: "الاسم الأول",
-        lastName: "اسم العائلة",
-        email: "البريد الإلكتروني",
-        password: "كلمة المرور",
-        confirmPassword: "تأكيد كلمة المرور",
-        signupBtn: "تسجيل",
-        haveAccount: "هل لديك حساب؟",
-        loginLink: "تسجيل الدخول هنا"
-      },
-      he: {
-        title: "הרשמה",
-        firstName: "שם פרטי",
-        lastName: "שם משפחה",
-        email: "אימייל",
-        password: "סיסמה",
-        confirmPassword: "אשר סיסמה",
-        signupBtn: "הרשם",
-        haveAccount: "כבר יש לך חשבון?",
-        loginLink: "התחבר כאן"
-      }
+      en: { title: "Sign Up", firstName: "First Name", lastName: "Last Name", email: "Email", password: "Password", confirmPassword: "Confirm Password", signupBtn: "Sign Up", haveAccount: "Already have an account?", loginLink: "Login here" },
+      ar: { title: "إنشاء حساب", firstName: "الاسم الأول", lastName: "اسم العائلة", email: "البريد الإلكتروني", password: "كلمة المرور", confirmPassword: "تأكيد كلمة المرور", signupBtn: "تسجيل", haveAccount: "هل لديك حساب؟", loginLink: "تسجيل الدخول هنا" },
+      he: { title: "הרשמה", firstName: "שם פרטי", lastName: "שם משפחה", email: "אימייל", password: "סיסמה", confirmPassword: "אשר סיסמה", signupBtn: "הרשם", haveAccount: "כבר יש לך חשבון?", loginLink: "התחבר כאן" }
     };
     const RTL_LANGS = new Set(["ar", "he"]);
 
@@ -232,30 +213,19 @@
       document.documentElement.dir = RTL_LANGS.has(lang) ? "rtl" : "ltr";
       document.querySelectorAll("[data-key]").forEach((el) => {
         const key = el.getAttribute("data-key");
-        const val = dict[key];
-        if (!val) return;
-        if (el.tagName === "INPUT") el.placeholder = val;
-        else el.textContent = val;
+        if (el.tagName === "INPUT") el.placeholder = dict[key];
+        else el.textContent = dict[key];
       });
-      const sel = document.getElementById("language-selector");
-      if (sel && sel.value !== lang) sel.value = lang;
+      document.getElementById("language-selector").value = lang;
       localStorage.setItem("site_lang", lang);
     }
 
-    function detectInitialLang() {
-      return localStorage.getItem("site_lang") || "en";
-    }
-
     document.addEventListener("DOMContentLoaded", () => {
-      const initial = detectInitialLang();
+      const initial = localStorage.getItem("site_lang") || "en";
       applyTranslations(initial);
-      const selector = document.getElementById("language-selector");
-      if (selector) {
-        selector.value = initial;
-        selector.addEventListener("change", (e) => applyTranslations(e.target.value));
-      }
 
-      // password toggle
+      document.getElementById("language-selector").addEventListener("change", (e) => applyTranslations(e.target.value));
+
       document.querySelectorAll(".password-toggle").forEach((toggle) => {
         toggle.addEventListener("click", () => {
           const input = toggle.previousElementSibling;
@@ -269,18 +239,14 @@
         });
       });
 
-      // Dark mode toggle
+      // dark mode
       const darkBtn = document.getElementById("darkModeToggle");
+      if (localStorage.getItem("theme") === "dark") document.body.classList.add("dark");
+
       darkBtn.addEventListener("click", () => {
         document.body.classList.toggle("dark");
-        if (document.body.classList.contains("dark")) {
-          document.body.style.background = "#1a1a1a";
-          document.querySelector(".auth-container").style.background = "#2c2c2c";
-          document.querySelectorAll(".form-input").forEach(i => i.style.background="#333", i.style.color="#fff");
-          darkBtn.textContent = "☀️";
-        } else {
-          location.reload();
-        }
+        localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+        darkBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
       });
     });
   </script>
