@@ -108,6 +108,7 @@
       position: absolute; right: 15px; top: 50%; transform: translateY(-50%);
       cursor: pointer; color: #999;
     }
+
     .forgot-password { text-align: right; margin-top: 10px; }
     .forgot-password a { color: #667eea; font-size: 0.9rem; }
 
@@ -120,6 +121,12 @@
       cursor: pointer; transition: all 0.3s ease;
     }
     .login-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.3); }
+
+    /* Extra Links */
+    .extra-links { text-align: center; margin-top: 20px; font-size: 0.95rem; }
+    .extra-links p { margin-bottom: 8px; }
+    .extra-links a { color: #667eea; text-decoration: none; font-weight: 500; }
+    .extra-links a:hover { text-decoration: underline; }
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -148,7 +155,7 @@
 
       <div class="login-header">
         <h1 data-key="login_title">Login</h1>
-       
+      
       </div>
 
       <form>
@@ -166,19 +173,24 @@
             <i class="fas fa-lock"></i>
             <span class="password-toggle"><i class="fas fa-eye"></i></span>
           </div>
-          <div class="forgot-password"><a href="#" data-key="forgot_password">Forgot Password?</a></div>
+          <div class="forgot-password"><a href="forgot.html" data-key="forgot_password">Forgot Password?</a></div>
         </div>
         <button type="submit" class="login-btn" data-key="login_btn">Login</button>
       </form>
+
+      <!-- Added Section -->
+      <div class="extra-links">
+        <p><span data-key="no_account">Don’t have an account?</span> <a href="signup.html" data-key="signup_link">Sign up here</a></p>
+      </div>
     </div>
   </div>
 
   <script>
     // Translations
     const I18N = {
-      en: { login_title: "Login", welcome_text:"Welcome back! Please login to continue.", email:"Email Address", password:"Password", forgot_password:"Forgot Password?", login_btn:"Sign In" },
-      ar: { login_title: "تسجيل الدخول", welcome_text:"مرحبًا بك! يرجى تسجيل الدخول للمتابعة.", email:"البريد الإلكتروني", password:"كلمة المرور", forgot_password:"هل نسيت كلمة المرور؟", login_btn:"تسجيل الدخول" },
-      he: { login_title: "התחברות", welcome_text:"ברוך שובך! אנא התחבר כדי להמשיך.", email:"אימייל", password:"סיסמה", forgot_password:"שכחת סיסמה?", login_btn:"התחבר" }
+      en: { login_title:"Login", welcome_text:"Welcome back! Please login to continue.", email:"Email Address", password:"Password", forgot_password:"Forgot Password?", login_btn:"Sign In", no_account:"Don’t have an account?", signup_link:"Sign up here" },
+      ar: { login_title:"تسجيل الدخول", welcome_text:"مرحبًا بك! يرجى تسجيل الدخول للمتابعة.", email:"البريد الإلكتروني", password:"كلمة المرور", forgot_password:"هل نسيت كلمة المرور؟", login_btn:"تسجيل الدخول", no_account:"ليس لديك حساب؟", signup_link:"سجل هنا" },
+      he: { login_title:"התחברות", welcome_text:"ברוך שובך! אנא התחבר כדי להמשיך.", email:"אימייל", password:"סיסמה", forgot_password:"שכחת סיסמה?", login_btn:"התחבר", no_account:"אין לך חשבון?", signup_link:"הירשם כאן" }
     };
     const RTL_LANGS = new Set(["ar","he"]);
 
