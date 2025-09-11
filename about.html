@@ -10,8 +10,25 @@
   <title>About Us - My Website</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; }
-
+    body {
+      font-family: 'Poppins', sans-serif;
+      /* Custom minimal scrollbar */
+      scrollbar-width: thin;
+      scrollbar-color: #007b8f #f0f0f0;
+    }
+    /* Webkit scrollbar styles */
+    body::-webkit-scrollbar {
+      width: 7px;
+      background: #f0f0f0;
+    }
+    body::-webkit-scrollbar-thumb {
+      background: #007b8f;
+      border-radius: 7px;
+    }
+    body::-webkit-scrollbar-track {
+      background: #f0f0f0;
+      border-radius: 7px;
+    }
     header {
       display: flex;
       justify-content: space-between;
@@ -23,18 +40,14 @@
       top: 0;
       z-index: 1000;
     }
-
     .logo img { height: 45px; }
-
     nav ul {
       list-style: none;
       display: flex;
       align-items: center;
       gap: 25px;
     }
-
     nav ul li { position: relative; }
-
     nav ul li a {
       text-decoration: none;
       color: #333;
@@ -43,12 +56,10 @@
       border-radius: 6px;
       transition: 0.3s ease;
     }
-
     nav ul li a:hover {
       background: #f0f0f0;
       color: #007bff;
     }
-
     /* Dropdown */
     .dropdown-menu {
       display: none;
@@ -61,26 +72,22 @@
       border-radius: 8px;
       overflow: hidden;
       animation: fadeIn 0.3s ease;
+      z-index: 10;
     }
-
     .dropdown:hover .dropdown-menu { display: block; }
-
     .dropdown-menu li a {
       display: block;
       padding: 10px 15px;
       color: #333;
     }
-
     .dropdown-menu li a:hover {
       background: #007bff;
       color: #fff;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     /* Profile */
     .profile-container { position: relative; margin-left: 20px; }
     .profile {
@@ -94,7 +101,6 @@
       transition: 0.3s;
     }
     .profile:hover { background: #0056b3; }
-
     .profile-dropdown {
       display: none;
       position: absolute;
@@ -105,22 +111,19 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.15);
       overflow: hidden;
       min-width: 140px;
+      z-index: 15;
     }
-
     .profile-dropdown li a {
       display: block;
       padding: 12px 15px;
       color: #333;
       transition: 0.3s;
     }
-
     .profile-dropdown li a:hover {
       background: #ff4d4d;
       color: #fff;
     }
-
     .profile-container.active .profile-dropdown { display: block; }
-
     /* Language Dropdown */
     #languageToggle {
       padding: 6px 12px;
@@ -131,7 +134,6 @@
       transition: 0.3s;
     }
     #languageToggle:hover { border-color: #007bff; }
-
     /* Dark mode button */
     #toggle-dark {
       background: #f0f0f0;
@@ -143,7 +145,6 @@
       transition: 0.3s;
     }
     #toggle-dark:hover { background: #007bff; color: #fff; }
-
     /* Mobile */
     #mobile-menu-toggle {
       display: none;
@@ -152,9 +153,15 @@
       border: none;
       cursor: pointer;
     }
-
+    /* Responsive adjustments */
     @media (max-width: 900px) {
-      nav { display: none; }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 16px;
+      }
+      .header-right { width: 100%; display: flex; align-items: center; flex-wrap: wrap; }
+      nav { display: none; width: 100%; }
       #mobile-menu-toggle { display: block; }
       nav.active {
         display: flex;
@@ -167,14 +174,239 @@
         animation: slideDown 0.3s ease;
       }
       nav ul { flex-direction: column; gap: 10px; }
+      .logo img { height: 36px; }
+      .profile-container { margin-left: 7px; margin-top: 10px; }
     }
-
     @keyframes slideDown {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    /* Responsive for hero, about, journey, and team sections */
+    .hero,
+    .about-hero,
+    .mission-vision,
+    .team-section,
+    .journey-section,
+    .contact-section {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .container {
+      max-width: 1100px;
+      padding: 40px 24px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    @media (max-width: 700px) {
+      .container {
+        padding: 24px 8px;
+      }
+      .about-hero .container {
+        padding: 28px 6px;
+      }
+      .about-hero h1,
+      .about-hero p,
+      .mission-vision h2,
+      .mission-vision p,
+      .team-section h2,
+      .journey-section h2,
+      .journey-section p,
+      .contact-section h2,
+      .contact-section p {
+        font-size: 1.05em;
+      }
+      .about-hero img,
+      .team-member img {
+        width: 98%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+      }
+      .team-grid {
+        display: block;
+      }
+      .team-member {
+        margin-bottom: 24px;
+        text-align: center;
+      }
+      .mission-vision .container {
+        flex-direction: column;
+      }
+      .left-image { width: 100%; margin-bottom: 18px; text-align: center; }
+    }
+    .about-hero {
+      background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+      padding: 60px 0 40px 0;
+      position: relative;
+      z-index: 1;
+    }
+    .about-hero .container {
+      background: rgba(255,255,255,0.85);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.12);
+      padding: 40px 30px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .about-hero img {
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      max-width: 100%;
+      height: auto;
+    }
+    /* Team grid responsive */
+    .team-grid {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .team-member {
+      text-align: center;
+      flex: 1 1 180px;
+      max-width: 250px;
+    }
+    .team-member img {
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+    /* Mission-Vision section responsive */
+    .mission-vision .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 36px;
+      align-items: center;
+    }
+    .left-image {
+      flex: 0 0 220px;
+      text-align: center;
+    }
+    .right-content {
+      flex: 1 1 300px;
+      text-align: left;
+    }
+    .mission-card, .vision-card {
+      margin: 16px 0;
+      background: #f6fcfe;
+      border-radius: 9px;
+      padding: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+    @media (max-width: 900px) {
+      .mission-vision .container { flex-direction: column; gap: 16px; }
+      .left-image, .right-content { width: 100%; }
+    }
+    /* Timeline responsive */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 24px;
+      padding-left: 0;
+      list-style: none;
+    }
+    /* Footer responsive */
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 16px;
+      box-sizing: border-box;
+    }
+    .footer-logo, .footer-links, .footer-services, .footer-contact, .footer-newsletter {
+      flex: 1 1 210px;
+      min-width: 150px;
+      margin-bottom: 18px;
+    }
+    .footer-logo img { height: 36px; }
+    .footer-copy {
+      text-align: center;
+      padding: 18px 10px;
+      background: #007b8f;
+      color: #fff;
+      letter-spacing: 0.03em;
+      font-size: 0.95em;
+    }
+    @media (max-width: 800px) {
+      .footer-container {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 6px;
+      }
+      .footer-logo, .footer-links, .footer-services, .footer-contact, .footer-newsletter {
+        min-width: 0;
+        margin-bottom: 10px;
+      }
+    }
+    /* Contact section responsive */
+    .contact-section {
+      padding: 36px 0;
+      background: linear-gradient(90deg, #cff2fa 0%, #e0eafc 100%);
+    }
+    .contact-container {
+      max-width: 450px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 32px 18px;
+      border-radius: 18px;
+      box-shadow: 0 4px 20px rgba(31,38,135,0.08);
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .contact-container { padding: 20px 8px; }
+    }
+    /* Button responsive */
+    .btn-secondary, .contact-btn {
+      display: inline-block;
+      padding: 9px 17px;
+      font-size: 1em;
+      background: #007b8f;
+      color: #fff;
+      border-radius: 7px;
+      border: none;
+      text-decoration: none;
+      margin: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+      transition: background 0.2s;
+    }
+    .btn-secondary:hover,
+    .contact-btn:hover {
+      background: #005f73;
+    }
+    /* Newsletter form input responsive */
+    #newsletter-form input[type="email"] {
+      padding: 7px 12px;
+      border-radius: 7px;
+      border: 1px solid #ccc;
+      width: 70%;
+      font-size: 0.97em;
+      margin-right: 8px;
+    }
+    #newsletter-form button {
+      padding: 7px 14px;
+      border-radius: 7px;
+      background: #007b8f;
+      color: #fff;
+      border: none;
+      font-size: 0.97em;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      #newsletter-form input[type="email"] { width: 100%; margin-bottom: 8px; }
+      #newsletter-form button { width: 100%; }
+    }
   </style>
-</head> 
+</head>
+
 <body>
   <header>
   <div class="logo">
@@ -228,60 +460,7 @@
     <button id="mobile-menu-toggle" class="hamburger">☰</button>
   </div>
 </header>
-  <!-- Header 
-  <header>
-    <div class="logo">
-      <a href="index.html"><img src="images/cropped-logo111.png" alt="Logo"></a>
-    </div>
-    <button id="mobile-menu-toggle" class="mobile-menu-btn">☰</button>
-    <nav>
-      <ul class="nav-menu">
-        <li>
-          <a href="index.html" data-i18n="nav_home">Home</a>
-          <ul class="dropdown">
-            <li><a href="index.html" data-i18n="nav_home1">Home1</a></li>
-            <li><a href="pages/home2.html" data-i18n="nav_home2">Home2</a></li>
-          </ul>
-        </li>
-        <li><a href="about.html" data-i18n="nav_about">About</a></li>
-        <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
-        <li>
-          <a href="services.html" data-i18n="nav_services">Services</a>
-          <ul class="dropdown">
-            <li><a href="pages/service1.html" data-i18n="svc_business">Business</a></li>
-            <li><a href="pages/services2.html" data-i18n="svc_operations">Operations</a></li>
-            <li><a href="pages/services3.html" data-i18n="svc_financial">Financial</a></li>
-            <li><a href="pages/services4.html" data-i18n="svc_marketing">Marketing</a></li>
-            <li><a href="pages/services5.html" data-i18n="svc_hr">HR &amp; Talent</a></li>
-            <li><a href="pages/services6.html" data-i18n="svc_digital">Digital</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
-      </ul>
-    </nav>
-  
-    <select id="languageToggle" style="margin-left:8px;">
-      <option value="en">English</option>
-      <option value="ar">العربية</option>
-      <option value="he">עברית</option>
-    </select>
-
-
-    <div class="profile-container">
-      <div class="profile" id="profile-dropdown-toggle">
-        <img id="profile-pic" src="../images/.jpg" alt="Profile Picture">
-        <span id="profile-initials" style="display:none;"></span>
-      </div>
-
-      <ul class="profile-dropdown" id="profile-dropdown">
-        <li><a href="#" id="logout-btn" data-i18n="logout">Logout</a></li>
-      </ul>
-
-      <button id="dark-mode-toggle">🌙</button>
-      
-    
-    </div>
-  </header>-->
+ 
 
   <section class="hero">
     <video autoplay muted loop playsinline class="hero-video">
