@@ -956,50 +956,6 @@
       });
     })();
   </script>
-  <script>
-  // Mobile menu toggle
-  const menuToggleBtn = document.getElementById('mobile-menu-toggle');
-  const nav = document.querySelector('nav');
-  menuToggleBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-
-  // Handle dropdown toggle on mobile
-  document.querySelectorAll('nav ul.nav-links li.dropdown > a').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      if (window.innerWidth <= 900) {
-        e.preventDefault();
-        const parentLi = anchor.parentElement;
-        parentLi.classList.toggle('active');
-      }
-    });
-  });
-
-  // Profile dropdown toggle
-  const profileContainer = document.getElementById('profile-container');
-  const profileToggle = document.getElementById('profile-dropdown-toggle');
-  profileToggle.addEventListener('click', () => {
-    profileContainer.classList.toggle('active');
-  });
-
-  // Close profile dropdown on clicking outside
-  document.addEventListener('click', (e) => {
-    if (!profileContainer.contains(e.target)) {
-      profileContainer.classList.remove('active');
-    }
-    if (!nav.contains(e.target) && !menuToggleBtn.contains(e.target)) {
-      nav.classList.remove('active');
-      // Close all dropdowns in mobile menu on outside click
-      document.querySelectorAll('nav ul.nav-links li.dropdown.active').forEach(li => {
-        li.classList.remove('active');
-      });
-    }
-  });
-
-  // Dark mode toggle
-  document.getElementById('toggle-dark').addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-  });
-</script>
+  
 </body>
 </html>  
